@@ -228,4 +228,14 @@
 
 })();
 
+document.addEventListener("DOMContentLoaded", function () {
+  const statWithPercentage = document.querySelector("#stat-4");
+
+  // Wait for PureCounter animation to finish, then append "%"
+  setTimeout(() => {
+    if (statWithPercentage) {
+      statWithPercentage.textContent += "%";
+    }
+  }, 1000); // Adjust this delay based on PureCounter duration
+});
 

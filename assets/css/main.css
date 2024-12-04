@@ -648,10 +648,18 @@ section,
 
 .stats .stats-item span {
   font-size: 36px;
-  display: block;
   font-weight: 700;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
+  display: inline; /* Ensures the number and "%" are on the same line */
 }
+
+.stats .stats-item span + span {
+  font-size: 36px; /* Matches the size of the number */
+  font-weight: 700; /* Matches the weight of the number */
+  margin-left: 2px; /* Adds slight spacing between the number and "%" */
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
 
 .stats .stats-item p {
   padding: 0;
