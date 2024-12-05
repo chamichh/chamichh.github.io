@@ -277,7 +277,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Footer
+# Global Footer - Adjusted for Alignment
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
@@ -286,25 +286,28 @@ h6 {
   text-align: center;
   padding: 30px 0;
   position: relative;
+  max-width: 1200px; /* Same as other sections */
+  margin: 0 auto;    /* Centers the footer */
+  width: 100%;       /* Ensures full-width responsiveness */
 }
 
 .footer h3 {
   font-size: 36px;
   font-weight: 700;
-  position: relative;
-  padding: 0;
   margin: 0 0 15px 0;
 }
 
 .footer p {
-  font-size: 15;
+  font-size: 15px;
   font-style: italic;
-  padding: 0;
   margin: 0 0 30px 0;
 }
 
 .footer .social-links {
   margin: 0 0 30px 0;
+  display: flex;
+  justify-content: center; /* Centers the icons */
+  gap: 10px;               /* Adds spacing between icons */
 }
 
 .footer .social-links a {
@@ -328,15 +331,11 @@ h6 {
   text-decoration: none;
 }
 
-.footer .copyright {
-  padding-top: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
 .footer .credits {
   font-size: 13px;
-  padding-top: 5px;
+  margin-top: 15px;
 }
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -475,7 +474,7 @@ section,
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 45px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -511,6 +510,14 @@ section,
 .section-title p {
   margin-bottom: 0;
 }
+
+/* Vertical Blue Line for About Section */
+.section-title.border-start {
+  border-left: 3px solid var(--primary-color); /* Matches the blue color */
+  padding-left: 20px; /* Space between the line and the content */
+}
+
+
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -1161,6 +1168,19 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
+#contact .btn {
+  margin-top: 40px; /* Increased gap between the button and the LinkedIn/email content */
+}
+
+#contact .container:last-of-type {
+  padding-bottom: 10px; /* Reduced gap between the bottom of the content and the page edge */
+}
+
+#contact .d-flex {
+  gap: 12px; /* Controls the spacing between the LinkedIn icon and email */
+}
+
+
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
@@ -1308,6 +1328,14 @@ section,
   color: #6c757d;
   margin: 0;
 }
+
+.testimonial-logo {
+  max-width: 100px; /* Adjust the width */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 20px; /* Add spacing */
+  object-fit: contain; /* Ensure the logo fits nicely */
+}
+
 
 .portfolio-details .portfolio-description .testimonial-item .quote-icon-left,
 .portfolio-details .portfolio-description .testimonial-item .quote-icon-right {
