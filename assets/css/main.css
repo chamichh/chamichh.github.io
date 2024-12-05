@@ -885,7 +885,7 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: ease-in-out 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
 }
 
@@ -919,18 +919,22 @@ section,
 }
 
 .services .service-item:hover {
-  box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Remove color change on hover */
 .services .service-item.item-cyan i {
   color: #0dcaf0;
 }
 
 .services .service-item.item-cyan:hover .icon i {
-  color: #fff;
+  /* Remove color: #fff; */
+  color: #0dcaf0; /* Keep the original color */
 }
 
 .services .service-item.item-cyan:hover .icon path {
+  /* Remove fill change */
   fill: #0dcaf0;
 }
 
@@ -939,7 +943,7 @@ section,
 }
 
 .services .service-item.item-orange:hover .icon i {
-  color: #fff;
+  color: #fd7e14;
 }
 
 .services .service-item.item-orange:hover .icon path {
@@ -951,7 +955,7 @@ section,
 }
 
 .services .service-item.item-teal:hover .icon i {
-  color: #fff;
+  color: #20c997;
 }
 
 .services .service-item.item-teal:hover .icon path {
@@ -963,7 +967,7 @@ section,
 }
 
 .services .service-item.item-red:hover .icon i {
-  color: #fff;
+  color: #df1529;
 }
 
 .services .service-item.item-red:hover .icon path {
@@ -975,7 +979,7 @@ section,
 }
 
 .services .service-item.item-indigo:hover .icon i {
-  color: #fff;
+  color: #6610f2;
 }
 
 .services .service-item.item-indigo:hover .icon path {
@@ -987,12 +991,14 @@ section,
 }
 
 .services .service-item.item-pink:hover .icon i {
-  color: #fff;
+  color: #f3268c;
 }
 
 .services .service-item.item-pink:hover .icon path {
   fill: #f3268c;
 }
+
+
 
 /*--------------------------------------------------------------
 # Testimonials Section
