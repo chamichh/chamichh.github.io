@@ -70,24 +70,24 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
+ <section id="hero" class="hero section light-background">
+  <img src="assets/img/hero-bg.JPEG" alt="Background image of Aleksis Kālis' Hero Section">
 
-      <img src="assets/img/hero-bg.JPEG" alt="Background image of Aleksis Kālis' Hero Section">
-
-      <div class="container" data-aos="zoom-out">
-        <div class="row">
-          <div class="col-lg-9" style="margin-left: 10%; max-width: 80%;">
-            <h1>Aleksis Kālis</h1>
-            <p>I'm <span class="typed" data-typed-items="AI Solutions Ambassador, Automations Engineer, Lecturer, Technical Sales Engineer, Start-Up Enthusiast">Lecturer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <div class="social-links mb-3">
-              <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank"><i class="bi bi-linkedin"></i></a>
-            </div>
-			<a href="mailto:aleksis@kaliz.ai" class="btn btn-primary btn-lg rounded-pill px-4 py-2">Contact Me</a>
-          </div>
+  <div class="container" data-aos="zoom-out">
+    <div class="row">
+      <div class="col-lg-9" style="margin-left: 10%; max-width: 80%;">
+        <h1>Aleksis Kālis</h1>
+        <p>I'm <span class="typed" data-typed-items="AI Solutions Ambassador, Automations Engineer, Lecturer, Technical Sales Engineer, Start-Up Enthusiast">Lecturer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <div class="social-links mb-3">
+          <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank"><i class="bi bi-linkedin"></i></a>
         </div>
+        <!-- Instead of mailto: replace with a normal link and add an id -->
+        <a href="#" id="contact-trigger" class="btn btn-primary btn-lg rounded-pill px-4 py-2">Contact Me</a>
       </div>
+    </div>
+  </div>
+</section><!-- /Hero Section -->
 
-    </section><!-- /Hero Section -->
 
     <!-- About Me Section -->
     <section id="about">
@@ -396,7 +396,7 @@
                 </div>
               </div>
               <div class="col-lg-2 col-sm-12">
-                <img src="assets/img/testimonials/testimonials-1.png" class="img-fluid testimonial-logo" alt="Logo of Ozolkalns">
+                <img src="assets/img/testimonials/2.png" class="img-fluid testimonial-logo" alt="Logo of Ozolkalns">
               </div>
             </div>
           </div>
@@ -421,7 +421,7 @@
                 </div>
               </div>
               <div class="col-lg-2 col-sm-12">
-                <img src="assets/img/testimonials/testimonials-2.png" class="img-fluid testimonial-img" alt="Photo of Jānis from Kārļamuiža">
+                <img src="assets/img/testimonials/1.png" class="img-fluid testimonial-img" alt="Photo of Jānis from Kārļamuiža">
               </div>
             </div>
           </div>
@@ -446,7 +446,7 @@
                 </div>
               </div>
               <div class="col-lg-2 col-sm-12">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img" alt="Photo of Elīna from Boards You">
+                <img src="assets/img/testimonials/3.png" class="img-fluid testimonial-img" alt="Photo of Elīna from Boards You">
               </div>
             </div>
           </div>
@@ -471,7 +471,7 @@
                 </div>
               </div>
               <div class="col-lg-2 col-sm-12">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="img-fluid testimonial-img" alt="Photo of Līga from Ozolkalns">
+                <img src="assets/img/testimonials/4.png" class="img-fluid testimonial-img" alt="Photo of Līga from Ozolkalns">
               </div>
             </div>
           </div>
@@ -542,6 +542,27 @@
 <div id="chat-bubble" class="d-none">
   <button class="chat-bubble-close">&times;</button>
   <p>Interested in this service?<br><a href="mailto:aleksis@kaliz.ai">Contact me</a> for more info!</p>
+</div>
+
+
+
+
+
+<div id="contact-overlay" class="contact-overlay"></div>
+<div id="contact-panel" class="contact-panel">
+  <button id="close-panel" class="close-panel-btn">&times;</button>
+  
+  <h2>Contact</h2>
+  <p>aleksis@kaliz.ai<br> Aleksis Kālis</p>
+  <hr>
+
+<form action="forms/contact.php" method="post" class="contact-form">
+  <input type="email" name="email" placeholder="Your email" required>
+  <input type="text" name="name" placeholder="Your full name" required>
+  <textarea name="message" placeholder="How can I help you?" required></textarea>
+  <button type="submit">Send</button>
+</form>
+
 </div>
 
 

@@ -1615,3 +1615,140 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
+
+
+
+/*--------
+# Contact Panel
+--------------*/
+
+
+/* The dark overlay behind the contact panel */
+.contact-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9998;
+}
+
+/* The slide-in contact panel */
+.contact-panel {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Panel is initially hidden off-screen */
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 9999;
+  font-family: var(--default-font, Arial, sans-serif); /* Adjust to your font variables */
+}
+
+/* Close button styling */
+.close-panel-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  float: right;
+  cursor: pointer;
+}
+
+
+.contact-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9998;
+}
+
+.contact-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 9999;
+  
+  /* Apply the default font to panel content */
+  font-family: var(--default-font);
+}
+
+.close-panel-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  float: right;
+  cursor: pointer;
+}
+
+.contact-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.contact-panel.show {
+  right: 0;
+}
+
+.contact-panel h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+  /* If headings use a different font, you can do: font-family: var(--heading-font); */
+}
+
+.contact-panel p {
+  color: #555;
+  margin-bottom: 20px;
+  /* Will use default font unless otherwise specified */
+}
+
+.contact-panel hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+/* Contact form font and styling */
+.contact-form {
+  font-family: var(--default-font); /* Ensure the same global font applies here */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  font-family: var(--default-font);
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  border-radius: 50px;
+  /* If buttons on your site use a special font or style, add it here as well */
+}

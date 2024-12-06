@@ -273,3 +273,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const contactTrigger = document.getElementById('contact-trigger');
+  const contactPanel = document.getElementById('contact-panel');
+  const contactOverlay = document.getElementById('contact-overlay');
+  const closePanelBtn = document.getElementById('close-panel');
+
+  // Open the panel
+  contactTrigger.addEventListener('click', function(e) {
+    e.preventDefault();
+    contactPanel.classList.add('show');
+    contactOverlay.classList.add('show');
+  });
+
+  // Close the panel
+  function closePanel() {
+    contactPanel.classList.remove('show');
+    contactOverlay.classList.remove('show');
+  }
+
+  closePanelBtn.addEventListener('click', closePanel);
+  contactOverlay.addEventListener('click', closePanel);
+
+  // Optional: Close on Esc key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape" && contactPanel.classList.contains('show')) {
+      closePanel();
+    }
+  });
+});
