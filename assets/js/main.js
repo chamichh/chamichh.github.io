@@ -239,3 +239,37 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 1000); // Adjust this delay based on PureCounter duration
 });
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const serviceItems = document.querySelectorAll('.service-item');
+  const chatBubble = document.getElementById('chat-bubble');
+  const closeButton = chatBubble.querySelector('.chat-bubble-close');
+
+  serviceItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Show the chat bubble with animation
+      chatBubble.classList.remove('d-none');
+      chatBubble.classList.add('show');
+
+      // Hide the chat bubble after 10 seconds
+      setTimeout(() => {
+        hideChatBubble();
+      }, 10000);
+    });
+  });
+
+  closeButton.addEventListener('click', () => {
+    hideChatBubble();
+  });
+
+  function hideChatBubble() {
+    chatBubble.classList.remove('show');
+    // Wait for the animation to complete before hiding
+    setTimeout(() => {
+      chatBubble.classList.add('d-none');
+    }, 500);
+  }
+});
+
+

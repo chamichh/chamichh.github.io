@@ -1088,6 +1088,47 @@ section,
   background-color: var(--accent-color);
 }
 
+/* New Styles for Consistency & Mobile Optimization */
+
+/* Uniform image sizing for testimonial logos/images */
+.testimonial-logo, .testimonial-img {
+   width: 150px;   /* Set a fixed width for uniform sizing */
+  height: auto;   /* Height adjusts based on image aspect ratio */
+  margin: 0 auto; /* Center the images horizontally */
+  display: block; /* Ensure proper centering and layout */
+  object-fit: contain; /* Ensures entire image fits within set dimensions */
+}
+
+/* Adjust bottom padding to prevent large gaps after the testimonial section */
+#testimonials {
+  padding-bottom: 40px; /* Adjust as needed */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  /* Stack columns vertically on small screens */
+  .testimonial-item .row > div {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Add some bottom margin between testimonial slides on mobile */
+  .testimonial-item {
+    margin-bottom: 30px;
+  }
+
+  /* Center-align text and content on mobile for a cleaner look */
+  .testimonial-content {
+    text-align: center;
+  }
+
+  /* Slightly smaller images on mobile for better fit */
+  .testimonial-logo, .testimonial-img {
+    max-width: 60px;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -1498,4 +1539,79 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 15px; /* Add padding to prevent text from sticking to the edge */
+    padding-right: 15px;
+    max-width: 1200px; /* Adjust to match your design */
+}
+
+body {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+
+/*--------
+# Chat bubble
+--------------*/
+
+#chat-bubble {
+  position: fixed;
+  bottom: 90px; 
+  right: 20px;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  padding: 20px; /* Uniform padding around the content */
+  max-width: 250px;
+  z-index: 99999;
+  color: var(--contrast-color);
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: normal;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+#chat-bubble p {
+  margin: 0;
+}
+
+#chat-bubble p a {
+  color: var(--contrast-color);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* When showing the bubble */
+#chat-bubble.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* When hiding the bubble */
+#chat-bubble.hide {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* No arrow needed */
+#chat-bubble::before {
+  content: none;
+}
+
+/* Close button closer to the edge, minimal extra space */
+#chat-bubble .chat-bubble-close {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: var(--contrast-color);
+  font-size: 16px;
+  cursor: pointer;
 }
