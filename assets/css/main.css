@@ -1,8 +1,6 @@
 /**
-* Template Name: MyResume
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
+* Updated: Dec 06 2024 with Bootstrap v5.3.3
+* Author: Aleksis Kālis
 * License: https://bootstrapmade.com/license/
 */
 
@@ -1221,6 +1219,64 @@ section,
   gap: 12px; /* Controls the spacing between the LinkedIn icon and email */
 }
 
+#contact-container {
+  position: relative;
+  width: 100%;
+  text-align: left; /* Align with LinkedIn button */
+  margin-top: 20px;
+  padding-left: 55px; /* Align content with LinkedIn button */
+}
+
+#contact-trigger {
+  display: inline-block; /* Prevent the button from stretching */
+  margin-top: 10px; /* Add space below the LinkedIn button */
+  padding: 10px 20px; /* Standard button size */
+  font-size: 16px; /* Consistent font size */
+  border-radius: 20px; /* Keep the pill shape */
+  max-width: 200px; /* Constrain the button's maximum width */
+  text-align: center; /* Center the text inside the button */
+}
+
+#contact-card {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position relative to the container */
+  top: 60px; /* Adjust to position below the button */
+  left: 0; /* Align with the button */
+  margin-top: 10px; /* Space between the button and card */
+  animation: fadeIn 0.5s ease-in-out forwards;
+  opacity: 0; /* Ensure it's hidden by default */
+}
+
+#contact-card.show {
+  display: block; /* Show when toggled */
+  animation: fadeIn 0.5s ease-in-out forwards; /* Fade in animation */
+}
+
+#contact-card.hide {
+  animation: fadeOut 0.5s ease-in-out forwards; /* Fade out animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
@@ -1751,4 +1807,20 @@ body {
   width: 100%;
   border-radius: 50px;
   /* If buttons on your site use a special font or style, add it here as well */
+}
+
+
+#contact-card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

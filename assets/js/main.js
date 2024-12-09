@@ -1,8 +1,6 @@
 /**
-* Template Name: MyResume
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
+* Updated: Dec 06 2024 with Bootstrap v5.3.3
+* Author: Aleksis Kālis
 * License: https://bootstrapmade.com/license/
 */
 
@@ -273,32 +271,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const contactTrigger = document.getElementById('contact-trigger');
-  const contactPanel = document.getElementById('contact-panel');
-  const contactOverlay = document.getElementById('contact-overlay');
-  const closePanelBtn = document.getElementById('close-panel');
+  const contactCard = document.getElementById('contact-card');
 
-  // Open the panel
-  contactTrigger.addEventListener('click', function(e) {
+  contactTrigger.addEventListener('click', function (e) {
     e.preventDefault();
-    contactPanel.classList.add('show');
-    contactOverlay.classList.add('show');
-  });
 
-  // Close the panel
-  function closePanel() {
-    contactPanel.classList.remove('show');
-    contactOverlay.classList.remove('show');
-  }
+    if (contactCard.classList.contains('show')) {
+      contactCard.classList.remove('show');
+      contactCard.classList.add('hide');
 
-  closePanelBtn.addEventListener('click', closePanel);
-  contactOverlay.addEventListener('click', closePanel);
-
-  // Optional: Close on Esc key
-  document.addEventListener('keydown', function(e) {
-    if (e.key === "Escape" && contactPanel.classList.contains('show')) {
-      closePanel();
+      setTimeout(() => {
+        contactCard.classList.remove('hide');
+        contactCard.style.display = 'none'; // Ensure it hides after animation
+      }, 500); // Match the animation duration
+    } else {
+      contactCard.style.display = 'block'; // Ensure it's visible before animation
+      contactCard.classList.remove('hide');
+      contactCard.classList.add('show');
     }
+
+    // Update button text
+    contactTrigger.textContent = contactCard.classList.contains('show')
+      ? "Hide Contact"
+      : "Contact Me";
   });
 });
