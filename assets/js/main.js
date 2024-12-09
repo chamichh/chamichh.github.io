@@ -239,37 +239,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const serviceItems = document.querySelectorAll('.service-item');
   const chatBubble = document.getElementById('chat-bubble');
   const closeButton = chatBubble.querySelector('.chat-bubble-close');
+  const footerContactButton = document.getElementById('footer-contact-btn'); // Footer Contact Me button
 
   serviceItems.forEach(item => {
-    item.addEventListener('click', function() {
-      // Show the chat bubble with animation
-      chatBubble.classList.remove('d-none');
-      chatBubble.classList.add('show');
-
-      // Hide the chat bubble after 10 seconds
-      setTimeout(() => {
-        hideChatBubble();
-      }, 10000);
+    item.addEventListener('click', function () {
+      showChatBubble(); // Show the chat bubble when a service item is clicked
     });
   });
 
-  closeButton.addEventListener('click', () => {
-    hideChatBubble();
+  footerContactButton.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    showChatBubble(); // Show the chat bubble when the footer button is clicked
   });
 
-  function hideChatBubble() {
-    chatBubble.classList.remove('show');
-    // Wait for the animation to complete before hiding
+  closeButton.addEventListener('click', () => {
+    hideChatBubble(); // Hide the chat bubble when the close button is clicked
+  });
+
+  function showChatBubble() {
+    // Make sure the bubble is visible and reset any hide animation state
+    chatBubble.style.display = 'block'; // Reset display
+    chatBubble.classList.remove('hide'); // Remove hide class if present
+
+    // Force a reflow to ensure the next class addition triggers the transition anew
+    void chatBubble.offsetWidth;
+
+    // Now add the 'show' class to trigger the fade-in animation
+    chatBubble.classList.add('show');
+
+    // Automatically hide the chat bubble after 10 seconds
     setTimeout(() => {
-      chatBubble.classList.add('d-none');
-    }, 500);
+      hideChatBubble();
+    }, 10000);
+  }
+
+  function hideChatBubble() {
+    // Remove the show class and add hide to start fade-out
+    chatBubble.classList.remove('show');
+    chatBubble.classList.add('hide');
+
+    // After the fade-out duration, set display to none
+    setTimeout(() => {
+      chatBubble.style.display = 'none';
+    }, 500); // Adjust this to match your CSS transition duration
   }
 });
-
 
 document.addEventListener('DOMContentLoaded', function () {
   const contactTrigger = document.getElementById('contact-trigger');
@@ -296,5 +314,32 @@ document.addEventListener('DOMContentLoaded', function () {
     contactTrigger.textContent = contactCard.classList.contains('show')
       ? "Hide Contact"
       : "Contact Me";
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const footerContactTrigger = document.getElementById('footer-contact-trigger');
+  const footerContactCard = document.getElementById('footer-contact-card');
+  const footerInfo = document.getElementById('footer-info');
+
+  footerContactTrigger.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (footerContactCard.classList.contains('hide')) {
+      footerContactCard.classList.remove('hide');
+      footerContactCard.classList.add('show');
+      footerContactTrigger.textContent = "Hide Contact";
+
+      // Slide footer info down
+      footerInfo.style.marginTop = "70px"; // Adjust gap to fit the contact card
+    } else {
+      footerContactCard.classList.remove('show');
+      footerContactCard.classList.add('hide');
+      footerContactTrigger.textContent = "Contact Me";
+
+      // Slide footer info back up
+      footerInfo.style.marginTop = "10px"; // Reduced default gap
+    }
   });
 });

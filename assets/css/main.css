@@ -467,7 +467,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -1208,7 +1208,7 @@ section,
 }
 
 #contact .btn {
-  margin-top: 40px; /* Increased gap between the button and the LinkedIn/email content */
+  margin-top: 10px; /* Increased gap between the button and the LinkedIn/email content */
 }
 
 #contact .container:last-of-type {
@@ -1617,30 +1617,31 @@ body {
   position: fixed;
   bottom: 90px; 
   right: 20px;
-  background-color: var(--accent-color);
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-  padding: 20px; /* Uniform padding around the content */
-  max-width: 250px;
-  z-index: 99999;
-  color: var(--contrast-color);
-  font-size: 14px;
+  background-color: var(--surface-color); /* Match contact card background */
+  border: 2px solid var(--accent-color); /* Add border for a card-like look */
+  border-radius: 10px; /* Rounded corners to match the contact card */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px; /* Uniform padding */
+  max-width: 300px; /* Increase width for a larger bubble */
+  z-index: 99999; /* Ensure it appears on top */
+  color: var(--default-color); /* Match contact card text color */
+  font-size: 16px; /* Adjust font size for readability */
   line-height: 1.5;
   white-space: normal;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease; 
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade and movement */
 }
 
 #chat-bubble p {
   margin: 0;
+  font-size: 16px; /* Match font size to contact card */
 }
 
 #chat-bubble p a {
-  color: var(--contrast-color);
-  font-weight: 600;
-  text-decoration: underline;
+  color: var(--accent-color); /* Match the link color of the contact card */
+  font-weight: bold;
+  text-decoration: underline; /* Make the link more prominent */
 }
 
 /* When showing the bubble */
@@ -1655,159 +1656,31 @@ body {
   transform: translateY(20px);
 }
 
-/* No arrow needed */
+/* Remove arrow */
 #chat-bubble::before {
   content: none;
 }
 
-/* Close button closer to the edge, minimal extra space */
+/* Close button adjustments */
 #chat-bubble .chat-bubble-close {
   position: absolute;
-  top: 2px;
-  right: 8px;
+  top: 1px; /* Adjust to align with the new design */
+  right: 5px;
   background: none;
   border: none;
-  color: var(--contrast-color);
-  font-size: 16px;
+  color: var(--accent-color); /* Use accent color for consistency */
+  font-size: 18px; /* Slightly larger for better visibility */
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#chat-bubble .chat-bubble-close:hover {
+  color: #ff0000; /* Highlight red on hover */
 }
 
 
 
-/*--------
-# Contact Panel
---------------*/
 
-
-/* The dark overlay behind the contact panel */
-.contact-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 9998;
-}
-
-/* The slide-in contact panel */
-.contact-panel {
-  position: fixed;
-  top: 0;
-  right: -400px; /* Panel is initially hidden off-screen */
-  width: 300px;
-  height: 100vh;
-  background-color: #fff;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
-  padding: 20px;
-  overflow-y: auto;
-  transition: right 0.3s ease;
-  z-index: 9999;
-  font-family: var(--default-font, Arial, sans-serif); /* Adjust to your font variables */
-}
-
-/* Close button styling */
-.close-panel-btn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: #333;
-  float: right;
-  cursor: pointer;
-}
-
-
-.contact-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 9998;
-}
-
-.contact-panel {
-  position: fixed;
-  top: 0;
-  right: -400px;
-  width: 300px;
-  height: 100vh;
-  background-color: #fff;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
-  padding: 20px;
-  overflow-y: auto;
-  transition: right 0.3s ease;
-  z-index: 9999;
-  
-  /* Apply the default font to panel content */
-  font-family: var(--default-font);
-}
-
-.close-panel-btn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: #333;
-  float: right;
-  cursor: pointer;
-}
-
-.contact-overlay.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.contact-panel.show {
-  right: 0;
-}
-
-.contact-panel h2 {
-  margin-top: 0;
-  font-size: 24px;
-  color: #333;
-  /* If headings use a different font, you can do: font-family: var(--heading-font); */
-}
-
-.contact-panel p {
-  color: #555;
-  margin-bottom: 20px;
-  /* Will use default font unless otherwise specified */
-}
-
-.contact-panel hr {
-  margin: 20px 0;
-  border: 0;
-  border-top: 1px solid #ddd;
-}
-
-/* Contact form font and styling */
-.contact-form {
-  font-family: var(--default-font); /* Ensure the same global font applies here */
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-  font-family: var(--default-font);
-  width: 100%;
-  border: 1px solid #ccc;
-  padding: 10px 12px;
-  margin-bottom: 15px;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.contact-form textarea {
-  height: 100px;
-  resize: vertical;
-}
-
-.contact-form button {
-  width: 100%;
-  border-radius: 50px;
-  /* If buttons on your site use a special font or style, add it here as well */
-}
 
 
 #contact-card {
@@ -1823,4 +1696,26 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+#footer-info {
+  margin-top: 0px; /* Reduce gap between the text and the button */
+  transition: margin-top 0.5s ease; /* Smooth transition for spacing */
+}
+
+#footer-contact-card {
+  opacity: 0;
+  transform: translateY(-10px);
+  font-size: 20px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#footer-contact-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#footer-contact-card.hide {
+  opacity: 0;
+  transform: translateY(-10px);
 }
