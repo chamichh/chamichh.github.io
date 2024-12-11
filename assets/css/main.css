@@ -1593,9 +1593,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
 
 .container {
     margin: 0 auto;
@@ -1606,8 +1603,25 @@ section,
 
 body {
     overflow-x: hidden; /* Disable horizontal scrolling */
+    position: relative;
 }
 
+
+body {
+  position: relative; /* Ensure we can position elements absolutely within the body */
+}
+
+.top-left-logo {
+  position: absolute;
+  top: 20px;    /* Adjust vertical offset */
+  left: 20px;  /* Adjust horizontal offset */
+  z-index: 9999;
+}
+
+.top-left-logo img {
+  max-width: 100px; /* Adjust size as needed */
+  height: auto;
+}
 
 /*--------
 # Chat bubble
