@@ -1,6 +1,3 @@
-Thanks for downloading this template!
-
-Template Name: MyResume
-Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-Author: BootstrapMade.com
+Website Name: Aleksis Kalis - AI Automation & Consulting | Transforming Operations into Growth Engines
+Author: Aleksis Kālis
 License: https://bootstrapmade.com/license/
