@@ -571,32 +571,6 @@
   <p>Interested in this service?<br><a href="mailto:aleksis@kaliz.ai">Contact me</a> for more info!</p>
 </div>
 
-<!-- AI Chat Widget -->
-<div class="chat-widget" id="chatWidget">
-  <div class="chat-header" onclick="toggleChat()">
-    <div class="chat-header-info">
-      <div class="chat-avatar">AK</div>
-      <div class="chat-header-text">
-        <h4>AI Assistant</h4>
-        <span>Aleksis Kālis - AI Solutions</span>
-      </div>
-    </div>
-    <button class="chat-minimize-btn" id="minimizeBtn">−</button>
-  </div>
-  
-  <div class="chat-messages" id="chatMessages">
-    <div class="chat-message bot">
-      👋 Hi! I'm Aleksis's AI assistant. I can help you with AI automation solutions, answer questions about our services, and schedule consultations. How can I assist you today?
-    </div>
-  </div>
-  
-  <div class="chat-input-area">
-    <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)">
-    <button class="chat-send-btn" id="chatSendBtn" onclick="sendChatMessage()">
-      <i class="bi bi-send"></i>
-    </button>
-  </div>
-</div>
 
 <script>
 // Chat Widget JavaScript
@@ -728,6 +702,34 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('chatInput').focus();
 });
 </script>
+
+<!-- AI Chat Widget -->
+<div class="chat-widget" id="chatWidget">
+  <div class="chat-header" onclick="toggleChat()">
+    <div class="chat-header-info">
+      <div class="chat-avatar">AK</div>
+      <div class="chat-header-text">
+        <h4>AI Assistant</h4>
+        <span>Aleksis Kālis - AI Solutions</span>
+      </div>
+    </div>
+    <button class="chat-minimize-btn" id="minimizeBtn">−</button>
+  </div>
+  
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-message bot">
+      👋 Hi! I'm Aleksis's AI assistant. I can help you with AI automation solutions, answer questions about our services, and schedule consultations. How can I assist you today?
+    </div>
+  </div>
+  
+  <div class="chat-input-area">
+    <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)">
+    <button class="chat-send-btn" id="chatSendBtn" onclick="sendChatMessage()">
+      <i class="bi bi-send"></i>
+    </button>
+  </div>
+</div>
+
 
 </body>
 
