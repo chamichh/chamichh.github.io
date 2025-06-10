@@ -1958,3 +1958,9 @@ body {
     left: 20px !important;
   }
 }
+
+.chat-message {
+  /* existing styles... */
+  white-space: pre-line !important; /* This preserves line breaks */
+  word-wrap: break-word !important;
+}
