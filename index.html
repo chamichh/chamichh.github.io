@@ -571,6 +571,164 @@
   <p>Interested in this service?<br><a href="mailto:aleksis@kaliz.ai">Contact me</a> for more info!</p>
 </div>
 
+<!-- AI Chat Widget -->
+<div class="chat-widget" id="chatWidget">
+  <div class="chat-header" onclick="toggleChat()">
+    <div class="chat-header-info">
+      <div class="chat-avatar">AK</div>
+      <div class="chat-header-text">
+        <h4>AI Assistant</h4>
+        <span>Aleksis Kālis - AI Solutions</span>
+      </div>
+    </div>
+    <button class="chat-minimize-btn" id="minimizeBtn">−</button>
+  </div>
+  
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-message bot">
+      👋 Hi! I'm Aleksis's AI assistant. I can help you with AI automation solutions, answer questions about our services, and schedule consultations. How can I assist you today?
+    </div>
+  </div>
+  
+  <div class="chat-input-area">
+    <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)">
+    <button class="chat-send-btn" id="chatSendBtn" onclick="sendChatMessage()">
+      <i class="bi bi-send"></i>
+    </button>
+  </div>
+</div>
+
+<script>
+// Chat Widget JavaScript
+const N8N_WEBHOOK_URL = 'https://kaliz.app.n8n.cloud/webhook/b3133f9e-3b48-481e-a645-f4fa7a965234';
+
+let isChatMinimized = false;
+let conversationId = 'conv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+
+function toggleChat() {
+  const widget = document.getElementById('chatWidget');
+  const minimizeBtn = document.getElementById('minimizeBtn');
+  
+  isChatMinimized = !isChatMinimized;
+  
+  if (isChatMinimized) {
+    widget.classList.add('minimized');
+    minimizeBtn.innerHTML = '+';
+  } else {
+    widget.classList.remove('minimized');
+    minimizeBtn.innerHTML = '−';
+  }
+}
+
+function handleChatKeyPress(event) {
+  if (event.key === 'Enter') {
+    sendChatMessage();
+  }
+}
+
+async function sendChatMessage() {
+  const input = document.getElementById('chatInput');
+  const message = input.value.trim();
+  
+  if (!message || document.getElementById('chatSendBtn').disabled) return;
+  
+  // Add user message
+  addChatMessage(message, 'user');
+  input.value = '';
+  
+  // Show typing indicator
+  setChatSendButtonState(false);
+  showChatTypingIndicator();
+  
+  try {
+    const response = await fetch(N8N_WEBHOOK_URL, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        chatInput: message,
+        conversationId: conversationId,
+        timestamp: new Date().toISOString(),
+        source: 'website_chat'
+      })
+    });
+
+    removeChatTypingIndicator();
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const responseText = await response.text();
+    let botMessage;
+    
+    try {
+      const data = JSON.parse(responseText);
+      botMessage = data.output || data.response || data.message || "I received your message and I'm processing it.";
+    } catch (parseError) {
+      botMessage = responseText || "I received your message and I'm processing it.";
+    }
+    
+    addChatMessage(botMessage, 'bot');
+    
+  } catch (error) {
+    console.error('Chat error:', error);
+    removeChatTypingIndicator();
+    addChatMessage("I'm sorry, I'm having trouble connecting right now. Please try again or contact aleksis@kaliz.ai directly.", 'bot');
+  } finally {
+    setChatSendButtonState(true);
+  }
+}
+
+function addChatMessage(text, sender) {
+  const messagesContainer = document.getElementById('chatMessages');
+  const messageDiv = document.createElement('div');
+  messageDiv.className = `chat-message ${sender}`;
+  messageDiv.textContent = text;
+  
+  messagesContainer.appendChild(messageDiv);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+function showChatTypingIndicator() {
+  const messagesContainer = document.getElementById('chatMessages');
+  const typingDiv = document.createElement('div');
+  typingDiv.className = 'chat-message typing';
+  typingDiv.id = 'chatTypingIndicator';
+  typingDiv.innerHTML = `
+    AI Assistant is typing
+    <div class="typing-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  `;
+  
+  messagesContainer.appendChild(typingDiv);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+function removeChatTypingIndicator() {
+  const typingIndicator = document.getElementById('chatTypingIndicator');
+  if (typingIndicator) {
+    typingIndicator.remove();
+  }
+}
+
+function setChatSendButtonState(enabled) {
+  const sendBtn = document.getElementById('chatSendBtn');
+  sendBtn.disabled = !enabled;
+}
+
+// Initialize chat when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('chatInput').focus();
+});
+</script>
+
 </body>
 
 </html>
