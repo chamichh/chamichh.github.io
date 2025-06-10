@@ -1735,11 +1735,11 @@ body {
 }
 
 /*--------------------------------------------------------------
-# AI Chat Widget - Fixed Version
+# AI Chat Widget - Enhanced Version
 --------------------------------------------------------------*/
 .chat-widget {
   position: fixed !important;
-  bottom: 20px !important;
+  bottom: 80px !important; /* Moved up to avoid scroll button collision */
   right: 20px !important;
   width: 350px !important;
   height: 500px !important;
@@ -1753,11 +1753,23 @@ body {
   z-index: 99999 !important;
   font-family: var(--default-font) !important;
   border: 2px solid var(--accent-color) !important;
+  resize: both !important; /* Makes widget resizable */
+  min-width: 300px !important;
+  min-height: 400px !important;
+  max-width: 500px !important;
+  max-height: 700px !important;
 }
 
 .chat-widget.minimized {
   height: 60px !important;
   width: 280px !important;
+  resize: none !important; /* Disable resize when minimized */
+}
+
+.chat-widget.half-open {
+  height: 120px !important; /* Shows header + partial message */
+  width: 300px !important;
+  resize: none !important;
 }
 
 .chat-header {
@@ -1830,6 +1842,11 @@ body {
   max-height: calc(100% - 120px) !important;
 }
 
+.chat-widget.half-open .chat-messages {
+  height: 40px !important;
+  overflow: hidden !important;
+}
+
 .chat-message {
   max-width: 85% !important;
   padding: 10px 14px !important;
@@ -1839,6 +1856,7 @@ body {
   font-size: 14px !important;
   line-height: 1.4 !important;
   margin-bottom: 5px !important;
+  white-space: pre-line !important; /* Preserves line breaks */
 }
 
 .chat-message.bot {
@@ -1892,6 +1910,11 @@ body {
   flex-shrink: 0 !important;
 }
 
+.chat-widget.half-open .chat-input-area,
+.chat-widget.minimized .chat-input-area {
+  display: none !important;
+}
+
 .chat-input-area input {
   flex: 1 !important;
   padding: 10px 12px !important;
@@ -1934,6 +1957,16 @@ body {
   transform: none !important;
 }
 
+/* Nudge animation for half-open state */
+.chat-widget.half-open {
+  animation: nudge 2s ease-in-out infinite !important;
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
 /* Hide the old chat bubble if it exists */
 #chat-bubble {
   display: none !important;
@@ -1949,13 +1982,22 @@ body {
   30% { transform: translateY(-8px); }
 }
 
+/* Adjust scroll button position to avoid collision */
+.scroll-top {
+  bottom: 75px !important; /* Moved up to avoid chat widget */
+}
+
 @media (max-width: 768px) {
   .chat-widget {
     width: calc(100vw - 40px) !important;
-    height: calc(100vh - 100px) !important;
-    bottom: 20px !important;
+    height: calc(100vh - 160px) !important;
+    bottom: 80px !important;
     right: 20px !important;
     left: 20px !important;
+  }
+  
+  .chat-widget.half-open {
+    height: 100px !important;
   }
 }
 

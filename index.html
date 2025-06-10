@@ -573,24 +573,32 @@
 
 
 <script>
-// Chat Widget JavaScript - Fixed Version
+// Chat Widget JavaScript - Enhanced Version
 const N8N_WEBHOOK_URL = 'https://kaliz.app.n8n.cloud/webhook/b3133f9e-3b48-481e-a645-f4fa7a965234';
 
 let isChatMinimized = false;
+let isChatHalfOpen = true; // Start in half-open state
 let sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 
 function toggleChat() {
   const widget = document.getElementById('chatWidget');
   const minimizeBtn = document.getElementById('minimizeBtn');
   
-  isChatMinimized = !isChatMinimized;
-  
-  if (isChatMinimized) {
-    widget.classList.add('minimized');
-    minimizeBtn.innerHTML = '+';
-  } else {
+  if (isChatHalfOpen) {
+    // From half-open to full open
+    isChatHalfOpen = false;
+    widget.classList.remove('half-open');
+    minimizeBtn.innerHTML = '−';
+  } else if (isChatMinimized) {
+    // From minimized to full open
+    isChatMinimized = false;
     widget.classList.remove('minimized');
     minimizeBtn.innerHTML = '−';
+  } else {
+    // From full open to minimized
+    isChatMinimized = true;
+    widget.classList.add('minimized');
+    minimizeBtn.innerHTML = '+';
   }
 }
 
@@ -605,6 +613,14 @@ async function sendChatMessage() {
   const message = input.value.trim();
   
   if (!message || document.getElementById('chatSendBtn').disabled) return;
+  
+  // Open chat fully when user sends first message
+  if (isChatHalfOpen) {
+    const widget = document.getElementById('chatWidget');
+    widget.classList.remove('half-open');
+    isChatHalfOpen = false;
+    document.getElementById('minimizeBtn').innerHTML = '−';
+  }
   
   // Add user message
   addChatMessage(message, 'user');
@@ -624,7 +640,7 @@ async function sendChatMessage() {
       },
       body: JSON.stringify({
         chatInput: message,
-        sessionId: sessionId,  // Changed from conversationId to sessionId
+        sessionId: sessionId,
         timestamp: new Date().toISOString(),
         source: 'website_chat'
       })
@@ -713,16 +729,15 @@ function setChatSendButtonState(enabled) {
 
 // Initialize chat when page loads
 document.addEventListener('DOMContentLoaded', function() {
-  const chatInput = document.getElementById('chatInput');
-  if (chatInput) {
-    chatInput.focus();
-  }
+  const chatWidget = document.getElementById('chatWidget');
   
-  // Add initial session info to console for debugging
+  // Start in half-open state
+  chatWidget.classList.add('half-open');
+  document.getElementById('minimizeBtn').innerHTML = '△'; // Up arrow to indicate it can be opened
+  
   console.log('Chat widget initialized with sessionId:', sessionId);
 });
 </script>
-
 <!-- AI Chat Widget -->
 <div class="chat-widget" id="chatWidget">
   <div class="chat-header" onclick="toggleChat()">
