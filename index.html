@@ -576,33 +576,21 @@
 // Chat Widget JavaScript - Fixed Version
 const N8N_WEBHOOK_URL = 'https://kaliz.app.n8n.cloud/webhook/b3133f9e-3b48-481e-a645-f4fa7a965234';
 
-let isExpanded = false;
-let isMinimized = false;
+let isChatMinimized = false;
 let sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 
 function toggleChat() {
   const widget = document.getElementById('chatWidget');
+  const minimizeBtn = document.getElementById('minimizeBtn');
   
-  if (!isExpanded && !isMinimized) {
-    // From compact to expanded
-    isExpanded = true;
-    widget.classList.add('expanded');
-    setTimeout(() => {
-      const input = document.getElementById('chatInput');
-      if (input) input.focus();
-    }, 300);
-  } else if (isMinimized) {
-    // From minimized to expanded
-    isMinimized = false;
-    isExpanded = true;
-    widget.classList.remove('minimized');
-    widget.classList.add('expanded');
-  } else {
-    // From expanded to minimized
-    isExpanded = false;
-    isMinimized = true;
-    widget.classList.remove('expanded');
+  isChatMinimized = !isChatMinimized;
+  
+  if (isChatMinimized) {
     widget.classList.add('minimized');
+    minimizeBtn.innerHTML = '+';
+  } else {
+    widget.classList.remove('minimized');
+    minimizeBtn.innerHTML = '−';
   }
 }
 
@@ -618,18 +606,11 @@ async function sendChatMessage() {
   
   if (!message || document.getElementById('chatSendBtn').disabled) return;
   
-  // Ensure chat is expanded when sending message
-  if (!isExpanded) {
-    const widget = document.getElementById('chatWidget');
-    isExpanded = true;
-    isMinimized = false;
-    widget.classList.remove('minimized');
-    widget.classList.add('expanded');
-  }
-  
+  // Add user message
   addChatMessage(message, 'user');
   input.value = '';
   
+  // Show typing indicator
   setChatSendButtonState(false);
   showChatTypingIndicator();
   
@@ -643,12 +624,14 @@ async function sendChatMessage() {
       },
       body: JSON.stringify({
         chatInput: message,
-        sessionId: sessionId,
+        sessionId: sessionId,  // Changed from conversationId to sessionId
         timestamp: new Date().toISOString(),
         source: 'website_chat'
       })
     });
 
+    console.log('Response status:', response.status);
+    
     removeChatTypingIndicator();
 
     if (!response.ok) {
@@ -656,6 +639,8 @@ async function sendChatMessage() {
     }
 
     const responseText = await response.text();
+    console.log('Raw response:', responseText);
+    
     let botMessage;
     
     if (responseText) {
@@ -663,6 +648,7 @@ async function sendChatMessage() {
         const data = JSON.parse(responseText);
         botMessage = data.output || data.response || data.message || "I received your message and I'm processing it.";
       } catch (parseError) {
+        console.log('Parse error, treating as text:', parseError);
         botMessage = responseText || "I received your message and I'm processing it.";
       }
     } else {
@@ -725,24 +711,20 @@ function setChatSendButtonState(enabled) {
   sendBtn.disabled = !enabled;
 }
 
-// Initialize when DOM loads
+// Initialize chat when page loads
 document.addEventListener('DOMContentLoaded', function() {
-  const chatWidget = document.getElementById('chatWidget');
+  const chatInput = document.getElementById('chatInput');
+  if (chatInput) {
+    chatInput.focus();
+  }
   
-  // Add click handler to the entire widget
-  chatWidget.addEventListener('click', function(event) {
-    if (!isExpanded) {
-      event.preventDefault();
-      event.stopPropagation();
-      toggleChat();
-    }
-  });
-  
-  console.log('Chat widget initialized - starting compact');
+  // Add initial session info to console for debugging
+  console.log('Chat widget initialized with sessionId:', sessionId);
 });
 </script>
 
 
+<!-- Place this just before </body> -->
 <!-- AI Chat Widget -->
 <div class="chat-widget" id="chatWidget">
   <div class="chat-header" onclick="toggleChat()">
@@ -770,7 +752,5 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-
 </body>
-
 </html>
