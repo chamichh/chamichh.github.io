@@ -573,7 +573,7 @@
 
 
 <script>
-// Chat Widget JavaScript - Ultra Compact Version
+// Chat Widget JavaScript - Fixed Ultra Compact Version
 const N8N_WEBHOOK_URL = 'https://kaliz.app.n8n.cloud/webhook/b3133f9e-3b48-481e-a645-f4fa7a965234';
 
 let isChatMinimized = false;
@@ -593,6 +593,7 @@ function toggleChat() {
     hasBeenActivated = true;
     widget.classList.remove('half-open');
     minimizeBtn.innerHTML = '−';
+    minimizeBtn.style.display = 'block';
     setTimeout(() => {
       const input = document.getElementById('chatInput');
       if (input) input.focus();
@@ -602,18 +603,18 @@ function toggleChat() {
     isChatMinimized = false;
     widget.classList.remove('minimized');
     minimizeBtn.innerHTML = '−';
+    minimizeBtn.style.display = 'block';
   } else {
     // From full open to small bubble (after first activation)
     isChatMinimized = true;
     widget.classList.add('minimized');
     minimizeBtn.innerHTML = '+';
+    minimizeBtn.style.display = 'none';
   }
 }
 
 // Add click handler for the entire widget when collapsed
 function handleWidgetClick(event) {
-  const widget = document.getElementById('chatWidget');
-  
   if ((isChatHalfOpen && isFirstSession) || isChatMinimized) {
     event.preventDefault();
     event.stopPropagation();
@@ -640,7 +641,9 @@ async function sendChatMessage() {
     isChatHalfOpen = false;
     isFirstSession = false;
     hasBeenActivated = true;
-    document.getElementById('minimizeBtn').innerHTML = '−';
+    const minimizeBtn = document.getElementById('minimizeBtn');
+    minimizeBtn.innerHTML = '−';
+    minimizeBtn.style.display = 'block';
   }
   
   // Add user message
@@ -752,8 +755,12 @@ function setChatSendButtonState(enabled) {
 document.addEventListener('DOMContentLoaded', function() {
   const chatWidget = document.getElementById('chatWidget');
   
-  // Start in half-open state (much smaller)
+  // Ensure widget starts in half-open state
   chatWidget.classList.add('half-open');
+  
+  // Hide minimize button initially
+  const minimizeBtn = document.getElementById('minimizeBtn');
+  minimizeBtn.style.display = 'none';
   
   // Add click handler for entire widget when collapsed
   chatWidget.addEventListener('click', handleWidgetClick);
