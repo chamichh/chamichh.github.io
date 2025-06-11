@@ -1624,11 +1624,11 @@ body {
 }
 
 /*--------------------------------------------------------------
-# AI Chat Widget - Fixed Half-Open State
+# AI Chat Widget - Ultra Compact Version
 --------------------------------------------------------------*/
 .chat-widget {
   position: fixed !important;
-  bottom: 100px !important; /* More space from scroll button */
+  bottom: 20px !important;
   right: 20px !important;
   width: 350px !important;
   height: 500px !important;
@@ -1650,16 +1650,18 @@ body {
 }
 
 .chat-widget.minimized {
-  height: 60px !important;
-  width: 280px !important;
+  height: 50px !important; /* Small bubble in corner */
+  width: 50px !important;
   resize: none !important;
+  border-radius: 50% !important; /* Round bubble */
+  cursor: pointer !important;
 }
 
 .chat-widget.half-open {
-  height: 80px !important; /* Smaller half-open state */
-  width: 280px !important;
+  height: 40px !important; /* Much smaller initial state */
+  width: 200px !important; /* Narrower width */
   resize: none !important;
-  cursor: pointer !important; /* Indicate it's clickable */
+  cursor: pointer !important;
 }
 
 .chat-header {
@@ -1675,13 +1677,24 @@ body {
 }
 
 .chat-widget.half-open .chat-header {
-  padding: 10px 15px !important; /* Smaller padding in half-open */
+  padding: 8px 12px !important; /* Much smaller padding */
+  border-radius: 13px !important; /* Fully rounded when half-open */
+}
+
+.chat-widget.minimized .chat-header {
+  padding: 12px !important;
+  border-radius: 50% !important; /* Round when minimized */
+  justify-content: center !important;
 }
 
 .chat-header-info {
   display: flex !important;
   align-items: center !important;
-  gap: 10px !important;
+  gap: 8px !important;
+}
+
+.chat-widget.minimized .chat-header-info {
+  gap: 0 !important;
 }
 
 .chat-avatar {
@@ -1698,9 +1711,19 @@ body {
 }
 
 .chat-widget.half-open .chat-avatar {
+  width: 20px !important;
+  height: 20px !important;
+  font-size: 10px !important;
+}
+
+.chat-widget.minimized .chat-avatar {
   width: 25px !important;
   height: 25px !important;
   font-size: 12px !important;
+}
+
+.chat-header-text {
+  flex: 1 !important;
 }
 
 .chat-header-text h4 {
@@ -1711,7 +1734,14 @@ body {
 }
 
 .chat-widget.half-open .chat-header-text h4 {
-  font-size: 12px !important;
+  font-size: 10px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.chat-widget.minimized .chat-header-text {
+  display: none !important; /* Hide text when minimized */
 }
 
 .chat-header-text span {
@@ -1721,22 +1751,23 @@ body {
 }
 
 .chat-widget.half-open .chat-header-text span {
-  font-size: 9px !important;
+  display: none !important; /* Hide subtitle when half-open */
 }
 
 .chat-minimize-btn {
   background: none !important;
   border: none !important;
   color: white !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   cursor: pointer !important;
-  padding: 5px !important;
+  padding: 3px !important;
   border-radius: 3px !important;
   transition: background 0.2s !important;
 }
 
-.chat-widget.half-open .chat-minimize-btn {
-  display: none !important; /* Hide triangle button in half-open state */
+.chat-widget.half-open .chat-minimize-btn,
+.chat-widget.minimized .chat-minimize-btn {
+  display: none !important; /* Hide button in collapsed states */
 }
 
 .chat-minimize-btn:hover {
@@ -1756,7 +1787,7 @@ body {
 
 .chat-widget.half-open .chat-messages,
 .chat-widget.minimized .chat-messages {
-  display: none !important; /* Hide messages in collapsed states */
+  display: none !important;
 }
 
 .chat-message {
@@ -1869,14 +1900,23 @@ body {
   transform: none !important;
 }
 
-/* Subtle pulse animation for half-open state */
+/* Subtle glow animation for half-open state */
 .chat-widget.half-open {
-  animation: subtlePulse 3s ease-in-out infinite !important;
+  animation: subtleGlow 2s ease-in-out infinite !important;
 }
 
-@keyframes subtlePulse {
-  0%, 100% { transform: scale(1); opacity: 0.9; }
-  50% { transform: scale(1.02); opacity: 1; }
+.chat-widget.minimized {
+  animation: miniPulse 3s ease-in-out infinite !important;
+}
+
+@keyframes subtleGlow {
+  0%, 100% { box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3); }
+  50% { box-shadow: 0 5px 20px rgba(102, 126, 234, 0.5); }
+}
+
+@keyframes miniPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 /* Hide the old chat bubble if it exists */
@@ -1894,23 +1934,23 @@ body {
   30% { transform: translateY(-8px); }
 }
 
-/* Ensure scroll button doesn't collide */
-.scroll-top {
-  bottom: 15px !important; /* Reset to original position */
-}
-
 @media (max-width: 768px) {
   .chat-widget {
     width: calc(100vw - 40px) !important;
-    height: calc(100vh - 160px) !important;
-    bottom: 100px !important;
+    height: calc(100vh - 100px) !important;
+    bottom: 20px !important;
     right: 20px !important;
     left: 20px !important;
   }
   
   .chat-widget.half-open {
-    height: 70px !important;
-    width: calc(100vw - 80px) !important;
+    height: 35px !important;
+    width: 180px !important;
+  }
+  
+  .chat-widget.minimized {
+    height: 45px !important;
+    width: 45px !important;
   }
 }
 
@@ -1918,4 +1958,9 @@ body {
   /* existing styles... */
   white-space: pre-line !important; /* This preserves line breaks */
   word-wrap: break-word !important;
+}
+
+/* Hide scroll button completely */
+.scroll-top {
+  display: none !important;
 }
