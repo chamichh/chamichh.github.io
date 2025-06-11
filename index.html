@@ -573,52 +573,36 @@
 
 
 <script>
-// Chat Widget JavaScript - Fixed Ultra Compact Version
+// Chat Widget JavaScript - Fixed Version
 const N8N_WEBHOOK_URL = 'https://kaliz.app.n8n.cloud/webhook/b3133f9e-3b48-481e-a645-f4fa7a965234';
 
-let isChatMinimized = false;
-let isChatHalfOpen = true;
-let isFirstSession = true;
-let hasBeenActivated = false;
+let isExpanded = false;
+let isMinimized = false;
 let sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 
 function toggleChat() {
   const widget = document.getElementById('chatWidget');
-  const minimizeBtn = document.getElementById('minimizeBtn');
   
-  if (isChatHalfOpen && isFirstSession) {
-    // First activation: from half-open to full open
-    isChatHalfOpen = false;
-    isFirstSession = false;
-    hasBeenActivated = true;
-    widget.classList.remove('half-open');
-    minimizeBtn.innerHTML = '−';
-    minimizeBtn.style.display = 'block';
+  if (!isExpanded && !isMinimized) {
+    // From compact to expanded
+    isExpanded = true;
+    widget.classList.add('expanded');
     setTimeout(() => {
       const input = document.getElementById('chatInput');
       if (input) input.focus();
     }, 300);
-  } else if (isChatMinimized) {
-    // From minimized bubble to full open
-    isChatMinimized = false;
+  } else if (isMinimized) {
+    // From minimized to expanded
+    isMinimized = false;
+    isExpanded = true;
     widget.classList.remove('minimized');
-    minimizeBtn.innerHTML = '−';
-    minimizeBtn.style.display = 'block';
+    widget.classList.add('expanded');
   } else {
-    // From full open to small bubble (after first activation)
-    isChatMinimized = true;
+    // From expanded to minimized
+    isExpanded = false;
+    isMinimized = true;
+    widget.classList.remove('expanded');
     widget.classList.add('minimized');
-    minimizeBtn.innerHTML = '+';
-    minimizeBtn.style.display = 'none';
-  }
-}
-
-// Add click handler for the entire widget when collapsed
-function handleWidgetClick(event) {
-  if ((isChatHalfOpen && isFirstSession) || isChatMinimized) {
-    event.preventDefault();
-    event.stopPropagation();
-    toggleChat();
   }
 }
 
@@ -634,23 +618,18 @@ async function sendChatMessage() {
   
   if (!message || document.getElementById('chatSendBtn').disabled) return;
   
-  // Open chat fully when user sends first message
-  if (isChatHalfOpen) {
+  // Ensure chat is expanded when sending message
+  if (!isExpanded) {
     const widget = document.getElementById('chatWidget');
-    widget.classList.remove('half-open');
-    isChatHalfOpen = false;
-    isFirstSession = false;
-    hasBeenActivated = true;
-    const minimizeBtn = document.getElementById('minimizeBtn');
-    minimizeBtn.innerHTML = '−';
-    minimizeBtn.style.display = 'block';
+    isExpanded = true;
+    isMinimized = false;
+    widget.classList.remove('minimized');
+    widget.classList.add('expanded');
   }
   
-  // Add user message
   addChatMessage(message, 'user');
   input.value = '';
   
-  // Show typing indicator
   setChatSendButtonState(false);
   showChatTypingIndicator();
   
@@ -670,8 +649,6 @@ async function sendChatMessage() {
       })
     });
 
-    console.log('Response status:', response.status);
-    
     removeChatTypingIndicator();
 
     if (!response.ok) {
@@ -679,8 +656,6 @@ async function sendChatMessage() {
     }
 
     const responseText = await response.text();
-    console.log('Raw response:', responseText);
-    
     let botMessage;
     
     if (responseText) {
@@ -688,7 +663,6 @@ async function sendChatMessage() {
         const data = JSON.parse(responseText);
         botMessage = data.output || data.response || data.message || "I received your message and I'm processing it.";
       } catch (parseError) {
-        console.log('Parse error, treating as text:', parseError);
         botMessage = responseText || "I received your message and I'm processing it.";
       }
     } else {
@@ -751,21 +725,20 @@ function setChatSendButtonState(enabled) {
   sendBtn.disabled = !enabled;
 }
 
-// Initialize chat when page loads
+// Initialize when DOM loads
 document.addEventListener('DOMContentLoaded', function() {
   const chatWidget = document.getElementById('chatWidget');
   
-  // Ensure widget starts in half-open state
-  chatWidget.classList.add('half-open');
+  // Add click handler to the entire widget
+  chatWidget.addEventListener('click', function(event) {
+    if (!isExpanded) {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleChat();
+    }
+  });
   
-  // Hide minimize button initially
-  const minimizeBtn = document.getElementById('minimizeBtn');
-  minimizeBtn.style.display = 'none';
-  
-  // Add click handler for entire widget when collapsed
-  chatWidget.addEventListener('click', handleWidgetClick);
-  
-  console.log('Chat widget initialized with sessionId:', sessionId);
+  console.log('Chat widget initialized - starting compact');
 });
 </script>
 
