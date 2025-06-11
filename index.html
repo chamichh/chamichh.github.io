@@ -573,11 +573,12 @@
 
 
 <script>
-// Chat Widget JavaScript - Enhanced Version
+// Chat Widget JavaScript - Fixed Half-Open State
 const N8N_WEBHOOK_URL = 'https://kaliz.app.n8n.cloud/webhook/b3133f9e-3b48-481e-a645-f4fa7a965234';
 
 let isChatMinimized = false;
-let isChatHalfOpen = true; // Start in half-open state
+let isChatHalfOpen = true;
+let isFirstSession = true;
 let sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 
 function toggleChat() {
@@ -587,8 +588,14 @@ function toggleChat() {
   if (isChatHalfOpen) {
     // From half-open to full open
     isChatHalfOpen = false;
+    isFirstSession = false;
     widget.classList.remove('half-open');
     minimizeBtn.innerHTML = '−';
+    // Focus on input when opening
+    setTimeout(() => {
+      const input = document.getElementById('chatInput');
+      if (input) input.focus();
+    }, 300);
   } else if (isChatMinimized) {
     // From minimized to full open
     isChatMinimized = false;
@@ -599,6 +606,17 @@ function toggleChat() {
     isChatMinimized = true;
     widget.classList.add('minimized');
     minimizeBtn.innerHTML = '+';
+  }
+}
+
+// Add click handler for the entire widget when half-open
+function handleWidgetClick(event) {
+  const widget = document.getElementById('chatWidget');
+  
+  if (isChatHalfOpen && isFirstSession) {
+    event.preventDefault();
+    event.stopPropagation();
+    toggleChat();
   }
 }
 
@@ -619,6 +637,7 @@ async function sendChatMessage() {
     const widget = document.getElementById('chatWidget');
     widget.classList.remove('half-open');
     isChatHalfOpen = false;
+    isFirstSession = false;
     document.getElementById('minimizeBtn').innerHTML = '−';
   }
   
@@ -733,11 +752,15 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Start in half-open state
   chatWidget.classList.add('half-open');
-  document.getElementById('minimizeBtn').innerHTML = '△'; // Up arrow to indicate it can be opened
+  
+  // Add click handler for entire widget when half-open
+  chatWidget.addEventListener('click', handleWidgetClick);
   
   console.log('Chat widget initialized with sessionId:', sessionId);
 });
 </script>
+
+
 <!-- AI Chat Widget -->
 <div class="chat-widget" id="chatWidget">
   <div class="chat-header" onclick="toggleChat()">

@@ -1623,123 +1623,12 @@ body {
   height: auto;
 }
 
-/*--------
-# Chat bubble
---------------*/
-
-#chat-bubble {
-  position: fixed;
-  bottom: 90px; 
-  right: 20px;
-  background-color: var(--surface-color); /* Match contact card background */
-  border: 2px solid var(--accent-color); /* Add border for a card-like look */
-  border-radius: 10px; /* Rounded corners to match the contact card */
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  padding: 20px; /* Uniform padding */
-  max-width: 300px; /* Increase width for a larger bubble */
-  z-index: 99999; /* Ensure it appears on top */
-  color: var(--default-color); /* Match contact card text color */
-  font-size: 16px; /* Adjust font size for readability */
-  line-height: 1.5;
-  white-space: normal;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade and movement */
-}
-
-#chat-bubble p {
-  margin: 0;
-  font-size: 16px; /* Match font size to contact card */
-}
-
-#chat-bubble p a {
-  color: var(--accent-color); /* Match the link color of the contact card */
-  font-weight: bold;
-  text-decoration: underline; /* Make the link more prominent */
-}
-
-/* When showing the bubble */
-#chat-bubble.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* When hiding the bubble */
-#chat-bubble.hide {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-/* Remove arrow */
-#chat-bubble::before {
-  content: none;
-}
-
-/* Close button adjustments */
-#chat-bubble .chat-bubble-close {
-  position: absolute;
-  top: 1px; /* Adjust to align with the new design */
-  right: 5px;
-  background: none;
-  border: none;
-  color: var(--accent-color); /* Use accent color for consistency */
-  font-size: 18px; /* Slightly larger for better visibility */
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-#chat-bubble .chat-bubble-close:hover {
-  color: #ff0000; /* Highlight red on hover */
-}
-
-
-
-
-
-
-#contact-card {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#footer-info {
-  margin-top: 0px; /* Reduce gap between the text and the button */
-  transition: margin-top 0.5s ease; /* Smooth transition for spacing */
-}
-
-#footer-contact-card {
-  opacity: 0;
-  transform: translateY(-10px);
-  font-size: 20px;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-#footer-contact-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#footer-contact-card.hide {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
 /*--------------------------------------------------------------
-# AI Chat Widget - Enhanced Version
+# AI Chat Widget - Fixed Half-Open State
 --------------------------------------------------------------*/
 .chat-widget {
   position: fixed !important;
-  bottom: 80px !important; /* Moved up to avoid scroll button collision */
+  bottom: 100px !important; /* More space from scroll button */
   right: 20px !important;
   width: 350px !important;
   height: 500px !important;
@@ -1753,7 +1642,7 @@ body {
   z-index: 99999 !important;
   font-family: var(--default-font) !important;
   border: 2px solid var(--accent-color) !important;
-  resize: both !important; /* Makes widget resizable */
+  resize: both !important;
   min-width: 300px !important;
   min-height: 400px !important;
   max-width: 500px !important;
@@ -1763,13 +1652,14 @@ body {
 .chat-widget.minimized {
   height: 60px !important;
   width: 280px !important;
-  resize: none !important; /* Disable resize when minimized */
+  resize: none !important;
 }
 
 .chat-widget.half-open {
-  height: 120px !important; /* Shows header + partial message */
-  width: 300px !important;
+  height: 80px !important; /* Smaller half-open state */
+  width: 280px !important;
   resize: none !important;
+  cursor: pointer !important; /* Indicate it's clickable */
 }
 
 .chat-header {
@@ -1782,6 +1672,10 @@ body {
   cursor: pointer !important;
   border-radius: 13px 13px 0 0 !important;
   flex-shrink: 0 !important;
+}
+
+.chat-widget.half-open .chat-header {
+  padding: 10px 15px !important; /* Smaller padding in half-open */
 }
 
 .chat-header-info {
@@ -1803,6 +1697,12 @@ body {
   color: white !important;
 }
 
+.chat-widget.half-open .chat-avatar {
+  width: 25px !important;
+  height: 25px !important;
+  font-size: 12px !important;
+}
+
 .chat-header-text h4 {
   font-size: 14px !important;
   margin: 0 !important;
@@ -1810,10 +1710,18 @@ body {
   font-family: var(--heading-font) !important;
 }
 
+.chat-widget.half-open .chat-header-text h4 {
+  font-size: 12px !important;
+}
+
 .chat-header-text span {
   font-size: 11px !important;
   opacity: 0.9 !important;
   color: white !important;
+}
+
+.chat-widget.half-open .chat-header-text span {
+  font-size: 9px !important;
 }
 
 .chat-minimize-btn {
@@ -1825,6 +1733,10 @@ body {
   padding: 5px !important;
   border-radius: 3px !important;
   transition: background 0.2s !important;
+}
+
+.chat-widget.half-open .chat-minimize-btn {
+  display: none !important; /* Hide triangle button in half-open state */
 }
 
 .chat-minimize-btn:hover {
@@ -1842,9 +1754,9 @@ body {
   max-height: calc(100% - 120px) !important;
 }
 
-.chat-widget.half-open .chat-messages {
-  height: 40px !important;
-  overflow: hidden !important;
+.chat-widget.half-open .chat-messages,
+.chat-widget.minimized .chat-messages {
+  display: none !important; /* Hide messages in collapsed states */
 }
 
 .chat-message {
@@ -1856,7 +1768,7 @@ body {
   font-size: 14px !important;
   line-height: 1.4 !important;
   margin-bottom: 5px !important;
-  white-space: pre-line !important; /* Preserves line breaks */
+  white-space: pre-line !important;
 }
 
 .chat-message.bot {
@@ -1957,14 +1869,14 @@ body {
   transform: none !important;
 }
 
-/* Nudge animation for half-open state */
+/* Subtle pulse animation for half-open state */
 .chat-widget.half-open {
-  animation: nudge 2s ease-in-out infinite !important;
+  animation: subtlePulse 3s ease-in-out infinite !important;
 }
 
-@keyframes nudge {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+@keyframes subtlePulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.02); opacity: 1; }
 }
 
 /* Hide the old chat bubble if it exists */
@@ -1982,22 +1894,23 @@ body {
   30% { transform: translateY(-8px); }
 }
 
-/* Adjust scroll button position to avoid collision */
+/* Ensure scroll button doesn't collide */
 .scroll-top {
-  bottom: 75px !important; /* Moved up to avoid chat widget */
+  bottom: 15px !important; /* Reset to original position */
 }
 
 @media (max-width: 768px) {
   .chat-widget {
     width: calc(100vw - 40px) !important;
     height: calc(100vh - 160px) !important;
-    bottom: 80px !important;
+    bottom: 100px !important;
     right: 20px !important;
     left: 20px !important;
   }
   
   .chat-widget.half-open {
-    height: 100px !important;
+    height: 70px !important;
+    width: calc(100vw - 80px) !important;
   }
 }
 
