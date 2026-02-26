@@ -2,26 +2,25 @@
 <html lang="en">
 
 <head>
-  <!-- Essential Meta Tags -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <!-- Primary Meta Tags -->
-  <title>Aleksis Kālis - AI Solutions Ambassador & Automation Engineer</title>
-  <meta name="description" content="Aleksis Kālis is an AI Solutions Ambassador, Automation Engineer, Lecturer, Technical Sales Engineer, and Start-Up Enthusiast. Offering tailored AI and automation solutions to streamline your business processes.">
-  <meta name="keywords" content="Aleksis Kālis, AI Solutions, Automation Engineer, Lecturer, Technical Sales Engineer, Start-Up Enthusiast, AI, Automation, Business Processes">
+  <title>Aleksis Kālis — AI Specialist & Automation Consultant</title>
+  <meta name="description" content="AI Specialist & Automation Consultant. Building automated workflows, custom AI tools, and training programmes for government and private-sector clients through Kaliz.ai.">
+  <meta name="keywords" content="Aleksis Kālis, AI Specialist, Automation Consultant, n8n, AI Solutions, Latvia, Kaliz.ai">
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Aleksis Kālis - AI Solutions Ambassador & Automation Engineer">
-  <meta property="og:description" content="Offering tailored AI and automation solutions to streamline your business processes.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aleksis Kālis — AI Specialist & Automation Consultant">
+  <meta property="og:description" content="Building automated workflows, custom AI tools, and training programmes. Founder of Kaliz.ai.">
   <meta property="og:image" content="assets/img/hero-bg.JPEG">
   <meta property="og:url" content="https://www.kaliz.ai">
   <meta property="og:type" content="website">
 
-  <!-- Twitter Card Meta Tags -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Aleksis Kālis - AI Solutions Ambassador & Automation Engineer">
-  <meta name="twitter:description" content="Offering tailored AI and automation solutions to streamline your business processes.">
+  <meta name="twitter:title" content="Aleksis Kālis — AI Specialist & Automation Consultant">
+  <meta name="twitter:description" content="Building automated workflows, custom AI tools, and training programmes. Founder of Kaliz.ai.">
   <meta name="twitter:image" content="assets/img/hero-bg.JPEG">
 
   <!-- Favicons -->
@@ -29,728 +28,1244 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Author: Aleksis Kālis
-  * Description: AI Solutions Ambassador & Automation Engineer
-  * Updated: Dec 06 2024 with Bootstrap v5.3.3
-  ======================================================== -->
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header d-flex flex-column justify-content-center">
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner"></div>
+  </div>
 
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <!-- Gradient Mesh Blobs -->
+  <div class="blob-container" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero">
+        <img src="assets/img/Kaliz-logo2.png" alt="Kaliz.ai" class="nav-logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
       </ul>
-    </nav>
-
-  </header>
-
-  <div class="top-left-logo">
-    <img src="assets/img/Kaliz-logo2.png" alt="Kaliz.ai Logo">
-  </div>
-
-  <main class="main">
-
-    <!-- Hero Section -->
- <section id="hero" class="hero section light-background">
-  <img src="assets/img/hero-bg.JPEG" alt="Background image of Aleksis Kālis' Hero Section">
-
-  <div class="container" data-aos="zoom-out">
-    <div class="row">
-      <div class="col-lg-9" style="margin-left: 10%; max-width: 80%;">
-        <h1>Aleksis Kālis</h1>
-        <p>I'm <span class="typed" data-typed-items="AI Solutions Ambassador, Automations Engineer, Lecturer, Technical Sales Engineer, Start-Up Enthusiast">Lecturer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-        <div class="social-links mb-3">
-          <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank"><i class="bi bi-linkedin"></i></a>
-        </div>
-        <!-- Instead of mailto: replace with a normal link and add an id -->
-        <div id="contact-container">
-          <a href="#" id="contact-trigger" class="btn btn-primary btn-lg rounded-pill px-4 py-2">Contact Me</a>
-          <div id="contact-card" class="card border-primary" style="max-width: 18rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title">Get in Touch</h5>
-              <p class="card-text">
-                <a href="mailto:aleksis@kaliz.ai" class="text-primary fw-bold">aleksis@kaliz.ai</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="bi bi-list"></i>
+      </button>
     </div>
-  </div>
-</section><!-- /Hero Section -->
+  </nav>
 
-
-    <!-- About Me Section -->
-    <section id="about">
-      <div class="container section-title position-relative border-start border-3 border-primary ps-4" data-aos="fade-up">
-        <h2 class="fw-bold text-dark mb-5 display-4">About Me</h2>
-        <div class="mt-5">
-          <p class="text-grey fs-5 lh-lg position-relative d-inline-block px-4 py-2 bg-light rounded shadow-sm">
-            I specialize in creating tailored AI solutions that help businesses unlock their full potential.
-            <br>
-            With expertise in automation, Start-Ups, and practical AI applications,
-            <br>
-            <span class="text-primary">
-              I turn complex challenges into efficient, innovative results.
-            </span>
-            <br>
-            Let me guide your journey into the world of AI and empower your business to thrive.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-emoji-smile"></i>
-            <div class="stats-item">
-              <span id="stat-1" data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="2" class="purecounter"></span><span>+</span>
-              <p>Happy Lecture Attendees</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-diagram-3"></i>
-            <div class="stats-item">
-              <span id="stat-2" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="2" class="purecounter"></span><span>+</span>
-              <p>Automations Delivered</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-gear"></i>
-            <div class="stats-item">
-              <span id="stat-3" data-purecounter-start="0" data-purecounter-end="2000" data-purecounter-duration="2" class="purecounter"></span><span>+</span>
-              <p>Hours Spent with AI and Automations</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-people"></i>
-            <div class="stats-item">
-              <span id="stat-4" data-purecounter-start="0" data-purecounter-end="70" data-purecounter-duration="2" class="purecounter"></span><span>%</span>
-              <p>Average of Manual Work Saved Per Week</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-      <!-- Section Title -->
-      <div class="container section-title position-relative border-start border-3 border-primary ps-4" data-aos="fade-up">
-        <h2 class="fw-bold text-dark mb-5 display-4">Skills</h2>
-        <div class="mt-5">
-          <p class="text-grey fs-5 lh-lg position-relative d-inline-block px-4 py-2 bg-light rounded shadow-sm">
-            I specialize in AI and automation, using tools like n8n, Python, and ChatGPT.
-            <br>
-            <span class="text-primary">
-              My expertise streamlines workflows, enhances data analysis, and optimizes sales processes.
-            </span>
-            <br>
-            <span>
-              These skills are designed to drive efficiency and empower businesses to grow.
-            </span>
-          </p>
-        </div>
-      </div>
-
-      <!-- Adding a gap -->
-      <div class="container mb-5"></div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>ChatGPT</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>SQL</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>n8n (Automations Builder)</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Sales Processes</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
- <!-- Services Section -->
-<section id="services" class="services section">
-  <!-- Section Title with Blue Line -->
-  <div class="container section-title position-relative border-start border-3 border-primary ps-4 mb-5" data-aos="fade-up">
-    <h2 class="fw-bold text-dark mb-5 display-4">Services</h2>
-    <div class="mt-5">
-      <p class="text-grey fs-5 lh-lg position-relative d-inline-block px-4 py-2 bg-light rounded shadow-sm">
-        I offer tailored AI and automation solutions designed to simplify workflows.
-        <br>
-        <span class="text-primary">
-          Optimize processes, enhance efficiency, and empower growth.
-        </span>
-        <br>
-        My expertise spans various industries, delivering innovative tools and strategies to businesses.
-      </p>
-    </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+      <i class="bi bi-x"></i>
+    </button>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#testimonials" class="mobile-link">Testimonials</a>
+    <a href="#contact" class="mobile-link">Contact</a>
   </div>
 
-  <!-- Services Grid -->
-  <div class="container">
-    <div class="row gy-4">
+  <main>
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-item item-cyan position-relative">
-          <div class="icon">
-            <i class="bi bi-activity"></i>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero section" id="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge reveal">
+            <span class="pulse"></span>
+            Available for projects
           </div>
-          <a href="javascript:void(0)" class="stretched-link">
-            <h3>AI-Powered Automation</h3>
-          </a>
-          <p>
-            Streamline repetitive tasks using advanced automation tools like n8n, improving efficiency and reducing manual work.
+          <h1 class="hero-name reveal reveal-delay-1">
+            Aleksis<br><span class="gradient-text">Kālis</span>
+          </h1>
+          <p class="hero-roles reveal reveal-delay-2">
+            <span class="typed" data-typed-items="AI Specialist & Automation Consultant, AI Project Manager — Supreme Court, Founder of Kaliz.ai, Guest Lecturer — AI & Computer Vision"></span>
           </p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-item item-orange position-relative">
-          <div class="icon">
-            <i class="bi bi-gear"></i>
+          <div class="hero-actions reveal reveal-delay-3">
+            <button onclick="openChatWithBooking()" class="btn-primary-gradient">
+              <i class="bi bi-calendar-check"></i> Book a Meeting
+            </button>
+            <a href="#contact" class="btn-outline">
+              <i class="bi bi-arrow-right"></i> Get in Touch
+            </a>
+            <a href="#experience" class="btn-outline">
+              <i class="bi bi-briefcase"></i> View Experience
+            </a>
           </div>
-          <a href="javascript:void(0)" class="stretched-link">
-            <h3>Custom AI Solutions</h3>
-          </a>
-          <p>
-            Develop personalized AI strategies tailored to your business needs, from data analysis to complex workflows.
-          </p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item item-teal position-relative">
-          <div class="icon">
-            <i class="bi bi-bar-chart"></i>
-          </div>
-          <a href="javascript:void(0)" class="stretched-link">
-            <h3>Data Analysis & Insights</h3>
-          </a>
-          <p>
-            Leverage Python and SQL for in-depth data analysis, transforming raw data into actionable insights for smarter decision-making.
-          </p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-item item-red position-relative">
-          <div class="icon">
-            <i class="bi bi-people"></i>
-          </div>
-          <a href="javascript:void(0)" class="stretched-link">
-            <h3>Team Training & Workshops</h3>
-          </a>
-          <p>
-            Educate your team on practical AI and automation tools through tailored workshops and hands-on training sessions.
-          </p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-        <div class="service-item item-indigo position-relative">
-          <div class="icon">
-            <i class="bi bi-diagram-3"></i>
-          </div>
-          <a href="javascript:void(0)" class="stretched-link">
-            <h3>Workflow Optimization</h3>
-          </a>
-          <p>
-            Redesign and optimize your workflows with AI-driven tools, ensuring faster, smarter, and more reliable operations.
-          </p>
-        </div>
-      </div><!-- End Service Item -->
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-        <div class="service-item item-pink position-relative">
-          <div class="icon">
-            <i class="bi bi-chat-dots"></i>
-          </div>
-          <a href="javascript:void(0)" class="stretched-link">
-            <h3>AI Consultations</h3>
-          </a>
-          <p>
-            Get expert advice on integrating AI into your business, from identifying opportunities to implementing cutting-edge solutions.
-          </p>
-        </div>
-      </div><!-- End Service Item -->
-
-    </div>
-  </div>
-
-</section><!-- /Services Section -->
-
-
-<!-- Testimonials Section -->
-<section id="testimonials" class="testimonials section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Testimonials</h2>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="swiper init-swiper">
-      <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "autoplay": {
-            "delay": 5000
-          },
-          "slidesPerView": "auto",
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
-          }
-        }
-      </script>
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row gy-4 justify-content-center align-items-center text-center text-lg-start">
-              <div class="col-lg-6 col-sm-12">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>The course was definitely valuable. It's understandable and useful even for beginners. It encourages thinking and looking for solutions to complete everyday tasks much faster and more productively. The lecturer was AMAZING – it’s important not only to be a specialist but also to be able to explain your knowledge in a way that others can easily understand.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <h3>Līga</h3>
-                  <h4 class="text-muted">Ozolkalns</h4>
-                  <h5 style="font-size: 16px; font-weight: normal; margin-top: 5px; color: #666;">Administrator &amp; Head of Management</h5>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-2 col-sm-12">
-                <img src="assets/img/testimonials/2.png" class="img-fluid testimonial-logo" alt="Logo of Ozolkalns">
-              </div>
-            </div>
-          </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row gy-4 justify-content-center align-items-center text-center text-lg-start">
-              <div class="col-lg-6 col-sm-12">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>The AI course was useful and managed to engage participants of different levels in working with artificial intelligence. It truly is an exciting field that offers many opportunities in tourism.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <h3>Jānis</h3>
-                  <h4 class="text-muted">Kārļamuiža</h4>
-                  <h5 style="font-size: 16px; font-weight: normal; margin-top: 5px; color: #666;">Owner</h5>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-2 col-sm-12">
-                <img src="assets/img/testimonials/1.png" class="img-fluid testimonial-img" alt="Photo of Jānis from Kārļamuiža">
-              </div>
-            </div>
-          </div>
-        </div><!-- End testimonial item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row gy-4 justify-content-center align-items-center text-center text-lg-start">
-              <div class="col-lg-6 col-sm-12">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Very useful, informative, and complex topics were explained in a clear and understandable way. Not a single moment was boring. I will definitely apply the knowledge gained in practice. A big thank you for the effort and the opportunity. A special thanks to the lecturer for their teaching style, answers, and engaging sessions. The best course I’ve participated in so far.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <h3>Elīna</h3>
-                  <h4 class="text-muted">Boards You</h4>
-                  <h5 style="font-size: 16px; font-weight: normal; margin-top: 5px; color: #666;">Project Manager</h5>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-2 col-sm-12">
-                <img src="assets/img/testimonials/3.png" class="img-fluid testimonial-img" alt="Photo of Elīna from Boards You">
-              </div>
-            </div>
-          </div>
-        </div><!-- End testimonial item -->
-
-
-        
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row gy-4 justify-content-center align-items-center text-center text-lg-start">
-              <div class="col-lg-6 col-sm-12">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>I very much value Aleksis entrepreneurial spirit when he can see the opportunity beyond his direct responsibilities and tasks. His ability to take initiative is highly visible both when creating opportunities for personal growth and in his committed way of fulfilling work duties.
-
-                      Aleksis is very proficient in most of the current technologies, he can adapt quickly and perform in an efficient way in dynamically changing environments. Aleksis is a very good team player, he works well with colleagues and fits in with the teams, contributes a lot to common success, and creates a very good work atmosphere.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <h3>Juris</h3>
-                  <h4 class="text-muted">HyperScan</h4>
-                  <h5 style="font-size: 16px; font-weight: normal; margin-top: 5px; color: #666;">CGO (Chief Growth Officer)</h5>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-2 col-sm-12">
-                <img src="assets/img/testimonials/4.png" class="img-fluid testimonial-img" alt="Photo of Juris from HyperScan">
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- End testimonial item  -->
-    
-
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-
-  </div>
-
-</section><!-- /Testimonials Section -->
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Get In Touch</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container text-center py-3" data-aos="fade-up" data-aos-delay="100">
-        <p class="text-muted fs-5">
-          If there's something you want to ask me, feel free to message me on <a href="https://www.linkedin.com/in/aleksis-kalis/" class="text-primary fw-bold" target="_blank">LinkedIn</a> or shoot me an <a href="mailto:aleksis@kaliz.ai" class="text-primary fw-bold">email</a>.
-        </p>
-        <div id="footer-contact-container" style="text-align: center; margin-top: 20px;">
-          <a href="#" id="footer-contact-trigger" class="btn btn-primary btn-lg rounded-pill px-4 py-2">Contact Me</a>
-          <div id="footer-contact-card" class="card border-primary hide" style="max-width: 18rem; margin: 20px auto;">
-            <div class="card-body text-center">
-              <h5 class="card-title" style="font-family: 'Raleway', sans-serif;">Get in Touch</h5>
-              <p class="card-text" style="font-family: 'Roboto', sans-serif;">
-                <a href="mailto:aleksis@kaliz.ai" class="text-primary fw-bold">aleksis@kaliz.ai</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div id="footer-info" class="container text-center py-2" data-aos="fade-up" data-aos-delay="200">
-          <div class="d-flex justify-content-center align-items-center gap-3">
-            <!-- LinkedIn Icon -->
-            <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank" class="text-primary fs-4">
+          <div class="hero-social reveal reveal-delay-4">
+            <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank" aria-label="LinkedIn">
               <i class="bi bi-linkedin"></i>
             </a>
-            <!-- Email -->
-            <span class="text-muted fs-6">aleksis@kaliz.ai | 2024 | Aleksis Kālis</span>
+            <a href="mailto:aleksis@kaliz.ai" aria-label="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <span class="section-label reveal">Who I Am</span>
+            <h2 class="section-title reveal reveal-delay-1">
+              AI consultant who<br><span class="gradient-text">builds and ships</span>
+            </h2>
+            <p class="about-text reveal reveal-delay-2">
+              I build <strong>automated workflows</strong>, custom AI tools, internal platforms, and training programmes. Working across <strong>government institutions</strong> — the Supreme Court, Central Election Commission — and private-sector clients through my consultancy <span class="highlight">Kaliz.ai</span>.
+            </p>
+            <br>
+            <p class="about-text reveal reveal-delay-3">
+              I combine strong <strong>technical execution</strong> with business thinking and clear communication, operating comfortably from early-stage ideation through to delivery and stakeholder buy-in. Cybersecurity background keeps me <span class="highlight">security-minded by default</span>.
+            </p>
+            <div class="gradient-line reveal reveal-delay-4"></div>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card reveal reveal-delay-1">
+              <div class="stat-number"><span class="counter" data-target="300">0</span><span class="stat-suffix">+</span></div>
+              <div class="stat-label">Lecture Attendees</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-2">
+              <div class="stat-number"><span class="counter" data-target="50">0</span><span class="stat-suffix">+</span></div>
+              <div class="stat-label">Automations Delivered</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-3">
+              <div class="stat-number"><span class="counter" data-target="4000">0</span><span class="stat-suffix">+</span></div>
+              <div class="stat-label">Hours spent on building</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-4">
+              <div class="stat-number"><span class="counter" data-target="70">0</span><span class="stat-suffix">%</span></div>
+              <div class="stat-label">Avg. Manual Work Saved</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <span class="section-label reveal">Career Path</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          Where I've <span class="gradient-text">made impact</span>
+        </h2>
+        <p class="section-description reveal reveal-delay-2">From cybersecurity to AI consulting — building solutions across government and private sector.</p>
+      </div>
+
+      <div class="exp-track">
+        <!-- Animated vertical spine -->
+        <div class="exp-spine" aria-hidden="true">
+          <div class="exp-spine-glow"></div>
+        </div>
+
+        <!-- Card 1 — LEFT (featured) -->
+        <div class="exp-row exp-left reveal">
+          <div class="exp-card exp-featured">
+            <div class="exp-card-accent" aria-hidden="true"></div>
+            <div class="exp-badge exp-badge-gov"><i class="bi bi-bank"></i> Government</div>
+            <div class="exp-date">Feb 2026 — Present</div>
+            <h3 class="exp-role">AI & Automation Consultant</h3>
+            <div class="exp-org">Central Election Commission of Latvia</div>
+            <ul class="exp-details">
+              <li>Advising on AI adoption for national election infrastructure</li>
+              <li>Architecting a private ChatGPT instance on MS Azure</li>
+              <li>Running hands-on training across departments</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Azure</span><span>AI Strategy</span><span>Training</span>
+            </div>
+          </div>
+          <div class="exp-node" aria-hidden="true">
+            <div class="exp-node-ring"></div>
+          </div>
+          <div class="exp-spacer"></div>
+        </div>
+
+        <!-- Card 2 — RIGHT -->
+        <div class="exp-row exp-right reveal">
+          <div class="exp-spacer"></div>
+          <div class="exp-node" aria-hidden="true">
+            <div class="exp-node-ring"></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-card-accent" aria-hidden="true"></div>
+            <div class="exp-badge exp-badge-edu"><i class="bi bi-mortarboard"></i> Education</div>
+            <div class="exp-date">Feb 2026 — Present</div>
+            <h3 class="exp-role">Guest Lecturer — AI & Computer Vision</h3>
+            <div class="exp-org">Vidzeme University of Applied Sciences</div>
+            <ul class="exp-details">
+              <li>Teaching practical AI and computer vision to IT engineering students</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Computer Vision</span><span>AI</span><span>Teaching</span>
+            </div>
           </div>
         </div>
 
-    </section><!-- /Contact Section -->
+        <!-- Card 3 — LEFT (featured) -->
+        <div class="exp-row exp-left reveal">
+          <div class="exp-card exp-featured">
+            <div class="exp-card-accent" aria-hidden="true"></div>
+            <div class="exp-badge exp-badge-gov"><i class="bi bi-bank"></i> Government</div>
+            <div class="exp-date">Mar 2025 — Present</div>
+            <h3 class="exp-role">AI Project Manager</h3>
+            <div class="exp-org">Supreme Court of the Republic of Latvia</div>
+            <ul class="exp-details">
+              <li>Managing a team building AI tools for judges, senators, and court staff</li>
+              <li>Implementing latest AI technologies to reduce manual workload</li>
+              <li>Building custom solutions tailored to individual team needs</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Leadership</span><span>Automation</span><span>n8n</span>
+            </div>
+          </div>
+          <div class="exp-node" aria-hidden="true">
+            <div class="exp-node-ring"></div>
+          </div>
+          <div class="exp-spacer"></div>
+        </div>
+
+        <!-- Card 4 — RIGHT (featured — Founder) -->
+        <div class="exp-row exp-right reveal">
+          <div class="exp-spacer"></div>
+          <div class="exp-node" aria-hidden="true">
+            <div class="exp-node-ring"></div>
+          </div>
+          <div class="exp-card exp-featured exp-founder">
+            <div class="exp-card-accent" aria-hidden="true"></div>
+            <div class="exp-badge exp-badge-startup"><i class="bi bi-rocket-takeoff"></i> Founder</div>
+            <div class="exp-date">Oct 2024 — Present</div>
+            <h3 class="exp-role">Kaliz.ai</h3>
+            <div class="exp-org">AI Automation Consultancy</div>
+            <ul class="exp-details">
+              <li>Custom AI solutions, workflow automation, and strategic consulting</li>
+              <li>End-to-end systems with n8n, Make.com, and custom API integrations</li>
+              <li>Rapid prototyping — turning ideas into products fast</li>
+            </ul>
+            <div class="exp-tags">
+              <span>n8n</span><span>Make.com</span><span>APIs</span><span>Vibe-coding</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 — LEFT -->
+        <div class="exp-row exp-left reveal">
+          <div class="exp-card">
+            <div class="exp-card-accent" aria-hidden="true"></div>
+            <div class="exp-badge exp-badge-gov"><i class="bi bi-bank"></i> Government</div>
+            <div class="exp-date">Oct 2024 — Present</div>
+            <h3 class="exp-role">AI Mentor — Digital Transformation</h3>
+            <div class="exp-org">State Administration School, Latvia</div>
+            <ul class="exp-details">
+              <li>Guiding government teams from idea generation to working prototype</li>
+              <li>Mentoring on practical AI implementation in public-sector</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Mentorship</span><span>Prototyping</span>
+            </div>
+          </div>
+          <div class="exp-node" aria-hidden="true">
+            <div class="exp-node-ring"></div>
+          </div>
+          <div class="exp-spacer"></div>
+        </div>
+
+        <!-- Card 6 — RIGHT -->
+        <div class="exp-row exp-right reveal">
+          <div class="exp-spacer"></div>
+          <div class="exp-node" aria-hidden="true">
+            <div class="exp-node-ring"></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-card-accent" aria-hidden="true"></div>
+            <div class="exp-badge exp-badge-private"><i class="bi bi-building"></i> Private Sector</div>
+            <div class="exp-date">Jan 2024 — Dec 2024</div>
+            <h3 class="exp-role">AI Specialist & Technical Sales Engineer</h3>
+            <div class="exp-org">SIA HYPER</div>
+            <ul class="exp-details">
+              <li>Built automated lead generation funnels with n8n — cold emails, database syncs, multi-platform integrations</li>
+              <li>Bridged technical AI capabilities and business needs</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Sales</span><span>Lead Gen</span><span>RPA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS / TECH STACK ==================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <span class="section-label reveal">Tech Stack</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          Tools I <span class="gradient-text">work with daily</span>
+        </h2>
+
+        <div class="stack-bento reveal reveal-delay-2">
+
+          <!-- AI & LLMs — large featured cell -->
+          <div class="stack-cell stack-ai">
+            <div class="stack-cell-bg" aria-hidden="true"></div>
+            <div class="stack-cell-content">
+              <div class="stack-cat"><i class="bi bi-stars"></i> AI & LLMs</div>
+              <div class="stack-items">
+                <div class="stack-chip stack-chip-hero" data-tool="claude-code" tabindex="0">
+                  <i class="bi bi-terminal"></i>
+                  <span>Claude Code</span>
+                  <small>Primary IDE</small>
+                </div>
+                <div class="stack-chip" data-tool="chatgpt" tabindex="0">
+                  <i class="bi bi-chat-dots"></i>
+                  <span>ChatGPT</span>
+                </div>
+                <div class="stack-chip" data-tool="gemini" tabindex="0">
+                  <i class="bi bi-stars"></i>
+                  <span>Gemini</span>
+                </div>
+                <div class="stack-chip" data-tool="copilot" tabindex="0">
+                  <i class="bi bi-github"></i>
+                  <span>Copilot</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Automation — medium cell -->
+          <div class="stack-cell stack-auto">
+            <div class="stack-cell-bg" aria-hidden="true"></div>
+            <div class="stack-cell-content">
+              <div class="stack-cat"><i class="bi bi-diagram-3"></i> Automation</div>
+              <div class="stack-items">
+                <div class="stack-chip stack-chip-hero" data-tool="n8n" tabindex="0">
+                  <i class="bi bi-diagram-3"></i>
+                  <span>n8n</span>
+                  <small>Core platform</small>
+                </div>
+                <div class="stack-chip" data-tool="make" tabindex="0">
+                  <i class="bi bi-gear"></i>
+                  <span>Make.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Development — medium cell -->
+          <div class="stack-cell stack-dev">
+            <div class="stack-cell-bg" aria-hidden="true"></div>
+            <div class="stack-cell-content">
+              <div class="stack-cat"><i class="bi bi-code-slash"></i> Development</div>
+              <div class="stack-items">
+                <div class="stack-chip" data-tool="python" tabindex="0">
+                  <i class="bi bi-braces"></i>
+                  <span>Python</span>
+                </div>
+                <div class="stack-chip" data-tool="javascript" tabindex="0">
+                  <i class="bi bi-filetype-js"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="stack-chip" data-tool="sql" tabindex="0">
+                  <i class="bi bi-database"></i>
+                  <span>SQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dev Tools — medium cell -->
+          <div class="stack-cell stack-tools">
+            <div class="stack-cell-bg" aria-hidden="true"></div>
+            <div class="stack-cell-content">
+              <div class="stack-cat"><i class="bi bi-wrench-adjustable"></i> Dev Tools</div>
+              <div class="stack-items">
+                <div class="stack-chip stack-chip-hero" data-tool="cursor" tabindex="0">
+                  <i class="bi bi-cursor"></i>
+                  <span>Cursor</span>
+                  <small>AI Editor</small>
+                </div>
+                <div class="stack-chip" data-tool="vscode" tabindex="0">
+                  <i class="bi bi-code-square"></i>
+                  <span>VS Code</span>
+                </div>
+                <div class="stack-chip" data-tool="lovable" tabindex="0">
+                  <i class="bi bi-heart"></i>
+                  <span>Lovable</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infrastructure — small cell -->
+          <div class="stack-cell stack-infra">
+            <div class="stack-cell-bg" aria-hidden="true"></div>
+            <div class="stack-cell-content">
+              <div class="stack-cat"><i class="bi bi-cloud"></i> Infrastructure</div>
+              <div class="stack-items">
+                <div class="stack-chip" data-tool="azure" tabindex="0">
+                  <i class="bi bi-cloud"></i>
+                  <span>MS Azure</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security — small cell -->
+          <div class="stack-cell stack-sec">
+            <div class="stack-cell-bg" aria-hidden="true"></div>
+            <div class="stack-cell-content">
+              <div class="stack-cat"><i class="bi bi-shield-lock"></i> Security</div>
+              <div class="stack-items">
+                <div class="stack-chip" data-tool="cybersecurity" tabindex="0">
+                  <i class="bi bi-shield-check"></i>
+                  <span>Cybersecurity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <span class="section-label reveal">What I Offer</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          Services that <span class="gradient-text">deliver results</span>
+        </h2>
+        <p class="section-description reveal reveal-delay-2">Tailored AI and automation solutions designed to simplify workflows, optimize processes, and empower growth.</p>
+      </div>
+
+      <div class="svc-showcase">
+
+        <!-- Row 1: 2 cards, first one large -->
+        <div class="svc-row reveal">
+          <div class="svc-card svc-card-wide" data-svc="01" data-svc-id="automation">
+            <div class="svc-card-glow" aria-hidden="true"></div>
+            <div class="svc-number" aria-hidden="true">01</div>
+            <div class="svc-icon-wrap svc-purple">
+              <i class="bi bi-lightning-charge"></i>
+              <div class="svc-icon-ring" aria-hidden="true"></div>
+            </div>
+            <div class="svc-body">
+              <h3>AI-Powered Automation</h3>
+              <p>Streamline repetitive tasks using n8n, Make.com, and custom API integrations — improving efficiency and eliminating manual work.</p>
+              <div class="svc-stack">
+                <span>n8n</span><span>Make.com</span><span>APIs</span><span>Webhooks</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="svc-card" data-svc="02" data-svc-id="ai-solutions">
+            <div class="svc-card-glow" aria-hidden="true"></div>
+            <div class="svc-number" aria-hidden="true">02</div>
+            <div class="svc-icon-wrap svc-blue">
+              <i class="bi bi-cpu"></i>
+              <div class="svc-icon-ring" aria-hidden="true"></div>
+            </div>
+            <div class="svc-body">
+              <h3>Custom AI Solutions</h3>
+              <p>From private ChatGPT instances to bespoke AI tools — tailored to your business needs and security requirements.</p>
+              <div class="svc-stack">
+                <span>Azure</span><span>LLMs</span><span>RAG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: 3 equal cards -->
+        <div class="svc-row svc-row-triple reveal">
+          <div class="svc-card" data-svc="03" data-svc-id="data-analysis">
+            <div class="svc-card-glow" aria-hidden="true"></div>
+            <div class="svc-number" aria-hidden="true">03</div>
+            <div class="svc-icon-wrap svc-cyan">
+              <i class="bi bi-bar-chart-line"></i>
+              <div class="svc-icon-ring" aria-hidden="true"></div>
+            </div>
+            <div class="svc-body">
+              <h3>Data Analysis & Insights</h3>
+              <p>Python and SQL for in-depth analysis — transforming raw data into actionable insights for smarter decisions.</p>
+              <div class="svc-stack">
+                <span>Python</span><span>SQL</span><span>Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="svc-card svc-card-highlight" data-svc="04" data-svc-id="training">
+            <div class="svc-card-glow" aria-hidden="true"></div>
+            <div class="svc-number" aria-hidden="true">04</div>
+            <div class="svc-icon-wrap svc-pink">
+              <i class="bi bi-people"></i>
+              <div class="svc-icon-ring" aria-hidden="true"></div>
+            </div>
+            <div class="svc-body">
+              <h3>Training & Workshops</h3>
+              <p>Hands-on AI and automation training — from beginners to advanced, adapted to your industry.</p>
+              <div class="svc-stack">
+                <span>Workshops</span><span>1-on-1</span><span>Teams</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="svc-card" data-svc="05" data-svc-id="workflow">
+            <div class="svc-card-glow" aria-hidden="true"></div>
+            <div class="svc-number" aria-hidden="true">05</div>
+            <div class="svc-icon-wrap svc-purple">
+              <i class="bi bi-arrows-angle-contract"></i>
+              <div class="svc-icon-ring" aria-hidden="true"></div>
+            </div>
+            <div class="svc-body">
+              <h3>Workflow Optimization</h3>
+              <p>Redesign your workflows with AI-driven tools — faster, smarter, and more reliable operations.</p>
+              <div class="svc-stack">
+                <span>BPA</span><span>RPA</span><span>AI Agents</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Full-width featured card -->
+        <div class="svc-row reveal">
+          <div class="svc-card svc-card-full svc-card-featured" data-svc="06" data-svc-id="prototyping">
+            <div class="svc-card-glow" aria-hidden="true"></div>
+            <div class="svc-number" aria-hidden="true">06</div>
+            <div class="svc-featured-layout">
+              <div class="svc-icon-wrap svc-gradient">
+                <i class="bi bi-rocket-takeoff"></i>
+                <div class="svc-icon-ring" aria-hidden="true"></div>
+              </div>
+              <div class="svc-body">
+                <h3>Rapid Prototyping</h3>
+                <p>Turn your ideas into working products fast through vibe-coding and AI-assisted development — from concept to prototype in days, not months. I use Claude Code, Cursor, and Lovable to build at startup speed.</p>
+                <div class="svc-stack">
+                  <span>Claude Code</span><span>Cursor</span><span>Lovable</span><span>Vibe-coding</span><span>MVPs</span>
+                </div>
+              </div>
+              <div class="svc-featured-stat">
+                <span class="svc-featured-num">10x</span>
+                <span class="svc-featured-label">Faster than traditional dev</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <span class="section-label reveal">Client Feedback</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          What people <span class="gradient-text">say about me</span>
+        </h2>
+        <br><br>
+
+        <div class="swiper testimonials-swiper reveal reveal-delay-2">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">The course was definitely valuable. It's understandable and useful even for beginners. It encourages thinking and looking for solutions to complete everyday tasks much faster and more productively. The lecturer was AMAZING — it's important not only to be a specialist but also to be able to explain your knowledge in a way that others can easily understand.</p>
+                <div class="testimonial-author">
+                  <img src="assets/img/testimonials/2.png" alt="Ozolkalns" class="testimonial-avatar">
+                  <div>
+                    <div class="testimonial-name">Līga</div>
+                    <div class="testimonial-role">Administrator & Head of Management</div>
+                    <div class="testimonial-org">Ozolkalns</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">The AI course was useful and managed to engage participants of different levels in working with artificial intelligence. It truly is an exciting field that offers many opportunities in tourism.</p>
+                <div class="testimonial-author">
+                  <img src="assets/img/testimonials/1.png" alt="Kārļamuiža" class="testimonial-avatar">
+                  <div>
+                    <div class="testimonial-name">Jānis</div>
+                    <div class="testimonial-role">Owner</div>
+                    <div class="testimonial-org">Kārļamuiža</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">Very useful, informative, and complex topics were explained in a clear and understandable way. Not a single moment was boring. I will definitely apply the knowledge gained in practice. A big thank you for the effort and the opportunity. The best course I've participated in so far.</p>
+                <div class="testimonial-author">
+                  <img src="assets/img/testimonials/3.png" alt="Boards You" class="testimonial-avatar">
+                  <div>
+                    <div class="testimonial-name">Elīna</div>
+                    <div class="testimonial-role">Project Manager</div>
+                    <div class="testimonial-org">Boards You</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">I very much value Aleksis' entrepreneurial spirit when he can see the opportunity beyond his direct responsibilities. His ability to take initiative is highly visible both in personal growth and in his committed way of fulfilling work duties. Aleksis is very proficient in current technologies, adapts quickly, and performs efficiently in dynamically changing environments.</p>
+                <div class="testimonial-author">
+                  <img src="assets/img/testimonials/4.png" alt="HyperScan" class="testimonial-avatar">
+                  <div>
+                    <div class="testimonial-name">Juris</div>
+                    <div class="testimonial-role">Chief Growth Officer</div>
+                    <div class="testimonial-org">HyperScan</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <span class="section-label reveal" style="justify-content: center;">Let's Connect</span>
+        <h2 class="contact-heading reveal reveal-delay-1">
+          Ready to <span class="gradient-text">work together</span>?
+        </h2>
+        <p class="contact-text reveal reveal-delay-2">
+          Whether you need AI consulting, automation solutions, or team training — I'd love to hear about your project.
+        </p>
+        <div class="contact-actions reveal reveal-delay-3">
+          <button onclick="openChatWithBooking()" class="btn-primary-gradient">
+            <i class="bi bi-calendar-check"></i> Book a Meeting
+          </button>
+          <a href="mailto:aleksis@kaliz.ai" class="btn-outline">
+            <i class="bi bi-envelope"></i> aleksis@kaliz.ai
+          </a>
+          <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank" class="btn-outline">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+        </div>
+        <hr class="contact-divider reveal reveal-delay-4">
+      </div>
+    </section>
 
   </main>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-<!-- Chat Bubble -->
-<div id="chat-bubble" class="hide">
-  <button class="chat-bubble-close" onclick="document.getElementById('chat-bubble').classList.add('hide')">&times;</button>
-  <p>Interested in this service?<br><a href="mailto:aleksis@kaliz.ai">Contact me</a> for more info!</p>
-</div>
-
-
-<script>
-// Chat Widget JavaScript - Fixed Version
-const N8N_WEBHOOK_URL = 'https://kaliz.app.n8n.cloud/webhook/b3133f9e-3b48-481e-a645-f4fa7a965234';
-
-let isChatMinimized = false;
-let sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-
-function toggleChat() {
-  const widget = document.getElementById('chatWidget');
-  const minimizeBtn = document.getElementById('minimizeBtn');
-  
-  isChatMinimized = !isChatMinimized;
-  
-  if (isChatMinimized) {
-    widget.classList.add('minimized');
-    minimizeBtn.innerHTML = '+';
-  } else {
-    widget.classList.remove('minimized');
-    minimizeBtn.innerHTML = '−';
-  }
-}
-
-function handleChatKeyPress(event) {
-  if (event.key === 'Enter') {
-    sendChatMessage();
-  }
-}
-
-async function sendChatMessage() {
-  const input = document.getElementById('chatInput');
-  const message = input.value.trim();
-  
-  if (!message || document.getElementById('chatSendBtn').disabled) return;
-  
-  // Add user message
-  addChatMessage(message, 'user');
-  input.value = '';
-  
-  // Show typing indicator
-  setChatSendButtonState(false);
-  showChatTypingIndicator();
-  
-  try {
-    const response = await fetch(N8N_WEBHOOK_URL, {
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: JSON.stringify({
-        chatInput: message,
-        sessionId: sessionId,  // Changed from conversationId to sessionId
-        timestamp: new Date().toISOString(),
-        source: 'website_chat'
-      })
-    });
-
-    console.log('Response status:', response.status);
-    
-    removeChatTypingIndicator();
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const responseText = await response.text();
-    console.log('Raw response:', responseText);
-    
-    let botMessage;
-    
-    if (responseText) {
-      try {
-        const data = JSON.parse(responseText);
-        botMessage = data.output || data.response || data.message || "I received your message and I'm processing it.";
-      } catch (parseError) {
-        console.log('Parse error, treating as text:', parseError);
-        botMessage = responseText || "I received your message and I'm processing it.";
-      }
-    } else {
-      botMessage = "I received your message and I'm processing it. Please check your email for any booking confirmations.";
-    }
-    
-    addChatMessage(botMessage, 'bot');
-    
-  } catch (error) {
-    console.error('Chat error:', error);
-    removeChatTypingIndicator();
-    
-    if (error.message.includes('Failed to fetch')) {
-      addChatMessage("I'm having trouble connecting to my systems right now. Please contact aleksis@kaliz.ai directly or try again in a moment.", 'bot');
-    } else {
-      addChatMessage("I'm sorry, there was an error processing your message. Please contact aleksis@kaliz.ai directly.", 'bot');
-    }
-  } finally {
-    setChatSendButtonState(true);
-  }
-}
-
-function addChatMessage(text, sender) {
-  const messagesContainer = document.getElementById('chatMessages');
-  const messageDiv = document.createElement('div');
-  messageDiv.className = `chat-message ${sender}`;
-  messageDiv.textContent = text;
-  
-  messagesContainer.appendChild(messageDiv);
-  messagesContainer.scrollTop = messagesContainer.scrollHeight;
-}
-
-function showChatTypingIndicator() {
-  const messagesContainer = document.getElementById('chatMessages');
-  const typingDiv = document.createElement('div');
-  typingDiv.className = 'chat-message typing';
-  typingDiv.id = 'chatTypingIndicator';
-  typingDiv.innerHTML = `
-    AI Assistant is typing
-    <div class="typing-dots">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  `;
-  
-  messagesContainer.appendChild(typingDiv);
-  messagesContainer.scrollTop = messagesContainer.scrollHeight;
-}
-
-function removeChatTypingIndicator() {
-  const typingIndicator = document.getElementById('chatTypingIndicator');
-  if (typingIndicator) {
-    typingIndicator.remove();
-  }
-}
-
-function setChatSendButtonState(enabled) {
-  const sendBtn = document.getElementById('chatSendBtn');
-  sendBtn.disabled = !enabled;
-}
-
-// Initialize chat when page loads
-document.addEventListener('DOMContentLoaded', function() {
-  const chatInput = document.getElementById('chatInput');
-  if (chatInput) {
-    chatInput.focus();
-  }
-  
-  // Add initial session info to console for debugging
-  console.log('Chat widget initialized with sessionId:', sessionId);
-});
-</script>
-
-
-<!-- Place this just before </body> -->
-<!-- AI Chat Widget -->
-<div class="chat-widget" id="chatWidget">
-  <div class="chat-header" onclick="toggleChat()">
-    <div class="chat-header-info">
-      <div class="chat-avatar">AK</div>
-      <div class="chat-header-text">
-        <h4>AI Assistant</h4>
-        <span>Aleksis Kālis - AI Solutions</span>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-copy">&copy; 2026 Aleksis Kālis &middot; Kaliz.ai &middot; Rīga, Latvia</span>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:aleksis@kaliz.ai" aria-label="Email"><i class="bi bi-envelope"></i></a>
+        </div>
       </div>
     </div>
-    <button class="chat-minimize-btn" id="minimizeBtn">−</button>
-  </div>
-  
-  <div class="chat-messages" id="chatMessages">
-    <div class="chat-message bot">
-      👋 Hi! I'm Aleksis's AI assistant. I can help you with AI automation solutions, answer questions about our services, and schedule consultations. How can I assist you today?
+  </footer>
+
+  <!-- Scroll to Top -->
+  <a href="#hero" class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <!-- AI Chat Widget — starts minimized -->
+  <div class="chat-outer minimized" id="chatWidget">
+    <!-- Nudge — positioned outside the border wrapper -->
+    <div class="chat-nudge" id="chatNudge">Book a free consultation</div>
+    <!-- Running border light -->
+    <div class="chat-border-glow" aria-hidden="true"></div>
+    <!-- Inner widget -->
+    <div class="chat-inner">
+      <div class="chat-header" onclick="toggleChat()">
+        <div class="chat-header-info">
+          <div class="chat-avatar">
+            <div class="chat-avatar-ring" aria-hidden="true"></div>
+            <span>AK</span>
+          </div>
+          <div class="chat-header-text">
+            <h4>AI Assistant</h4>
+            <span class="chat-status"><span class="chat-status-dot"></span> Online</span>
+          </div>
+        </div>
+        <button class="chat-minimize-btn" id="minimizeBtn" aria-label="Toggle chat">
+          <i class="bi bi-plus-lg"></i>
+        </button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-message bot">
+          Hi! I'm Aleksis's AI assistant. I can help you with AI automation solutions, answer questions about services, and schedule consultations. How can I help?
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" id="chatInput" placeholder="Ask anything..." onkeypress="handleChatKeyPress(event)">
+        <button class="chat-send-btn" id="chatSendBtn" onclick="sendChatMessage()">
+          <i class="bi bi-send"></i>
+        </button>
+      </div>
     </div>
   </div>
-  
-  <div class="chat-input-area">
-    <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)">
-    <button class="chat-send-btn" id="chatSendBtn" onclick="sendChatMessage()">
-      <i class="bi bi-send"></i>
-    </button>
+
+  <!-- Popovers (body-level for absolute positioning) -->
+  <div class="popover" id="toolPopover">
+    <button class="popover-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+    <div class="popover-tool-header">
+      <div class="popover-tool-icon" id="popToolIcon"></div>
+      <div>
+        <h4 class="popover-tool-name" id="popToolName"></h4>
+        <span class="popover-tool-cat" id="popToolCat"></span>
+      </div>
+    </div>
+    <p class="popover-desc" id="popToolDesc"></p>
+    <div class="popover-exp">
+      <div class="popover-exp-label"><i class="bi bi-lightning-charge"></i> Where I use it</div>
+      <div class="popover-exp-items" id="popToolExp"></div>
+    </div>
   </div>
-</div>
+
+  <div class="popover popover-svc" id="svcPopover">
+    <button class="popover-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+    <div class="popover-svc-header">
+      <div class="popover-svc-icon" id="popSvcIcon"></div>
+      <h4 class="popover-svc-title" id="popSvcTitle"></h4>
+    </div>
+    <p class="popover-svc-text" id="popSvcText"></p>
+    <div class="popover-svc-cta">
+      <button class="popover-svc-btn popover-svc-btn-primary" id="popSvcBookBtn">
+        <i class="bi bi-calendar-check"></i> Book a Call
+      </button>
+      <a href="#contact" class="popover-svc-btn popover-svc-btn-secondary" id="popSvcContactBtn">
+        <i class="bi bi-envelope"></i> Get in Touch
+      </a>
+    </div>
+  </div>
+
+  <div class="popover-backdrop" id="popoverBackdrop"></div>
+
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    // ===== Preloader =====
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      preloader.classList.add('loaded');
+      setTimeout(() => preloader.remove(), 500);
+    });
+
+    // ===== Scroll Reveal (Intersection Observer) =====
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ===== Navbar Scroll Effect =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ===== Active Nav Link =====
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // ===== Mobile Menu =====
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    navToggle.addEventListener('click', () => mobileMenu.classList.add('open'));
+    mobileMenuClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // ===== Scroll to Top =====
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 500);
+    });
+
+    // ===== Typed.js =====
+    const typedEl = document.querySelector('.typed');
+    if (typedEl) {
+      const items = typedEl.getAttribute('data-typed-items').split(',').map(s => s.trim());
+      new Typed('.typed', {
+        strings: items,
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 2000,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+      });
+    }
+
+    // ===== Counter Animation =====
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute('data-target'));
+          const duration = 2000;
+          const increment = target / (duration / 16);
+          let current = 0;
+
+          const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+              counter.textContent = Math.floor(current).toLocaleString();
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.textContent = target.toLocaleString();
+            }
+          };
+          updateCounter();
+          counterObserver.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(c => counterObserver.observe(c));
+
+    // ===== Swiper (Testimonials) =====
+    new Swiper('.testimonials-swiper', {
+      loop: true,
+      speed: 600,
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      slidesPerView: 1,
+      spaceBetween: 24,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 2 }
+      }
+    });
+
+    // ===== Card Mouse-Follow Glow =====
+    document.querySelectorAll('.svc-card, .stack-cell').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const glow = card.querySelector('.svc-card-glow, .stack-cell-bg');
+        if (glow) {
+          glow.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(124,58,237,0.06), transparent 40%)`;
+          glow.style.opacity = '1';
+        }
+      });
+      card.addEventListener('mouseleave', () => {
+        const glow = card.querySelector('.svc-card-glow, .stack-cell-bg');
+        if (glow) glow.style.opacity = '0';
+      });
+    });
+
+    // ===== Chat Widget =====
+    const N8N_WEBHOOK_URL = 'https://kaliz.app.n8n.cloud/webhook/b3133f9e-3b48-481e-a645-f4fa7a965234';
+    let isChatMinimized = true; // starts minimized
+    let sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    let nudgeInterval = null;
+    let nudgeCount = 0;
+
+    function toggleChat() {
+      const widget = document.getElementById('chatWidget');
+      const minimizeBtn = document.getElementById('minimizeBtn');
+      isChatMinimized = !isChatMinimized;
+      if (isChatMinimized) {
+        widget.classList.add('minimized');
+        minimizeBtn.innerHTML = '<i class="bi bi-plus-lg"></i>';
+      } else {
+        widget.classList.remove('minimized');
+        minimizeBtn.innerHTML = '<i class="bi bi-dash-lg"></i>';
+        stopNudge();
+        setTimeout(() => document.getElementById('chatInput').focus(), 300);
+      }
+    }
+
+    // Open chat and send a booking message automatically
+    function openChatWithBooking() {
+      const widget = document.getElementById('chatWidget');
+      if (isChatMinimized) toggleChat();
+      // Small delay so the widget opens first
+      setTimeout(() => {
+        document.getElementById('chatInput').value = "Hi, I'd like to book a consultation.";
+        sendChatMessage();
+      }, 400);
+    }
+
+    // Nudge system — subtle periodic reminder
+    function startNudge() {
+      const nudge = document.getElementById('chatNudge');
+      const messages = [
+        'Book a free consultation',
+        'Ask me anything',
+        'Need AI help?',
+      ];
+
+      // First nudge after 8 seconds
+      setTimeout(() => {
+        if (!isChatMinimized) return;
+        showNudge(nudge, messages[0]);
+
+        // Then every 30 seconds, cycle messages (max 4 nudges)
+        nudgeInterval = setInterval(() => {
+          if (!isChatMinimized && nudgeCount < 4) {
+            clearInterval(nudgeInterval);
+            return;
+          }
+          if (nudgeCount >= 4) {
+            clearInterval(nudgeInterval);
+            return;
+          }
+          nudgeCount++;
+          showNudge(nudge, messages[nudgeCount % messages.length]);
+        }, 30000);
+      }, 8000);
+    }
+
+    function showNudge(el, text) {
+      el.textContent = text;
+      el.classList.add('show');
+      setTimeout(() => el.classList.remove('show'), 4000);
+    }
+
+    function stopNudge() {
+      if (nudgeInterval) clearInterval(nudgeInterval);
+      const nudge = document.getElementById('chatNudge');
+      nudge.classList.remove('show');
+    }
+
+    // Start nudge cycle on page load
+    window.addEventListener('load', () => {
+      startNudge();
+    });
+
+    function handleChatKeyPress(event) {
+      if (event.key === 'Enter') sendChatMessage();
+    }
+
+    async function sendChatMessage() {
+      const input = document.getElementById('chatInput');
+      const message = input.value.trim();
+      if (!message || document.getElementById('chatSendBtn').disabled) return;
+
+      addChatMessage(message, 'user');
+      input.value = '';
+      setChatSendButtonState(false);
+      showChatTypingIndicator();
+
+      try {
+        const response = await fetch(N8N_WEBHOOK_URL, {
+          method: 'POST',
+          mode: 'cors',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            chatInput: message,
+            sessionId: sessionId,
+            timestamp: new Date().toISOString(),
+            source: 'website_chat'
+          })
+        });
+
+        removeChatTypingIndicator();
+        if (!response.ok) throw new Error('HTTP error: ' + response.status);
+
+        const responseText = await response.text();
+        let botMessage;
+        if (responseText) {
+          try {
+            const data = JSON.parse(responseText);
+            botMessage = data.output || data.response || data.message || "I received your message and I'm processing it.";
+          } catch (e) {
+            botMessage = responseText;
+          }
+        } else {
+          botMessage = "I received your message. Please check your email for any confirmations.";
+        }
+        addChatMessage(botMessage, 'bot');
+      } catch (error) {
+        removeChatTypingIndicator();
+        addChatMessage("I'm having trouble connecting right now. Please contact aleksis@kaliz.ai directly.", 'bot');
+      } finally {
+        setChatSendButtonState(true);
+      }
+    }
+
+    function addChatMessage(text, sender) {
+      const container = document.getElementById('chatMessages');
+      const div = document.createElement('div');
+      div.className = 'chat-message ' + sender;
+      div.textContent = text;
+      container.appendChild(div);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function showChatTypingIndicator() {
+      const container = document.getElementById('chatMessages');
+      const div = document.createElement('div');
+      div.className = 'chat-message typing';
+      div.id = 'chatTypingIndicator';
+      div.innerHTML = 'AI Assistant is typing<div class="typing-dots"><span></span><span></span><span></span></div>';
+      container.appendChild(div);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function removeChatTypingIndicator() {
+      const el = document.getElementById('chatTypingIndicator');
+      if (el) el.remove();
+    }
+
+    function setChatSendButtonState(enabled) {
+      document.getElementById('chatSendBtn').disabled = !enabled;
+    }
+
+    /* ========== Popover System ========== */
+
+    // Tool data
+    const toolData = {
+      'claude-code': { name: 'Claude Code', icon: 'bi-terminal', category: 'AI & LLMs', description: 'My primary development environment — an AI-native IDE for building full-stack applications, automating workflows, and pair-programming on complex problems.', experience: ['Built this entire website from design to deployment', 'Custom automation flows and API integrations for Kaliz.ai clients', 'Rapid prototyping of AI-powered tools for the Supreme Court of Latvia'] },
+      'chatgpt': { name: 'ChatGPT', icon: 'bi-chat-dots', category: 'AI & LLMs', description: 'Go-to for brainstorming, content generation, and quick research. GPT models for documentation, client communication, and exploring solutions.', experience: ['Architecting a private ChatGPT instance on Azure for the Central Election Commission', 'Training government teams on practical ChatGPT usage', 'Content creation and strategy development for Kaliz.ai clients'] },
+      'gemini': { name: 'Gemini', icon: 'bi-stars', category: 'AI & LLMs', description: 'Google\'s multimodal AI for deep Google Workspace integration, long-context analysis, and cross-referencing large document sets.', experience: ['Long-context document analysis for legal and government projects', 'Multimodal workflows combining text, image, and data analysis', 'Benchmarking responses across models for client solutions'] },
+      'copilot': { name: 'GitHub Copilot', icon: 'bi-github', category: 'AI & LLMs', description: 'AI pair-programmer integrated into VS Code and Cursor. Speeds up coding with inline suggestions and context-aware completions.', experience: ['Daily code acceleration across Python, JavaScript, and SQL projects', 'Building automation scripts and API connectors at Kaliz.ai', 'Teaching students at Vidzeme University how to leverage Copilot'] },
+      'n8n': { name: 'n8n', icon: 'bi-diagram-3', category: 'Automation', description: 'Core automation platform. Complex multi-step workflows connecting APIs, databases, AI models, and communication tools — all self-hosted.', experience: ['Built the AI assistant on this site — webhook → AI agent → Calendar + Gmail', 'Automated lead generation funnels at SIA HYPER — cold emails, CRM syncs', 'End-to-end client solutions at Kaliz.ai — intake forms to delivery'] },
+      'make': { name: 'Make.com', icon: 'bi-gear', category: 'Automation', description: 'Visual automation for managed, no-code-friendly solutions. Great for quick integrations and client handoffs.', experience: ['Client-facing automations where clients manage flows independently', 'Multi-platform integrations connecting CRMs, email tools, and databases', 'Rapid prototyping before building production-grade n8n flows'] },
+      'python': { name: 'Python', icon: 'bi-braces', category: 'Development', description: 'Primary language for data processing, AI/ML pipelines, scripting, and backend logic. The backbone of most technical projects.', experience: ['AI tool development for the Supreme Court — document processing pipelines', 'Data analysis and automation scripts for government projects', 'Computer vision coursework and labs at Vidzeme University'] },
+      'javascript': { name: 'JavaScript', icon: 'bi-filetype-js', category: 'Development', description: 'Essential for web development, n8n code nodes, and interactive frontend experiences across client-side and server-side logic.', experience: ['This website — custom animations, intersection observers, chat widget', 'n8n code nodes for complex data transformations', 'Interactive prototypes and client dashboards at Kaliz.ai'] },
+      'sql': { name: 'SQL', icon: 'bi-database', category: 'Development', description: 'Database querying and management for structured data — analytics, reporting, and building data pipelines.', experience: ['Database integrations in n8n workflows — querying, syncing, transforming', 'Analytics and reporting for lead generation at SIA HYPER', 'Data pipeline design for government AI projects'] },
+      'cursor': { name: 'Cursor', icon: 'bi-cursor', category: 'Dev Tools', description: 'AI-powered code editor built on VS Code. Familiar experience with deep AI integration for faster, smarter development.', experience: ['Primary code editor for client projects alongside Claude Code', 'Teaching AI-assisted development workflows to students', 'Building and iterating on prototypes with AI code generation'] },
+      'vscode': { name: 'VS Code', icon: 'bi-code-square', category: 'Dev Tools', description: 'Industry-standard code editor. Foundation for development with extensions, debugging, and Git integration.', experience: ['Long-standing development environment across all projects', 'Extension ecosystem for Python, JavaScript, and DevOps', 'Live coding demos during university lectures'] },
+      'lovable': { name: 'Lovable', icon: 'bi-heart', category: 'Dev Tools', description: 'AI-native app builder for rapidly prototyping full-stack web applications. Ideas to working MVPs in hours, not weeks.', experience: ['Rapid client prototyping — validating ideas before full builds', 'Building internal tools and dashboards for government projects', 'Demonstrating AI-powered development to potential clients'] },
+      'azure': { name: 'MS Azure', icon: 'bi-cloud', category: 'Infrastructure', description: 'Cloud platform for deploying secure, scalable infrastructure. Strong for government projects requiring data residency and compliance.', experience: ['Private ChatGPT instance for the Central Election Commission of Latvia', 'Cloud infrastructure for AI tools at the Supreme Court', 'Enterprise-grade deployment environments for Kaliz.ai clients'] },
+      'cybersecurity': { name: 'Cybersecurity', icon: 'bi-shield-check', category: 'Security', description: 'Security-first mindset woven into everything I build — threat modeling, secure architecture, and responsible AI implementation.', experience: ['Security-minded architecture across all government AI projects', 'Secure deployment for self-hosted n8n instances and client data', 'Cybersecurity background informing responsible AI practices'] }
+    };
+
+    // Service CTA data
+    const svcData = {
+      'automation': { title: 'AI-Powered Automation', icon: 'bi-lightning-charge', color: 'pop-purple', text: 'Let\'s automate your repetitive tasks and build intelligent workflows that save hours every week.' },
+      'ai-solutions': { title: 'Custom AI Solutions', icon: 'bi-cpu', color: 'pop-blue', text: 'Need a private AI instance or custom tool? Let\'s discuss your requirements and security needs.' },
+      'data-analysis': { title: 'Data Analysis & Insights', icon: 'bi-bar-chart-line', color: 'pop-cyan', text: 'Turn your raw data into actionable insights. Let\'s explore what your data can tell you.' },
+      'training': { title: 'Training & Workshops', icon: 'bi-people', color: 'pop-pink', text: 'Hands-on AI training tailored to your team\'s level and industry. From intro sessions to advanced workshops.' },
+      'workflow': { title: 'Workflow Optimization', icon: 'bi-arrows-angle-contract', color: 'pop-purple', text: 'Redesign your workflows with AI-driven tools for faster, smarter, and more reliable operations.' },
+      'prototyping': { title: 'Rapid Prototyping', icon: 'bi-rocket-takeoff', color: 'pop-gradient', text: 'Got an idea? Let\'s turn it into a working product in days, not months. AI-assisted development at startup speed.' }
+    };
+
+    const backdrop = document.getElementById('popoverBackdrop');
+    let activePopover = null;
+
+    function positionPopover(popover, anchor) {
+      // Reset position for measurement
+      popover.style.left = '0';
+      popover.style.top = '0';
+      popover.classList.add('active');
+
+      const aRect = anchor.getBoundingClientRect();
+      const pRect = popover.getBoundingClientRect();
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      const scrollY = window.scrollY;
+      const gap = 10;
+
+      // Try positioning to the right of the anchor
+      let left = aRect.right + gap;
+      let top = aRect.top + scrollY - 20;
+
+      // If it overflows right, try left side
+      if (left + pRect.width > vw - 16) {
+        left = aRect.left - pRect.width - gap;
+      }
+
+      // If left side also overflows, center below
+      if (left < 16) {
+        left = Math.max(16, aRect.left + (aRect.width / 2) - (pRect.width / 2));
+        top = aRect.bottom + scrollY + gap;
+      }
+
+      // Clamp horizontal
+      left = Math.max(16, Math.min(left, vw - pRect.width - 16));
+
+      // If it would go below viewport, position above
+      if ((top - scrollY) + pRect.height > vh - 16) {
+        top = aRect.top + scrollY - pRect.height - gap;
+      }
+
+      // Clamp vertical
+      top = Math.max(scrollY + 16, top);
+
+      popover.style.left = left + 'px';
+      popover.style.top = top + 'px';
+    }
+
+    function closeAllPopovers() {
+      document.querySelectorAll('.popover.active').forEach(function(p) {
+        p.classList.remove('active');
+      });
+      backdrop.classList.remove('active');
+      activePopover = null;
+    }
+
+    // Tool chip clicks
+    const toolPopover = document.getElementById('toolPopover');
+
+    document.querySelectorAll('.stack-chip[data-tool]').forEach(function(chip) {
+      chip.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var id = this.dataset.tool;
+        var d = toolData[id];
+        if (!d) return;
+
+        // If clicking same chip, toggle off
+        if (activePopover === 'tool-' + id) { closeAllPopovers(); return; }
+        closeAllPopovers();
+
+        document.getElementById('popToolIcon').innerHTML = '<i class="bi ' + d.icon + '"></i>';
+        document.getElementById('popToolName').textContent = d.name;
+        document.getElementById('popToolCat').textContent = d.category;
+        document.getElementById('popToolDesc').textContent = d.description;
+        document.getElementById('popToolExp').innerHTML = d.experience.map(function(item) {
+          return '<div class="popover-exp-item">' + item + '</div>';
+        }).join('');
+
+        // Position needs absolute coords
+        toolPopover.style.position = 'absolute';
+        positionPopover(toolPopover, this);
+        backdrop.classList.add('active');
+        activePopover = 'tool-' + id;
+      });
+
+      chip.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+
+    // Service card clicks
+    var svcPopover = document.getElementById('svcPopover');
+
+    document.querySelectorAll('.svc-card[data-svc-id]').forEach(function(card) {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var id = this.dataset.svcId;
+        var d = svcData[id];
+        if (!d) return;
+
+        if (activePopover === 'svc-' + id) { closeAllPopovers(); return; }
+        closeAllPopovers();
+
+        document.getElementById('popSvcIcon').className = 'popover-svc-icon ' + d.color;
+        document.getElementById('popSvcIcon').innerHTML = '<i class="bi ' + d.icon + '"></i>';
+        document.getElementById('popSvcTitle').textContent = d.title;
+        document.getElementById('popSvcText').textContent = d.text;
+
+        svcPopover.style.position = 'absolute';
+        positionPopover(svcPopover, this);
+        backdrop.classList.add('active');
+        activePopover = 'svc-' + id;
+      });
+    });
+
+    // "Book a Call" inside service popover opens chat
+    document.getElementById('popSvcBookBtn').addEventListener('click', function(e) {
+      e.stopPropagation();
+      closeAllPopovers();
+      openChatWithBooking();
+    });
+
+    // "Get in Touch" closes popover
+    document.getElementById('popSvcContactBtn').addEventListener('click', function() {
+      closeAllPopovers();
+    });
+
+    // Close handlers
+    document.querySelectorAll('.popover-close').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeAllPopovers();
+      });
+    });
+
+    backdrop.addEventListener('click', closeAllPopovers);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeAllPopovers();
+    });
+  </script>
 
 </body>
 </html>
