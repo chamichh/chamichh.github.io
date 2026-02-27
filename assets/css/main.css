@@ -929,6 +929,13 @@ body::after {
 
 .exp-detail-inner {
   overflow: hidden;
+  min-height: 0;
+  max-height: 0;
+  transition: max-height 0.5s var(--ease-out-expo);
+}
+
+.exp-card.exp-expanded .exp-detail-inner {
+  max-height: 600px;
 }
 
 .exp-detail-content {
@@ -936,13 +943,16 @@ body::after {
   margin-top: 1.25rem;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   opacity: 0;
+  visibility: hidden;
   transform: translateY(-8px);
-  transition: opacity 0.4s ease 0.1s, transform 0.4s var(--ease-out-expo) 0.1s;
+  transition: opacity 0.4s ease 0.1s, visibility 0s linear 0.5s, transform 0.4s var(--ease-out-expo) 0.1s;
 }
 
 .exp-card.exp-expanded .exp-detail-content {
   opacity: 1;
+  visibility: visible;
   transform: translateY(0);
+  transition: opacity 0.4s ease 0.1s, visibility 0s linear 0s, transform 0.4s var(--ease-out-expo) 0.1s;
 }
 
 .exp-detail-desc {
