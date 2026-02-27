@@ -81,7 +81,7 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
-      <i class="bi bi-x"></i>
+      <i class="bi bi-x-lg"></i>
     </button>
     <a href="#about" class="mobile-link">About</a>
     <a href="#experience" class="mobile-link">Experience</a>
@@ -851,10 +851,18 @@
     const mobileMenuClose = document.getElementById('mobileMenuClose');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    navToggle.addEventListener('click', () => mobileMenu.classList.add('open'));
-    mobileMenuClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    function openMobileMenu() {
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    navToggle.addEventListener('click', openMobileMenu);
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
     mobileLinks.forEach(link => {
-      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+      link.addEventListener('click', closeMobileMenu);
     });
 
     // ===== Scroll to Top =====
