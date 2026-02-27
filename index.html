@@ -151,7 +151,7 @@
             Aleksis<br><span class="gradient-text">Kālis</span>
           </h1>
           <p class="hero-roles reveal reveal-delay-2">
-            <span class="typed" data-typed-items="AI Specialist & Automation Consultant, AI Project Manager — Supreme Court, Founder of Kaliz.ai, Guest Lecturer — AI & Computer Vision"></span>
+            <span class="typed" data-typed-items="AI Specialist & Automation Consultant, AI Project Manager — Supreme Court, Founder of Kaliz.ai, Guest Lecturer — AI & Computer Vision" data-typed-mobile="AI & Automation Consultant, AI Project Manager, Founder of Kaliz.ai, Guest Lecturer — AI & CV"></span>
           </p>
           <div class="hero-actions reveal reveal-delay-3">
             <button onclick="openChatWithBooking()" class="btn-primary-gradient">
@@ -1058,7 +1058,11 @@
     // ===== Typed.js =====
     const typedEl = document.querySelector('.typed');
     if (typedEl) {
-      const items = typedEl.getAttribute('data-typed-items').split(',').map(s => s.trim());
+      var isMobile = window.innerWidth <= 600;
+      var src = isMobile && typedEl.getAttribute('data-typed-mobile')
+        ? typedEl.getAttribute('data-typed-mobile')
+        : typedEl.getAttribute('data-typed-items');
+      var items = src.split(',').map(function(s) { return s.trim(); });
       new Typed('.typed', {
         strings: items,
         typeSpeed: 50,
