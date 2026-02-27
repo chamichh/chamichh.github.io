@@ -520,7 +520,8 @@ body::after {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 100%;
+  max-width: calc(100vw - 4rem);
+  width: 100%;
 }
 
 .hero-roles .typed-cursor {
