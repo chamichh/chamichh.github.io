@@ -2558,7 +2558,7 @@ body::after {
   }
 
   .nav-toggle {
-    display: block;
+    display: flex;
   }
 
   .section {
@@ -2690,7 +2690,8 @@ body::after {
     position: fixed;
     inset: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 10001;
+    transition: none;
   }
 
   .chat-outer:not(.minimized) .chat-inner {
@@ -2716,6 +2717,11 @@ body::after {
 
   .chat-outer:not(.minimized) .chat-header {
     padding: 1rem 1.25rem;
+  }
+
+  /* Hide noise overlay when fullscreen chat could appear */
+  body::after {
+    display: none;
   }
 
   .footer-inner {
