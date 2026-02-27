@@ -2568,24 +2568,39 @@ body::after {
   .stack-cell-content {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 
   .stack-cat {
     min-width: unset;
+    font-size: 0.62rem;
+    gap: 0.35rem;
   }
 
   .stack-cell {
-    padding: 1rem 1.25rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .stack-bento {
+    gap: 0.35rem;
   }
 
   .stack-chip {
-    font-size: 0.76rem;
-    padding: 0.45rem 0.75rem;
+    font-size: 0.72rem;
+    padding: 0.4rem 0.65rem;
+    gap: 0.35rem;
+  }
+
+  .stack-chip i {
+    font-size: 0.75rem;
   }
 
   .stack-chip-hero small {
     display: none;
+  }
+
+  .stack-items {
+    gap: 0.35rem;
   }
 
   .exp-track {
@@ -2694,6 +2709,7 @@ body::after {
 
   .hero-badge {
     font-size: 0.65rem;
+    margin-bottom: 1rem;
   }
 
   .blob-1 { width: 300px; height: 300px; }
@@ -2765,6 +2781,109 @@ body::after {
 
   .exp-role {
     font-size: 1.1rem;
+  }
+
+  /* Hero spacing */
+  .hero {
+    padding-top: 3rem;
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+
+  .hero-name {
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-roles {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .hero-actions .btn-primary-gradient,
+  .hero-actions .btn-outline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-social {
+    margin-top: 1.5rem;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+  /* Section spacing */
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  /* Services */
+  .svc-card {
+    padding: 1.5rem;
+  }
+
+  .svc-number {
+    font-size: 4rem;
+  }
+
+  .svc-title {
+    font-size: 1.05rem;
+  }
+
+  .svc-desc {
+    font-size: 0.82rem;
+  }
+
+  .svc-showcase {
+    padding: 0 0.5rem;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .testimonial-quote {
+    font-size: 0.92rem;
+  }
+
+  .testimonial-quote::before {
+    font-size: 2rem;
+    vertical-align: -0.5rem;
+  }
+
+  /* Contact */
+  .contact-actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact-actions .btn-primary-gradient,
+  .contact-actions .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-text {
+    font-size: 1rem;
+  }
+
+  /* Stats — 2x2 grid instead of single column */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    padding: 1.25rem;
   }
 }
 
