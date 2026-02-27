@@ -952,10 +952,14 @@
       if (isChatMinimized) {
         widget.classList.add('minimized');
         minimizeBtn.innerHTML = '<i class="bi bi-plus-lg"></i>';
+        document.body.style.overflow = '';
       } else {
         widget.classList.remove('minimized');
         minimizeBtn.innerHTML = '<i class="bi bi-dash-lg"></i>';
         stopNudge();
+        if (window.innerWidth <= 768) {
+          document.body.style.overflow = 'hidden';
+        }
         setTimeout(() => document.getElementById('chatInput').focus(), 300);
       }
     }
