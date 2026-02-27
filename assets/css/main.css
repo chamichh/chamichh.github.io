@@ -48,6 +48,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scrollbar-width: thin;
@@ -177,7 +178,7 @@ body::after {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 10000;
   padding: 1.25rem 2rem;
   transition: all 0.4s var(--ease-out-expo);
 }
@@ -288,7 +289,7 @@ body::after {
   background: rgba(6, 6, 14, 0.92);
   backdrop-filter: blur(40px) saturate(1.5);
   -webkit-backdrop-filter: blur(40px) saturate(1.5);
-  z-index: 9998;
+  z-index: 10000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -462,6 +463,8 @@ body::after {
 
 .hero-content {
   max-width: 800px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .hero-badge {
@@ -514,6 +517,10 @@ body::after {
   color: var(--text-secondary);
   margin-bottom: 2.5rem;
   min-height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .hero-roles .typed-cursor {
@@ -593,8 +600,8 @@ body::after {
 }
 
 .hero-social a {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -854,6 +861,12 @@ body::after {
   margin-left: auto;
 }
 
+/* Left cards: move expand hint to left side to avoid text overlap */
+.exp-left .exp-expand-hint {
+  right: auto;
+  left: 1rem;
+}
+
 /* Cards */
 .exp-card {
   position: relative;
@@ -861,19 +874,8 @@ body::after {
   border-radius: var(--radius-lg);
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  overflow: hidden;
   transition: all 0.5s var(--ease-out-expo);
-}
-
-.exp-card-accent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--gradient-main);
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  cursor: pointer;
 }
 
 .exp-card:hover {
@@ -884,22 +886,137 @@ body::after {
     0 0 40px rgba(124, 58, 237, 0.05);
 }
 
-.exp-card:hover .exp-card-accent {
+/* Expand indicator */
+.exp-expand-hint {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: all 0.4s var(--ease-out-expo);
+}
+
+.exp-card:hover .exp-expand-hint {
+  background: rgba(124, 58, 237, 0.1);
+  border-color: rgba(124, 58, 237, 0.2);
+  color: var(--accent-purple);
+}
+
+.exp-card.exp-expanded .exp-expand-hint {
+  transform: rotate(45deg);
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--accent-purple);
+}
+
+/* Expandable detail panel */
+.exp-detail {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s var(--ease-out-expo);
+}
+
+.exp-card.exp-expanded .exp-detail {
+  grid-template-rows: 1fr;
+}
+
+.exp-detail-inner {
+  overflow: hidden;
+}
+
+.exp-detail-content {
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s var(--ease-out-expo) 0.1s;
+}
+
+.exp-card.exp-expanded .exp-detail-content {
   opacity: 1;
+  transform: translateY(0);
+}
+
+.exp-detail-desc {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.15rem;
+}
+
+.exp-detail-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-cyan);
+  margin-bottom: 0.65rem;
+}
+
+.exp-detail-label i {
+  font-size: 0.75rem;
+}
+
+.exp-achievement {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s var(--ease-out-expo);
+}
+
+.exp-card.exp-expanded .exp-achievement {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger achievement items */
+.exp-card.exp-expanded .exp-achievement:nth-child(1) { transition-delay: 0.15s; }
+.exp-card.exp-expanded .exp-achievement:nth-child(2) { transition-delay: 0.22s; }
+.exp-card.exp-expanded .exp-achievement:nth-child(3) { transition-delay: 0.29s; }
+.exp-card.exp-expanded .exp-achievement:nth-child(4) { transition-delay: 0.36s; }
+
+.exp-achievement::before {
+  content: '';
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  margin-top: 0.5rem;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+
+/* Active expanded state — elevated card */
+.exp-card.exp-expanded {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(124, 58, 237, 0.2);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.3),
+    0 0 48px rgba(124, 58, 237, 0.08);
 }
 
 /* Featured card (larger, emphasized) */
 .exp-featured {
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(124, 58, 237, 0.1);
-}
-
-.exp-featured .exp-card-accent {
-  opacity: 0.5;
-}
-
-.exp-featured:hover .exp-card-accent {
-  opacity: 1;
 }
 
 /* Founder card — special gradient border */
@@ -1093,13 +1210,18 @@ body::after {
     margin-left: 0;
   }
 
+  .exp-left .exp-expand-hint {
+    left: auto;
+    right: 1rem;
+  }
+
   .exp-card {
     padding: 1.5rem;
     margin-bottom: 1rem;
   }
 
   .exp-track {
-    padding: 0;
+    padding: 0 1.5rem;
   }
 }
 
@@ -1395,6 +1517,11 @@ body::after {
   background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.25), rgba(236, 72, 153, 0.2), rgba(124, 58, 237, 0.25), transparent);
 }
 
+/* Drag handle — hidden on desktop, shown on mobile */
+.popover-handle {
+  display: none;
+}
+
 /* Close button */
 .popover-close {
   position: absolute;
@@ -1636,7 +1763,7 @@ body::after {
   display: block;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .popover {
     position: fixed !important;
     bottom: 0 !important;
@@ -1644,11 +1771,19 @@ body::after {
     right: 0 !important;
     top: auto !important;
     width: 100% !important;
-    max-height: 70vh;
-    overflow-y: auto;
+    max-width: 100% !important;
     border-radius: 20px 20px 0 0;
-    padding: 1.5rem;
+    padding: 0.5rem 1.5rem 2rem;
     transform: translateY(100%) !important;
+    background: rgb(14, 14, 30) !important;
+    border: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow:
+      0 -16px 60px rgba(0, 0, 0, 0.7),
+      0 -2px 20px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
     transition:
       opacity 0.3s ease,
       visibility 0.3s ease,
@@ -1659,14 +1794,46 @@ body::after {
     transform: translateY(0) !important;
     opacity: 1 !important;
     visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* Hide desktop decorations on mobile */
+  .popover::before,
+  .popover::after {
+    display: none !important;
+  }
+
+  /* Drag handle pill */
+  .popover-handle {
+    display: block;
+    width: 36px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    margin: 0.75rem auto 1rem;
+  }
+
+  /* Hide X button on mobile — swipe/tap backdrop to close */
+  .popover-close {
+    display: none;
   }
 
   .popover-svc {
     width: 100% !important;
   }
 
+  /* Service CTA buttons — full width stacked */
+  .popover-svc-cta {
+    flex-direction: column;
+  }
+
+  .popover-svc-btn {
+    justify-content: center;
+    padding: 0.9rem 1rem;
+  }
+
   .popover-backdrop.active {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.65);
   }
 }
 
@@ -2041,6 +2208,7 @@ body::after {
 /* ===== Contact Section ===== */
 .contact-section {
   text-align: center;
+  padding-bottom: 3rem;
 }
 
 .contact-heading {
@@ -2071,7 +2239,7 @@ body::after {
   max-width: 200px;
   height: 2px;
   background: var(--gradient-main);
-  margin: 4rem auto 0;
+  margin: 2.5rem auto 0;
   border: none;
   border-radius: 1px;
 }
@@ -2080,7 +2248,7 @@ body::after {
 .footer {
   position: relative;
   z-index: 1;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -2304,8 +2472,8 @@ body::after {
 }
 
 .chat-minimize-btn {
-  width: 28px;
-  height: 28px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2504,8 +2672,8 @@ body::after {
 }
 
 .chat-send-btn {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
   border: none;
@@ -2665,7 +2833,21 @@ body::after {
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    padding: 1rem 0.75rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
   }
 
   /* Tools — 2-column grid on tablet, compact cards */
@@ -2855,7 +3037,7 @@ body::after {
 
   /* Experience — remove timeline, stack cards */
   .exp-track {
-    padding: 0;
+    padding: 0 1rem;
   }
 
   .exp-spine {
@@ -2995,11 +3177,11 @@ body::after {
     font-size: 4rem;
   }
 
-  .svc-title {
+  .svc-body h3 {
     font-size: 1.05rem;
   }
 
-  .svc-desc {
+  .svc-body p {
     font-size: 0.82rem;
   }
 
@@ -3038,14 +3220,12 @@ body::after {
     font-size: 1rem;
   }
 
-  /* Stats — 2x2 grid instead of single column */
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+  .contact-divider {
+    margin-top: 2rem;
   }
 
-  .stat-card {
-    padding: 1.25rem;
+  .contact-section {
+    padding-bottom: 1.5rem;
   }
 
   .nav {
@@ -3072,13 +3252,14 @@ body::after {
   .scroll-top {
     bottom: 80px;
     left: 16px;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     font-size: 1rem;
   }
 
-  /* iOS auto-zoom prevention */
-  input, select, textarea {
+  /* iOS auto-zoom prevention — higher specificity for chat input */
+  input, select, textarea,
+  .chat-input-area input {
     font-size: 16px;
   }
 

@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
 
   <!-- Primary Meta Tags -->
   <title>Aleksis Kālis — AI Solutions Ambassador & Automation Engineer | Kaliz.ai</title>
-  <meta name="description" content="AI Solutions Ambassador & Automation Engineer. 4 000+ hours building AI automations for government and private-sector clients. Custom AI tools, workflow automation & training through Kaliz.ai.">
+  <meta name="description" content="AI Solutions Ambassador & Automation Engineer. 4 000+ hours building AI automations for government and private-sector clients. Custom AI tools, workflow automation & training.">
+  <link rel="canonical" href="https://www.kaliz.ai/">
   <meta name="keywords" content="Aleksis Kālis, AI Solutions, Automation Engineer, n8n, AI Automation, Custom AI Tools, Workflow Optimization, Latvia, Kaliz.ai">
 
   <!-- Open Graph -->
@@ -43,6 +44,51 @@
 
   <!-- Custom CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aleksis Kālis",
+    "url": "https://www.kaliz.ai",
+    "jobTitle": "AI Solutions Ambassador & Automation Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Kaliz.ai",
+      "url": "https://www.kaliz.ai"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rīga",
+      "addressCountry": "LV"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/aleksis-kalis/"
+    ],
+    "knowsAbout": ["AI Automation", "n8n", "Workflow Optimization", "AI Training", "Custom AI Tools"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Kaliz.ai",
+    "url": "https://www.kaliz.ai",
+    "description": "AI automation solutions, custom AI tools, workflow optimization & hands-on AI training for businesses.",
+    "founder": {
+      "@type": "Person",
+      "name": "Aleksis Kālis"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rīga",
+      "addressCountry": "LV"
+    },
+    "areaServed": "Europe",
+    "serviceType": ["AI Consulting", "AI Automation", "AI Training", "Workflow Optimization"]
+  }
+  </script>
 </head>
 
 <body>
@@ -119,7 +165,7 @@
             </a>
           </div>
           <div class="hero-social reveal reveal-delay-4">
-            <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i class="bi bi-linkedin"></i>
             </a>
             <a href="mailto:aleksis@kaliz.ai" aria-label="Email">
@@ -192,8 +238,8 @@
 
         <!-- Card 1 — LEFT (featured) -->
         <div class="exp-row exp-left reveal">
-          <div class="exp-card exp-featured">
-            <div class="exp-card-accent" aria-hidden="true"></div>
+          <div class="exp-card exp-featured" data-exp-id="cec">
+            <div class="exp-expand-hint"><i class="bi bi-plus-lg"></i></div>
             <div class="exp-badge exp-badge-gov"><i class="bi bi-bank"></i> Government</div>
             <div class="exp-date">Feb 2026 — Present</div>
             <h3 class="exp-role">AI & Automation Consultant</h3>
@@ -205,6 +251,18 @@
             </ul>
             <div class="exp-tags">
               <span>Azure</span><span>AI Strategy</span><span>Training</span>
+            </div>
+            <div class="exp-detail">
+              <div class="exp-detail-inner">
+                <div class="exp-detail-content">
+                  <p class="exp-detail-desc">Advising on AI adoption and process automation for national election infrastructure. Building agentic AI solutions using rapid prototyping and AI-assisted development to automate internal processes.</p>
+                  <div class="exp-detail-label"><i class="bi bi-lightning-charge"></i> Key achievements</div>
+                  <div class="exp-achievement">Architecting a private ChatGPT instance on MS Azure for secure handling of sensitive institutional data</div>
+                  <div class="exp-achievement">Building agentic AI solutions to automate internal commission processes using rapid prototyping</div>
+                  <div class="exp-achievement">Consulting staff on effective AI use and running hands-on training sessions across departments</div>
+                  <div class="exp-achievement">Redesigning the commission's public website for improved accessibility</div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="exp-node" aria-hidden="true">
@@ -219,8 +277,8 @@
           <div class="exp-node" aria-hidden="true">
             <div class="exp-node-ring"></div>
           </div>
-          <div class="exp-card">
-            <div class="exp-card-accent" aria-hidden="true"></div>
+          <div class="exp-card" data-exp-id="vidzeme">
+            <div class="exp-expand-hint"><i class="bi bi-plus-lg"></i></div>
             <div class="exp-badge exp-badge-edu"><i class="bi bi-mortarboard"></i> Education</div>
             <div class="exp-date">Feb 2026 — Present</div>
             <h3 class="exp-role">Guest Lecturer — AI & Computer Vision</h3>
@@ -231,13 +289,24 @@
             <div class="exp-tags">
               <span>Computer Vision</span><span>AI</span><span>Teaching</span>
             </div>
+            <div class="exp-detail">
+              <div class="exp-detail-inner">
+                <div class="exp-detail-content">
+                  <p class="exp-detail-desc">Teaching practical AI and computer vision to IT engineering students — bridging academic theory with real-world production AI experience from government and private sector projects.</p>
+                  <div class="exp-detail-label"><i class="bi bi-lightning-charge"></i> Key achievements</div>
+                  <div class="exp-achievement">Delivering hands-on lectures on AI tools, workflows, and computer vision techniques</div>
+                  <div class="exp-achievement">Teaching students to leverage AI coding assistants like Copilot and Cursor for accelerated development</div>
+                  <div class="exp-achievement">Bringing real-world case studies from Supreme Court and Central Election Commission projects into the classroom</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Card 3 — LEFT (featured) -->
         <div class="exp-row exp-left reveal">
-          <div class="exp-card exp-featured">
-            <div class="exp-card-accent" aria-hidden="true"></div>
+          <div class="exp-card exp-featured" data-exp-id="court">
+            <div class="exp-expand-hint"><i class="bi bi-plus-lg"></i></div>
             <div class="exp-badge exp-badge-gov"><i class="bi bi-bank"></i> Government</div>
             <div class="exp-date">Mar 2025 — Present</div>
             <h3 class="exp-role">AI Project Manager</h3>
@@ -249,6 +318,18 @@
             </ul>
             <div class="exp-tags">
               <span>Leadership</span><span>Automation</span><span>n8n</span>
+            </div>
+            <div class="exp-detail">
+              <div class="exp-detail-inner">
+                <div class="exp-detail-content">
+                  <p class="exp-detail-desc">Leading AI transformation at Latvia's highest court — from a major RAG-based semantic search procurement to production automations that serve judges, senators, and court staff daily.</p>
+                  <div class="exp-detail-label"><i class="bi bi-lightning-charge"></i> Key achievements</div>
+                  <div class="exp-achievement">Leading a major public procurement for a RAG-based semantic search engine over 50,000+ sensitive court decisions — coordinating a developer team and defining ML foundations</div>
+                  <div class="exp-achievement">Building production AI automations with proper LLMOps — evaluation pipelines, output validation, monitoring, cost control, and lifecycle management</div>
+                  <div class="exp-achievement">Proposed a case time-tracking system that the Chief Justice mentioned on national television as a potential rollout across the entire court system</div>
+                  <div class="exp-achievement">Designing AI-agent + human workflows for judges and court staff, delivering hands-on training and tailored solutions</div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="exp-node" aria-hidden="true">
@@ -263,8 +344,8 @@
           <div class="exp-node" aria-hidden="true">
             <div class="exp-node-ring"></div>
           </div>
-          <div class="exp-card exp-featured exp-founder">
-            <div class="exp-card-accent" aria-hidden="true"></div>
+          <div class="exp-card exp-featured exp-founder" data-exp-id="kaliz">
+            <div class="exp-expand-hint"><i class="bi bi-plus-lg"></i></div>
             <div class="exp-badge exp-badge-startup"><i class="bi bi-rocket-takeoff"></i> Founder</div>
             <div class="exp-date">Oct 2024 — Present</div>
             <h3 class="exp-role">Kaliz.ai</h3>
@@ -277,13 +358,25 @@
             <div class="exp-tags">
               <span>n8n</span><span>Make.com</span><span>APIs</span><span>Vibe-coding</span>
             </div>
+            <div class="exp-detail">
+              <div class="exp-detail-inner">
+                <div class="exp-detail-content">
+                  <p class="exp-detail-desc">Running an AI consultancy delivering agentic solutions, RAG strategies, workflow automation, and AI-native product development for clients across multiple industries. Leading a small developer team and conducting AI training.</p>
+                  <div class="exp-detail-label"><i class="bi bi-lightning-charge"></i> Key achievements</div>
+                  <div class="exp-achievement">Architecting end-to-end data engineering pipelines with n8n, Make.com, and custom API integrations — from data ingestion through LLM processing to business-facing outputs</div>
+                  <div class="exp-achievement">Rapid prototyping through vibe-coding — turning client ideas into working products fast using AI-first development</div>
+                  <div class="exp-achievement">Conducting AI adoption workshops and ongoing consulting for teams looking to integrate AI into daily operations</div>
+                  <div class="exp-achievement">The full loop of AI adoption — from tech scouting and prototyping through to production deployment and team training</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Card 5 — LEFT -->
         <div class="exp-row exp-left reveal">
-          <div class="exp-card">
-            <div class="exp-card-accent" aria-hidden="true"></div>
+          <div class="exp-card" data-exp-id="sas">
+            <div class="exp-expand-hint"><i class="bi bi-plus-lg"></i></div>
             <div class="exp-badge exp-badge-gov"><i class="bi bi-bank"></i> Government</div>
             <div class="exp-date">Oct 2024 — Present</div>
             <h3 class="exp-role">AI Mentor — Digital Transformation</h3>
@@ -294,6 +387,18 @@
             </ul>
             <div class="exp-tags">
               <span>Mentorship</span><span>Prototyping</span>
+            </div>
+            <div class="exp-detail">
+              <div class="exp-detail-inner">
+                <div class="exp-detail-content">
+                  <p class="exp-detail-desc">Guiding government project teams through startup-style sprints — from idea generation to working prototype — replicating real startup methodology adapted for introducing AI into large public-sector institutions.</p>
+                  <div class="exp-detail-label"><i class="bi bi-lightning-charge"></i> Key achievements</div>
+                  <div class="exp-achievement">Guiding government teams through structured sprints from idea generation to working AI prototype</div>
+                  <div class="exp-achievement">Scaling learnings across multiple mentor teams — studying what makes top teams achieve faster results</div>
+                  <div class="exp-achievement">Applying startup methodologies to accelerate AI adoption across government departments</div>
+                  <div class="exp-achievement">Convincing institutions naturally resistant to change to trust and adopt AI workflows</div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="exp-node" aria-hidden="true">
@@ -308,8 +413,8 @@
           <div class="exp-node" aria-hidden="true">
             <div class="exp-node-ring"></div>
           </div>
-          <div class="exp-card">
-            <div class="exp-card-accent" aria-hidden="true"></div>
+          <div class="exp-card" data-exp-id="hyper">
+            <div class="exp-expand-hint"><i class="bi bi-plus-lg"></i></div>
             <div class="exp-badge exp-badge-private"><i class="bi bi-building"></i> Private Sector</div>
             <div class="exp-date">Jan 2024 — Dec 2024</div>
             <h3 class="exp-role">AI Specialist & Technical Sales Engineer</h3>
@@ -320,6 +425,18 @@
             </ul>
             <div class="exp-tags">
               <span>Sales</span><span>Lead Gen</span><span>RPA</span>
+            </div>
+            <div class="exp-detail">
+              <div class="exp-detail-inner">
+                <div class="exp-detail-content">
+                  <p class="exp-detail-desc">Built LLM-powered lead validation pipelines and AI-driven sales automation at a fast-moving startup. Evaluated emerging AI platforms and agent frameworks, while learning growth methodologies from successful startups and investors.</p>
+                  <div class="exp-detail-label"><i class="bi bi-lightning-charge"></i> Key achievements</div>
+                  <div class="exp-achievement">Built LLM-powered lead validation pipelines using n8n — applying prompt engineering, model fine-tuning, and cost optimization for large-context daily runs</div>
+                  <div class="exp-achievement">Tech scouting: evaluated emerging AI platforms and agent frameworks for client use cases</div>
+                  <div class="exp-achievement">Developed RPA solutions and ran business process analysis across sectors</div>
+                  <div class="exp-achievement">Learning growth methodologies from successful startups and investors — applying those patterns to accelerate product-market fit</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -337,34 +454,68 @@
 
         <div class="stack-bento reveal reveal-delay-2">
 
-          <!-- AI & LLMs — large featured cell -->
+          <!-- Row 1: AI Coding Assistants (span 2) + AI Models -->
+
+          <!-- AI Coding Assistants — span 2 -->
           <div class="stack-cell stack-ai">
             <div class="stack-cell-bg" aria-hidden="true"></div>
             <div class="stack-cell-content">
-              <div class="stack-cat"><i class="bi bi-stars"></i> AI & LLMs</div>
+              <div class="stack-cat"><i class="bi bi-terminal"></i> AI Coding Assistants</div>
               <div class="stack-items">
                 <div class="stack-chip stack-chip-hero" data-tool="claude-code" tabindex="0">
                   <i class="bi bi-terminal"></i>
                   <span>Claude Code</span>
                   <small>Primary IDE</small>
                 </div>
-                <div class="stack-chip" data-tool="chatgpt" tabindex="0">
-                  <i class="bi bi-chat-dots"></i>
-                  <span>ChatGPT</span>
-                </div>
-                <div class="stack-chip" data-tool="gemini" tabindex="0">
-                  <i class="bi bi-stars"></i>
-                  <span>Gemini</span>
+                <div class="stack-chip" data-tool="cursor" tabindex="0">
+                  <i class="bi bi-cursor"></i>
+                  <span>Cursor</span>
                 </div>
                 <div class="stack-chip" data-tool="copilot" tabindex="0">
                   <i class="bi bi-github"></i>
                   <span>Copilot</span>
                 </div>
+                <div class="stack-chip" data-tool="windsurf" tabindex="0">
+                  <i class="bi bi-wind"></i>
+                  <span>Windsurf</span>
+                </div>
+                <div class="stack-chip" data-tool="devin" tabindex="0">
+                  <i class="bi bi-robot"></i>
+                  <span>Devin</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Automation — medium cell -->
+          <!-- AI Models -->
+          <div class="stack-cell stack-models">
+            <div class="stack-cell-bg" aria-hidden="true"></div>
+            <div class="stack-cell-content">
+              <div class="stack-cat"><i class="bi bi-stars"></i> AI Models</div>
+              <div class="stack-items">
+                <div class="stack-chip" data-tool="chatgpt" tabindex="0">
+                  <i class="bi bi-chat-dots"></i>
+                  <span>ChatGPT</span>
+                </div>
+                <div class="stack-chip" data-tool="anthropic" tabindex="0">
+                  <i class="bi bi-cpu"></i>
+                  <span>Anthropic</span>
+                </div>
+                <div class="stack-chip" data-tool="gemini" tabindex="0">
+                  <i class="bi bi-stars"></i>
+                  <span>Gemini</span>
+                </div>
+                <div class="stack-chip" data-tool="perplexity" tabindex="0">
+                  <i class="bi bi-search"></i>
+                  <span>Perplexity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Automation + AI Engineering + Development -->
+
+          <!-- Automation -->
           <div class="stack-cell stack-auto">
             <div class="stack-cell-bg" aria-hidden="true"></div>
             <div class="stack-cell-content">
@@ -383,7 +534,29 @@
             </div>
           </div>
 
-          <!-- Development — medium cell -->
+          <!-- AI Engineering -->
+          <div class="stack-cell stack-aieng">
+            <div class="stack-cell-bg" aria-hidden="true"></div>
+            <div class="stack-cell-content">
+              <div class="stack-cat"><i class="bi bi-cpu"></i> AI Engineering</div>
+              <div class="stack-items">
+                <div class="stack-chip" data-tool="rag" tabindex="0">
+                  <i class="bi bi-search"></i>
+                  <span>RAG & Vector Search</span>
+                </div>
+                <div class="stack-chip" data-tool="prompt-eng" tabindex="0">
+                  <i class="bi bi-chat-square-text"></i>
+                  <span>Prompt Engineering</span>
+                </div>
+                <div class="stack-chip" data-tool="llmops" tabindex="0">
+                  <i class="bi bi-graph-up"></i>
+                  <span>LLMOps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Development -->
           <div class="stack-cell stack-dev">
             <div class="stack-cell-bg" aria-hidden="true"></div>
             <div class="stack-cell-content">
@@ -405,17 +578,14 @@
             </div>
           </div>
 
-          <!-- Dev Tools — medium cell -->
+          <!-- Row 3: Dev Tools + Infrastructure & Security -->
+
+          <!-- Dev Tools -->
           <div class="stack-cell stack-tools">
             <div class="stack-cell-bg" aria-hidden="true"></div>
             <div class="stack-cell-content">
               <div class="stack-cat"><i class="bi bi-wrench-adjustable"></i> Dev Tools</div>
               <div class="stack-items">
-                <div class="stack-chip stack-chip-hero" data-tool="cursor" tabindex="0">
-                  <i class="bi bi-cursor"></i>
-                  <span>Cursor</span>
-                  <small>AI Editor</small>
-                </div>
                 <div class="stack-chip" data-tool="vscode" tabindex="0">
                   <i class="bi bi-code-square"></i>
                   <span>VS Code</span>
@@ -424,11 +594,15 @@
                   <i class="bi bi-heart"></i>
                   <span>Lovable</span>
                 </div>
+                <div class="stack-chip" data-tool="git" tabindex="0">
+                  <i class="bi bi-git"></i>
+                  <span>Git & GitHub</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Infrastructure — small cell -->
+          <!-- Infrastructure & Cloud -->
           <div class="stack-cell stack-infra">
             <div class="stack-cell-bg" aria-hidden="true"></div>
             <div class="stack-cell-content">
@@ -438,11 +612,15 @@
                   <i class="bi bi-cloud"></i>
                   <span>MS Azure</span>
                 </div>
+                <div class="stack-chip" data-tool="data-eng" tabindex="0">
+                  <i class="bi bi-arrow-left-right"></i>
+                  <span>API Integrations</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Security — small cell -->
+          <!-- Security -->
           <div class="stack-cell stack-sec">
             <div class="stack-cell-bg" aria-hidden="true"></div>
             <div class="stack-cell-content">
@@ -451,6 +629,10 @@
                 <div class="stack-chip" data-tool="cybersecurity" tabindex="0">
                   <i class="bi bi-shield-check"></i>
                   <span>Cybersecurity</span>
+                </div>
+                <div class="stack-chip" data-tool="bsc-cyber" tabindex="0">
+                  <i class="bi bi-mortarboard"></i>
+                  <span>BSc IT & Cybersec</span>
                 </div>
               </div>
             </div>
@@ -607,7 +789,7 @@
                 </div>
                 <p class="testimonial-quote">The course was definitely valuable. It's understandable and useful even for beginners. It encourages thinking and looking for solutions to complete everyday tasks much faster and more productively. The lecturer was AMAZING — it's important not only to be a specialist but also to be able to explain your knowledge in a way that others can easily understand.</p>
                 <div class="testimonial-author">
-                  <img src="assets/img/testimonials/2.png" alt="Ozolkalns" class="testimonial-avatar">
+                  <img src="assets/img/testimonials/2.png" alt="Ozolkalns" class="testimonial-avatar" loading="lazy">
                   <div>
                     <div class="testimonial-name">Līga</div>
                     <div class="testimonial-role">Administrator & Head of Management</div>
@@ -624,7 +806,7 @@
                 </div>
                 <p class="testimonial-quote">The AI course was useful and managed to engage participants of different levels in working with artificial intelligence. It truly is an exciting field that offers many opportunities in tourism.</p>
                 <div class="testimonial-author">
-                  <img src="assets/img/testimonials/1.png" alt="Kārļamuiža" class="testimonial-avatar">
+                  <img src="assets/img/testimonials/1.png" alt="Kārļamuiža" class="testimonial-avatar" loading="lazy">
                   <div>
                     <div class="testimonial-name">Jānis</div>
                     <div class="testimonial-role">Owner</div>
@@ -641,7 +823,7 @@
                 </div>
                 <p class="testimonial-quote">Very useful, informative, and complex topics were explained in a clear and understandable way. Not a single moment was boring. I will definitely apply the knowledge gained in practice. A big thank you for the effort and the opportunity. The best course I've participated in so far.</p>
                 <div class="testimonial-author">
-                  <img src="assets/img/testimonials/3.png" alt="Boards You" class="testimonial-avatar">
+                  <img src="assets/img/testimonials/3.png" alt="Boards You" class="testimonial-avatar" loading="lazy">
                   <div>
                     <div class="testimonial-name">Elīna</div>
                     <div class="testimonial-role">Project Manager</div>
@@ -658,7 +840,7 @@
                 </div>
                 <p class="testimonial-quote">I very much value Aleksis' entrepreneurial spirit when he can see the opportunity beyond his direct responsibilities. His ability to take initiative is highly visible both in personal growth and in his committed way of fulfilling work duties. Aleksis is very proficient in current technologies, adapts quickly, and performs efficiently in dynamically changing environments.</p>
                 <div class="testimonial-author">
-                  <img src="assets/img/testimonials/4.png" alt="HyperScan" class="testimonial-avatar">
+                  <img src="assets/img/testimonials/4.png" alt="HyperScan" class="testimonial-avatar" loading="lazy">
                   <div>
                     <div class="testimonial-name">Juris</div>
                     <div class="testimonial-role">Chief Growth Officer</div>
@@ -691,7 +873,7 @@
           <a href="mailto:aleksis@kaliz.ai" class="btn-outline">
             <i class="bi bi-envelope"></i> aleksis@kaliz.ai
           </a>
-          <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank" class="btn-outline">
+          <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank" rel="noopener noreferrer" class="btn-outline">
             <i class="bi bi-linkedin"></i> LinkedIn
           </a>
         </div>
@@ -707,7 +889,7 @@
       <div class="footer-inner">
         <span class="footer-copy">&copy; 2026 Aleksis Kālis &middot; Kaliz.ai &middot; Rīga, Latvia</span>
         <div class="footer-links">
-          <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/aleksis-kalis/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
           <a href="mailto:aleksis@kaliz.ai" aria-label="Email"><i class="bi bi-envelope"></i></a>
         </div>
       </div>
@@ -758,6 +940,7 @@
 
   <!-- Popovers (body-level for absolute positioning) -->
   <div class="popover" id="toolPopover">
+    <div class="popover-handle"></div>
     <button class="popover-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
     <div class="popover-tool-header">
       <div class="popover-tool-icon" id="popToolIcon"></div>
@@ -774,6 +957,7 @@
   </div>
 
   <div class="popover popover-svc" id="svcPopover">
+    <div class="popover-handle"></div>
     <button class="popover-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
     <div class="popover-svc-header">
       <div class="popover-svc-icon" id="popSvcIcon"></div>
@@ -1122,11 +1306,21 @@
       'python': { name: 'Python', icon: 'bi-braces', category: 'Development', description: 'Primary language for data processing, AI/ML pipelines, scripting, and backend logic. The backbone of most technical projects.', experience: ['AI tool development for the Supreme Court — document processing pipelines', 'Data analysis and automation scripts for government projects', 'Computer vision coursework and labs at Vidzeme University'] },
       'javascript': { name: 'JavaScript', icon: 'bi-filetype-js', category: 'Development', description: 'Essential for web development, n8n code nodes, and interactive frontend experiences across client-side and server-side logic.', experience: ['This website — custom animations, intersection observers, chat widget', 'n8n code nodes for complex data transformations', 'Interactive prototypes and client dashboards at Kaliz.ai'] },
       'sql': { name: 'SQL', icon: 'bi-database', category: 'Development', description: 'Database querying and management for structured data — analytics, reporting, and building data pipelines.', experience: ['Database integrations in n8n workflows — querying, syncing, transforming', 'Analytics and reporting for lead generation at SIA HYPER', 'Data pipeline design for government AI projects'] },
-      'cursor': { name: 'Cursor', icon: 'bi-cursor', category: 'Dev Tools', description: 'AI-powered code editor built on VS Code. Familiar experience with deep AI integration for faster, smarter development.', experience: ['Primary code editor for client projects alongside Claude Code', 'Teaching AI-assisted development workflows to students', 'Building and iterating on prototypes with AI code generation'] },
+      'cursor': { name: 'Cursor', icon: 'bi-cursor', category: 'AI Coding Assistants', description: 'AI-powered code editor built on VS Code. Familiar experience with deep AI integration for faster, smarter development.', experience: ['Primary code editor for client projects alongside Claude Code', 'Teaching AI-assisted development workflows to students', 'Building and iterating on prototypes with AI code generation'] },
       'vscode': { name: 'VS Code', icon: 'bi-code-square', category: 'Dev Tools', description: 'Industry-standard code editor. Foundation for development with extensions, debugging, and Git integration.', experience: ['Long-standing development environment across all projects', 'Extension ecosystem for Python, JavaScript, and DevOps', 'Live coding demos during university lectures'] },
       'lovable': { name: 'Lovable', icon: 'bi-heart', category: 'Dev Tools', description: 'AI-native app builder for rapidly prototyping full-stack web applications. Ideas to working MVPs in hours, not weeks.', experience: ['Rapid client prototyping — validating ideas before full builds', 'Building internal tools and dashboards for government projects', 'Demonstrating AI-powered development to potential clients'] },
       'azure': { name: 'MS Azure', icon: 'bi-cloud', category: 'Infrastructure', description: 'Cloud platform for deploying secure, scalable infrastructure. Strong for government projects requiring data residency and compliance.', experience: ['Private ChatGPT instance for the Central Election Commission of Latvia', 'Cloud infrastructure for AI tools at the Supreme Court', 'Enterprise-grade deployment environments for Kaliz.ai clients'] },
-      'cybersecurity': { name: 'Cybersecurity', icon: 'bi-shield-check', category: 'Security', description: 'Security-first mindset woven into everything I build — threat modeling, secure architecture, and responsible AI implementation.', experience: ['Security-minded architecture across all government AI projects', 'Secure deployment for self-hosted n8n instances and client data', 'Cybersecurity background informing responsible AI practices'] }
+      'cybersecurity': { name: 'Cybersecurity', icon: 'bi-shield-check', category: 'Security', description: 'Security-first mindset woven into everything I build — threat modeling, secure architecture, and responsible AI implementation.', experience: ['Security-minded architecture across all government AI projects', 'Secure deployment for self-hosted n8n instances and client data', 'Cybersecurity background informing responsible AI practices'] },
+      'windsurf': { name: 'Windsurf', icon: 'bi-wind', category: 'AI Coding Assistants', description: 'AI-native code editor with deep context awareness. Part of the AI coding toolkit for rapid iteration and multi-file editing.', experience: ['Rapid prototyping of AI-powered tools for client projects', 'Complementary AI assistant alongside Claude Code and Cursor', 'Testing and benchmarking AI coding tools for best-fit workflows'] },
+      'devin': { name: 'Devin', icon: 'bi-robot', category: 'AI Coding Assistants', description: 'Autonomous AI software engineer for delegating full development tasks — from planning through implementation to deployment.', experience: ['Delegating standalone development tasks for faster delivery at Kaliz.ai', 'Evaluating autonomous AI agents for government project scalability', 'Running parallel workstreams using AI agent capabilities'] },
+      'rag': { name: 'RAG & Vector Search', icon: 'bi-search', category: 'AI Engineering', description: 'Retrieval-Augmented Generation and semantic vector search — building production systems that ground LLM outputs in real data.', experience: ['Leading a major RAG-based semantic search procurement at Latvia\'s Supreme Court over 50,000+ court decisions', 'Defining ML foundations and technical requirements for production vector search systems', 'Designing retrieval pipelines that combine embedding models, reranking, and LLM generation'] },
+      'prompt-eng': { name: 'Prompt Engineering', icon: 'bi-chat-square-text', category: 'AI Engineering', description: 'Systematic prompt and context engineering for production AI systems — designing reliable prompt chains, managing context windows, and optimizing LLM outputs for real-world use.', experience: ['Prompt engineering for production automations at the Supreme Court — designing reliable prompt chains for legal document processing', 'Building LLM-powered lead validation pipelines at SIA HYPER with optimized prompts for cost-efficient large-context daily runs', 'Teaching practical prompt engineering techniques across government departments and university lectures'] },
+      'llmops': { name: 'LLMOps', icon: 'bi-graph-up', category: 'AI Engineering', description: 'End-to-end LLM lifecycle management — evaluation pipelines, output validation, monitoring, cost control, and production reliability.', experience: ['Building evaluation and monitoring pipelines for Supreme Court AI automations', 'Cost optimization across multiple LLM providers for high-volume daily processing at SIA HYPER', 'Designing output validation workflows to ensure AI reliability in government decision-making'] },
+      'git': { name: 'Git & GitHub', icon: 'bi-git', category: 'Dev Tools', description: 'Version control and collaborative development — Git workflows, GitHub Actions, CI/CD pipelines, and open-source contribution.', experience: ['Managing all project repositories across Kaliz.ai client work', 'GitHub Pages deployment for this portfolio site', 'Teaching version control practices to university students'] },
+      'data-eng': { name: 'API Integrations', icon: 'bi-arrow-left-right', category: 'Infrastructure', description: 'End-to-end data engineering — designing API integrations, building data pipelines from ingestion through LLM processing to business-facing outputs.', experience: ['Architecting multi-platform API integrations with n8n and Make.com for Kaliz.ai clients', 'Building data pipelines connecting CRMs, email tools, and databases at SIA HYPER', 'Custom webhook and REST API development for the Supreme Court\'s AI systems'] },
+      'anthropic': { name: 'Anthropic (Claude)', icon: 'bi-cpu', category: 'AI Models', description: 'Claude model family for complex reasoning, coding, and long-context analysis. My primary AI for technical work through Claude Code and the API.', experience: ['Claude Code as primary development IDE — building full-stack applications and automations', 'Long-context document analysis for legal and government projects', 'API integration for production AI pipelines at Kaliz.ai'] },
+      'perplexity': { name: 'Perplexity', icon: 'bi-search', category: 'AI Models', description: 'AI-powered research engine for up-to-date information retrieval, fact-checking, and deep-dive research with source citations.', experience: ['Real-time research and fact-checking during client consulting sessions', 'Tech scouting and evaluating emerging AI platforms and frameworks', 'Sourcing documentation and references for government project proposals'] },
+      'bsc-cyber': { name: 'BSc IT Engineering, Cybersecurity', icon: 'bi-mortarboard', category: 'Security', description: 'Bachelor of Science in Information Technology Engineering with a specialization in Cybersecurity from Vidzeme University of Applied Sciences.', experience: ['Formal education in network security, cryptography, and threat modeling', 'Security-first mindset applied to all AI and automation projects', 'Now guest-lecturing on AI and computer vision at the same university'] }
     };
 
     // Service CTA data
@@ -1143,8 +1337,8 @@
     let activePopover = null;
 
     function positionPopover(popover, anchor) {
-      // On mobile, use CSS bottom-sheet positioning
-      if (window.innerWidth <= 600) {
+      // On mobile/tablet, use CSS bottom-sheet positioning
+      if (window.innerWidth <= 768) {
         popover.classList.add('active');
         return;
       }
@@ -1160,6 +1354,7 @@
       const vh = window.innerHeight;
       const scrollY = window.scrollY;
       const gap = 10;
+      const navHeight = 70; // Keep popover below the fixed nav
 
       // Try positioning to the right of the anchor
       let left = aRect.right + gap;
@@ -1184,8 +1379,8 @@
         top = aRect.top + scrollY - pRect.height - gap;
       }
 
-      // Clamp vertical
-      top = Math.max(scrollY + 16, top);
+      // Clamp vertical — never overlap the fixed nav
+      top = Math.max(scrollY + navHeight, top);
 
       popover.style.left = left + 'px';
       popover.style.top = top + 'px';
@@ -1221,7 +1416,6 @@
           return '<div class="popover-exp-item">' + item + '</div>';
         }).join('');
 
-        // Position needs absolute coords
         toolPopover.style.position = 'absolute';
         positionPopover(toolPopover, this);
         backdrop.classList.add('active');
@@ -1273,6 +1467,57 @@
     document.getElementById('popSvcContactBtn').addEventListener('click', function() {
       closeAllPopovers();
     });
+
+    // Experience card inline expand/collapse
+    document.querySelectorAll('.exp-card[data-exp-id]').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeAllPopovers();
+
+        var wasExpanded = this.classList.contains('exp-expanded');
+        var clickedCard = this;
+
+        // Remember this card's position in the viewport before collapsing others
+        var rectBefore = clickedCard.getBoundingClientRect();
+
+        // Collapse all other expanded cards
+        document.querySelectorAll('.exp-card.exp-expanded').forEach(function(c) {
+          if (c !== clickedCard) c.classList.remove('exp-expanded');
+        });
+
+        // Restore scroll so the clicked card stays in the same viewport spot
+        var rectAfter = clickedCard.getBoundingClientRect();
+        var drift = rectAfter.top - rectBefore.top;
+        if (drift !== 0) {
+          window.scrollBy(0, drift);
+        }
+
+        // Toggle this card
+        if (!wasExpanded) {
+          clickedCard.classList.add('exp-expanded');
+        } else {
+          clickedCard.classList.remove('exp-expanded');
+        }
+      });
+    });
+
+    // Close expanded cards when clicking outside
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.exp-card.exp-expanded').forEach(function(c) {
+        c.classList.remove('exp-expanded');
+      });
+    });
+
+    // Close popovers on scroll (prevents floating disconnected panels)
+    var scrollCloseTimer = null;
+    window.addEventListener('scroll', function() {
+      if (activePopover) {
+        if (scrollCloseTimer) clearTimeout(scrollCloseTimer);
+        scrollCloseTimer = setTimeout(function() {
+          closeAllPopovers();
+        }, 50);
+      }
+    }, { passive: true });
 
     // Close handlers
     document.querySelectorAll('.popover-close').forEach(function(btn) {
