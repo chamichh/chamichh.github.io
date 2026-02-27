@@ -87,6 +87,10 @@ a {
   transition: color 0.3s ease;
 }
 
+button, a, [tabindex], input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -2732,7 +2736,7 @@ body::after {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 1.25rem;
+    padding: 0 1rem;
   }
 
   .hero-badge {
@@ -2920,6 +2924,40 @@ body::after {
 
   .nav.scrolled {
     padding: 0.6rem 1.25rem;
+  }
+
+  /* Performance — reduce GPU load on mobile */
+  .blob {
+    filter: blur(80px);
+  }
+
+  .blob-3 {
+    display: none;
+  }
+
+  body::after {
+    display: none;
+  }
+
+  .scroll-top {
+    bottom: 80px;
+    left: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  /* iOS auto-zoom prevention */
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  .footer-inner {
+    gap: 0.75rem;
+  }
+
+  .footer-copy {
+    font-size: 0.72rem;
   }
 }
 
