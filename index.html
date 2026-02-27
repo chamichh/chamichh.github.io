@@ -1481,22 +1481,49 @@
         var wasExpanded = this.classList.contains('exp-expanded');
         var clickedCard = this;
 
-        // Remember this card's position in the viewport before collapsing others
-        var rectBefore = clickedCard.getBoundingClientRect();
-
-        // Collapse all other expanded cards
+        // Find any other expanded card above this one
+        var otherExpanded = [];
         document.querySelectorAll('.exp-card.exp-expanded').forEach(function(c) {
-          if (c !== clickedCard) c.classList.remove('exp-expanded');
+          if (c !== clickedCard) otherExpanded.push(c);
         });
 
-        // Restore scroll so the clicked card stays in the same viewport spot
-        var rectAfter = clickedCard.getBoundingClientRect();
-        var drift = rectAfter.top - rectBefore.top;
-        if (drift !== 0) {
-          window.scrollBy(0, drift);
+        if (otherExpanded.length > 0) {
+          // Snapshot clicked card's viewport position
+          var topBefore = clickedCard.getBoundingClientRect().top;
+
+          // Instantly collapse other cards (no animation) so layout settles immediately
+          otherExpanded.forEach(function(c) {
+            c.style.transition = 'none';
+            var detail = c.querySelector('.exp-detail');
+            var inner = c.querySelector('.exp-detail-inner');
+            if (detail) detail.style.transition = 'none';
+            if (inner) inner.style.transition = 'none';
+            c.classList.remove('exp-expanded');
+          });
+
+          // Force layout recalc so the collapse takes effect now
+          void clickedCard.offsetHeight;
+
+          // Correct scroll to keep clicked card in same viewport spot
+          var topAfter = clickedCard.getBoundingClientRect().top;
+          var drift = topAfter - topBefore;
+          if (drift !== 0) {
+            window.scrollBy(0, drift);
+          }
+
+          // Re-enable transitions after a frame
+          requestAnimationFrame(function() {
+            otherExpanded.forEach(function(c) {
+              c.style.transition = '';
+              var detail = c.querySelector('.exp-detail');
+              var inner = c.querySelector('.exp-detail-inner');
+              if (detail) detail.style.transition = '';
+              if (inner) inner.style.transition = '';
+            });
+          });
         }
 
-        // Toggle this card
+        // Toggle this card (with animation)
         if (!wasExpanded) {
           clickedCard.classList.add('exp-expanded');
         } else {
