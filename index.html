@@ -454,13 +454,13 @@
 
         <div class="stack-bento reveal reveal-delay-2">
 
-          <!-- Row 1: AI Coding Assistants (span 2) + AI Models -->
+          <!-- Row 1: AI & Dev Tools + AI Models + AI Engineering -->
 
-          <!-- AI Coding Assistants — span 2 -->
+          <!-- AI & Dev Tools -->
           <div class="stack-cell stack-ai">
             <div class="stack-cell-bg" aria-hidden="true"></div>
             <div class="stack-cell-content">
-              <div class="stack-cat"><i class="bi bi-terminal"></i> AI Coding Assistants</div>
+              <div class="stack-cat"><i class="bi bi-terminal"></i> AI & Dev Tools</div>
               <div class="stack-items">
                 <div class="stack-chip stack-chip-hero" data-tool="claude-code" tabindex="0">
                   <i class="bi bi-terminal"></i>
@@ -471,17 +471,21 @@
                   <i class="bi bi-cursor"></i>
                   <span>Cursor</span>
                 </div>
-                <div class="stack-chip" data-tool="copilot" tabindex="0">
-                  <i class="bi bi-github"></i>
-                  <span>Copilot</span>
-                </div>
                 <div class="stack-chip" data-tool="windsurf" tabindex="0">
                   <i class="bi bi-wind"></i>
                   <span>Windsurf</span>
                 </div>
-                <div class="stack-chip" data-tool="devin" tabindex="0">
-                  <i class="bi bi-robot"></i>
-                  <span>Devin</span>
+                <div class="stack-chip" data-tool="vscode" tabindex="0">
+                  <i class="bi bi-code-square"></i>
+                  <span>VS Code</span>
+                </div>
+                <div class="stack-chip" data-tool="lovable" tabindex="0">
+                  <i class="bi bi-heart"></i>
+                  <span>Lovable</span>
+                </div>
+                <div class="stack-chip" data-tool="git" tabindex="0">
+                  <i class="bi bi-git"></i>
+                  <span>Git & GitHub</span>
                 </div>
               </div>
             </div>
@@ -513,27 +517,6 @@
             </div>
           </div>
 
-          <!-- Row 2: Automation + AI Engineering + Development -->
-
-          <!-- Automation -->
-          <div class="stack-cell stack-auto">
-            <div class="stack-cell-bg" aria-hidden="true"></div>
-            <div class="stack-cell-content">
-              <div class="stack-cat"><i class="bi bi-diagram-3"></i> Automation</div>
-              <div class="stack-items">
-                <div class="stack-chip stack-chip-hero" data-tool="n8n" tabindex="0">
-                  <i class="bi bi-diagram-3"></i>
-                  <span>n8n</span>
-                  <small>Core platform</small>
-                </div>
-                <div class="stack-chip" data-tool="make" tabindex="0">
-                  <i class="bi bi-gear"></i>
-                  <span>Make.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- AI Engineering -->
           <div class="stack-cell stack-aieng">
             <div class="stack-cell-bg" aria-hidden="true"></div>
@@ -555,6 +538,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Row 2: Development + Automation + Infrastructure & Security -->
 
           <!-- Development -->
           <div class="stack-cell stack-dev">
@@ -578,39 +563,20 @@
             </div>
           </div>
 
-          <!-- Row 3: Dev Tools + Infrastructure & Security -->
-
-          <!-- Dev Tools -->
-          <div class="stack-cell stack-tools">
+          <!-- Automation -->
+          <div class="stack-cell stack-auto">
             <div class="stack-cell-bg" aria-hidden="true"></div>
             <div class="stack-cell-content">
-              <div class="stack-cat"><i class="bi bi-wrench-adjustable"></i> Dev Tools</div>
+              <div class="stack-cat"><i class="bi bi-diagram-3"></i> Automation</div>
               <div class="stack-items">
-                <div class="stack-chip" data-tool="vscode" tabindex="0">
-                  <i class="bi bi-code-square"></i>
-                  <span>VS Code</span>
+                <div class="stack-chip stack-chip-hero" data-tool="n8n" tabindex="0">
+                  <i class="bi bi-diagram-3"></i>
+                  <span>n8n</span>
+                  <small>Core platform</small>
                 </div>
-                <div class="stack-chip" data-tool="lovable" tabindex="0">
-                  <i class="bi bi-heart"></i>
-                  <span>Lovable</span>
-                </div>
-                <div class="stack-chip" data-tool="git" tabindex="0">
-                  <i class="bi bi-git"></i>
-                  <span>Git & GitHub</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Infrastructure & Cloud -->
-          <div class="stack-cell stack-infra">
-            <div class="stack-cell-bg" aria-hidden="true"></div>
-            <div class="stack-cell-content">
-              <div class="stack-cat"><i class="bi bi-cloud"></i> Infrastructure</div>
-              <div class="stack-items">
-                <div class="stack-chip" data-tool="azure" tabindex="0">
-                  <i class="bi bi-cloud"></i>
-                  <span>MS Azure</span>
+                <div class="stack-chip" data-tool="make" tabindex="0">
+                  <i class="bi bi-gear"></i>
+                  <span>Make.com</span>
                 </div>
                 <div class="stack-chip" data-tool="data-eng" tabindex="0">
                   <i class="bi bi-arrow-left-right"></i>
@@ -620,12 +586,16 @@
             </div>
           </div>
 
-          <!-- Security -->
-          <div class="stack-cell stack-sec">
+          <!-- Infrastructure & Security -->
+          <div class="stack-cell stack-infra">
             <div class="stack-cell-bg" aria-hidden="true"></div>
             <div class="stack-cell-content">
-              <div class="stack-cat"><i class="bi bi-shield-lock"></i> Security</div>
+              <div class="stack-cat"><i class="bi bi-shield-lock"></i> Infra & Security</div>
               <div class="stack-items">
+                <div class="stack-chip" data-tool="azure" tabindex="0">
+                  <i class="bi bi-cloud"></i>
+                  <span>MS Azure</span>
+                </div>
                 <div class="stack-chip" data-tool="cybersecurity" tabindex="0">
                   <i class="bi bi-shield-check"></i>
                   <span>Cybersecurity</span>
@@ -1301,26 +1271,24 @@
 
     // Tool data
     const toolData = {
-      'claude-code': { name: 'Claude Code', icon: 'bi-terminal', category: 'AI & LLMs', description: 'My primary development environment — an AI-native IDE for building full-stack applications, automating workflows, and pair-programming on complex problems.', experience: ['Built this entire website from design to deployment', 'Custom automation flows and API integrations for Kaliz.ai clients', 'Rapid prototyping of AI-powered tools for the Supreme Court of Latvia'] },
+      'claude-code': { name: 'Claude Code', icon: 'bi-terminal', category: 'AI & Dev Tools', description: 'My primary development environment — an AI-native IDE for building full-stack applications, automating workflows, and pair-programming on complex problems.', experience: ['Built this entire website from design to deployment', 'Custom automation flows and API integrations for Kaliz.ai clients', 'Rapid prototyping of AI-powered tools for the Supreme Court of Latvia'] },
       'chatgpt': { name: 'ChatGPT', icon: 'bi-chat-dots', category: 'AI & LLMs', description: 'Go-to for brainstorming, content generation, and quick research. GPT models for documentation, client communication, and exploring solutions.', experience: ['Architecting a private ChatGPT instance on Azure for the Central Election Commission', 'Training government teams on practical ChatGPT usage', 'Content creation and strategy development for Kaliz.ai clients'] },
       'gemini': { name: 'Gemini', icon: 'bi-stars', category: 'AI & LLMs', description: 'Google\'s multimodal AI for deep Google Workspace integration, long-context analysis, and cross-referencing large document sets.', experience: ['Long-context document analysis for legal and government projects', 'Multimodal workflows combining text, image, and data analysis', 'Benchmarking responses across models for client solutions'] },
-      'copilot': { name: 'GitHub Copilot', icon: 'bi-github', category: 'AI & LLMs', description: 'AI pair-programmer integrated into VS Code and Cursor. Speeds up coding with inline suggestions and context-aware completions.', experience: ['Daily code acceleration across Python, JavaScript, and SQL projects', 'Building automation scripts and API connectors at Kaliz.ai', 'Teaching students at Vidzeme University how to leverage Copilot'] },
       'n8n': { name: 'n8n', icon: 'bi-diagram-3', category: 'Automation', description: 'Core automation platform. Complex multi-step workflows connecting APIs, databases, AI models, and communication tools — all self-hosted.', experience: ['Built the AI assistant on this site — webhook → AI agent → Calendar + Gmail', 'Automated lead generation funnels at SIA HYPER — cold emails, CRM syncs', 'End-to-end client solutions at Kaliz.ai — intake forms to delivery'] },
       'make': { name: 'Make.com', icon: 'bi-gear', category: 'Automation', description: 'Visual automation for managed, no-code-friendly solutions. Great for quick integrations and client handoffs.', experience: ['Client-facing automations where clients manage flows independently', 'Multi-platform integrations connecting CRMs, email tools, and databases', 'Rapid prototyping before building production-grade n8n flows'] },
       'python': { name: 'Python', icon: 'bi-braces', category: 'Development', description: 'Primary language for data processing, AI/ML pipelines, scripting, and backend logic. The backbone of most technical projects.', experience: ['AI tool development for the Supreme Court — document processing pipelines', 'Data analysis and automation scripts for government projects', 'Computer vision coursework and labs at Vidzeme University'] },
       'javascript': { name: 'JavaScript', icon: 'bi-filetype-js', category: 'Development', description: 'Essential for web development, n8n code nodes, and interactive frontend experiences across client-side and server-side logic.', experience: ['This website — custom animations, intersection observers, chat widget', 'n8n code nodes for complex data transformations', 'Interactive prototypes and client dashboards at Kaliz.ai'] },
       'sql': { name: 'SQL', icon: 'bi-database', category: 'Development', description: 'Database querying and management for structured data — analytics, reporting, and building data pipelines.', experience: ['Database integrations in n8n workflows — querying, syncing, transforming', 'Analytics and reporting for lead generation at SIA HYPER', 'Data pipeline design for government AI projects'] },
-      'cursor': { name: 'Cursor', icon: 'bi-cursor', category: 'AI Coding Assistants', description: 'AI-powered code editor built on VS Code. Familiar experience with deep AI integration for faster, smarter development.', experience: ['Primary code editor for client projects alongside Claude Code', 'Teaching AI-assisted development workflows to students', 'Building and iterating on prototypes with AI code generation'] },
-      'vscode': { name: 'VS Code', icon: 'bi-code-square', category: 'Dev Tools', description: 'Industry-standard code editor. Foundation for development with extensions, debugging, and Git integration.', experience: ['Long-standing development environment across all projects', 'Extension ecosystem for Python, JavaScript, and DevOps', 'Live coding demos during university lectures'] },
-      'lovable': { name: 'Lovable', icon: 'bi-heart', category: 'Dev Tools', description: 'AI-native app builder for rapidly prototyping full-stack web applications. Ideas to working MVPs in hours, not weeks.', experience: ['Rapid client prototyping — validating ideas before full builds', 'Building internal tools and dashboards for government projects', 'Demonstrating AI-powered development to potential clients'] },
+      'cursor': { name: 'Cursor', icon: 'bi-cursor', category: 'AI & Dev Tools', description: 'AI-powered code editor built on VS Code. Familiar experience with deep AI integration for faster, smarter development.', experience: ['Primary code editor for client projects alongside Claude Code', 'Teaching AI-assisted development workflows to students', 'Building and iterating on prototypes with AI code generation'] },
+      'vscode': { name: 'VS Code', icon: 'bi-code-square', category: 'AI & Dev Tools', description: 'Industry-standard code editor. Foundation for development with extensions, debugging, and Git integration.', experience: ['Long-standing development environment across all projects', 'Extension ecosystem for Python, JavaScript, and DevOps', 'Live coding demos during university lectures'] },
+      'lovable': { name: 'Lovable', icon: 'bi-heart', category: 'AI & Dev Tools', description: 'AI-native app builder for rapidly prototyping full-stack web applications. Ideas to working MVPs in hours, not weeks.', experience: ['Rapid client prototyping — validating ideas before full builds', 'Building internal tools and dashboards for government projects', 'Demonstrating AI-powered development to potential clients'] },
       'azure': { name: 'MS Azure', icon: 'bi-cloud', category: 'Infrastructure', description: 'Cloud platform for deploying secure, scalable infrastructure. Strong for government projects requiring data residency and compliance.', experience: ['Private ChatGPT instance for the Central Election Commission of Latvia', 'Cloud infrastructure for AI tools at the Supreme Court', 'Enterprise-grade deployment environments for Kaliz.ai clients'] },
       'cybersecurity': { name: 'Cybersecurity', icon: 'bi-shield-check', category: 'Security', description: 'Security-first mindset woven into everything I build — threat modeling, secure architecture, and responsible AI implementation.', experience: ['Security-minded architecture across all government AI projects', 'Secure deployment for self-hosted n8n instances and client data', 'Cybersecurity background informing responsible AI practices'] },
-      'windsurf': { name: 'Windsurf', icon: 'bi-wind', category: 'AI Coding Assistants', description: 'AI-native code editor with deep context awareness. Part of the AI coding toolkit for rapid iteration and multi-file editing.', experience: ['Rapid prototyping of AI-powered tools for client projects', 'Complementary AI assistant alongside Claude Code and Cursor', 'Testing and benchmarking AI coding tools for best-fit workflows'] },
-      'devin': { name: 'Devin', icon: 'bi-robot', category: 'AI Coding Assistants', description: 'Autonomous AI software engineer for delegating full development tasks — from planning through implementation to deployment.', experience: ['Delegating standalone development tasks for faster delivery at Kaliz.ai', 'Evaluating autonomous AI agents for government project scalability', 'Running parallel workstreams using AI agent capabilities'] },
+      'windsurf': { name: 'Windsurf', icon: 'bi-wind', category: 'AI & Dev Tools', description: 'AI-native code editor with deep context awareness. Part of the AI coding toolkit for rapid iteration and multi-file editing.', experience: ['Rapid prototyping of AI-powered tools for client projects', 'Complementary AI assistant alongside Claude Code and Cursor', 'Testing and benchmarking AI coding tools for best-fit workflows'] },
       'rag': { name: 'RAG & Vector Search', icon: 'bi-search', category: 'AI Engineering', description: 'Retrieval-Augmented Generation and semantic vector search — building production systems that ground LLM outputs in real data.', experience: ['Leading a major RAG-based semantic search procurement at Latvia\'s Supreme Court over 50,000+ court decisions', 'Defining ML foundations and technical requirements for production vector search systems', 'Designing retrieval pipelines that combine embedding models, reranking, and LLM generation'] },
       'prompt-eng': { name: 'Prompt Engineering', icon: 'bi-chat-square-text', category: 'AI Engineering', description: 'Systematic prompt and context engineering for production AI systems — designing reliable prompt chains, managing context windows, and optimizing LLM outputs for real-world use.', experience: ['Prompt engineering for production automations at the Supreme Court — designing reliable prompt chains for legal document processing', 'Building LLM-powered lead validation pipelines at SIA HYPER with optimized prompts for cost-efficient large-context daily runs', 'Teaching practical prompt engineering techniques across government departments and university lectures'] },
       'llmops': { name: 'LLMOps', icon: 'bi-graph-up', category: 'AI Engineering', description: 'End-to-end LLM lifecycle management — evaluation pipelines, output validation, monitoring, cost control, and production reliability.', experience: ['Building evaluation and monitoring pipelines for Supreme Court AI automations', 'Cost optimization across multiple LLM providers for high-volume daily processing at SIA HYPER', 'Designing output validation workflows to ensure AI reliability in government decision-making'] },
-      'git': { name: 'Git & GitHub', icon: 'bi-git', category: 'Dev Tools', description: 'Version control and collaborative development — Git workflows, GitHub Actions, CI/CD pipelines, and open-source contribution.', experience: ['Managing all project repositories across Kaliz.ai client work', 'GitHub Pages deployment for this portfolio site', 'Teaching version control practices to university students'] },
+      'git': { name: 'Git & GitHub', icon: 'bi-git', category: 'AI & Dev Tools', description: 'Version control and collaborative development — Git workflows, GitHub Actions, CI/CD pipelines, and open-source contribution.', experience: ['Managing all project repositories across Kaliz.ai client work', 'GitHub Pages deployment for this portfolio site', 'Teaching version control practices to university students'] },
       'data-eng': { name: 'API Integrations', icon: 'bi-arrow-left-right', category: 'Infrastructure', description: 'End-to-end data engineering — designing API integrations, building data pipelines from ingestion through LLM processing to business-facing outputs.', experience: ['Architecting multi-platform API integrations with n8n and Make.com for Kaliz.ai clients', 'Building data pipelines connecting CRMs, email tools, and databases at SIA HYPER', 'Custom webhook and REST API development for the Supreme Court\'s AI systems'] },
       'anthropic': { name: 'Anthropic (Claude)', icon: 'bi-cpu', category: 'AI Models', description: 'Claude model family for complex reasoning, coding, and long-context analysis. My primary AI for technical work through Claude Code and the API.', experience: ['Claude Code as primary development IDE — building full-stack applications and automations', 'Long-context document analysis for legal and government projects', 'API integration for production AI pipelines at Kaliz.ai'] },
       'perplexity': { name: 'Perplexity', icon: 'bi-search', category: 'AI Models', description: 'AI-powered research engine for up-to-date information retrieval, fact-checking, and deep-dive research with source citations.', experience: ['Real-time research and fact-checking during client consulting sessions', 'Tech scouting and evaluating emerging AI platforms and frameworks', 'Sourcing documentation and references for government project proposals'] },
