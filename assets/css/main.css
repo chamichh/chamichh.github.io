@@ -217,7 +217,7 @@ body::after {
 
 .nav-links a {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-secondary);
   letter-spacing: 0.02em;
@@ -250,7 +250,7 @@ body::after {
 
 .nav-cta {
   font-family: var(--font-body) !important;
-  font-size: 0.8rem !important;
+  font-size: 0.88rem !important;
   font-weight: 600 !important;
   padding: 0.5rem 1.25rem !important;
   border-radius: 100px !important;
@@ -379,7 +379,7 @@ body::after {
 
 .section-label {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -415,7 +415,7 @@ body::after {
 }
 
 .section-description {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-secondary);
   max-width: 600px;
   line-height: 1.8;
@@ -476,7 +476,7 @@ body::after {
   background: rgba(124, 58, 237, 0.1);
   border: 1px solid rgba(124, 58, 237, 0.2);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   color: var(--accent-purple);
   margin-bottom: 2rem;
   letter-spacing: 0.05em;
@@ -545,7 +545,7 @@ body::after {
   color: #fff;
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   border: none;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
@@ -580,7 +580,7 @@ body::after {
   color: var(--text-primary);
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   border: 1px solid var(--border-subtle);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -655,7 +655,7 @@ body::after {
 }
 
 .about-text {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-secondary);
   line-height: 1.9;
 }
@@ -731,7 +731,7 @@ body::after {
 }
 
 .stat-label {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
   margin-top: 0.25rem;
   font-weight: 500;
@@ -956,7 +956,7 @@ body::after {
 }
 
 .exp-detail-desc {
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 1.15rem;
@@ -967,7 +967,7 @@ body::after {
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -976,14 +976,14 @@ body::after {
 }
 
 .exp-detail-label i {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 
 .exp-achievement {
   display: flex;
   gap: 0.65rem;
   align-items: flex-start;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
@@ -1055,7 +1055,7 @@ body::after {
   padding: 0.3rem 0.85rem;
   border-radius: 100px;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1089,7 +1089,7 @@ body::after {
 /* Date */
 .exp-date {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
@@ -1098,7 +1098,7 @@ body::after {
 /* Role */
 .exp-role {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.2rem;
@@ -1107,7 +1107,7 @@ body::after {
 
 /* Org */
 .exp-org {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--accent-purple);
   font-weight: 500;
   margin-bottom: 1rem;
@@ -1124,7 +1124,7 @@ body::after {
   position: relative;
   padding-left: 1.25rem;
   margin-bottom: 0.4rem;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.7;
 }
@@ -1135,7 +1135,7 @@ body::after {
   left: 0;
   color: var(--accent-cyan);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 700;
 }
 
@@ -1158,10 +1158,10 @@ body::after {
 }
 
 .exp-tags span {
-  padding: 0.2rem 0.65rem;
+  padding: 0.25rem 0.7rem;
   border-radius: 100px;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   background: rgba(255, 255, 255, 0.04);
   color: var(--text-muted);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -1308,7 +1308,7 @@ body::after {
 /* Category header — icon + label */
 .stack-cat {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -1384,7 +1384,7 @@ body::after {
   border-radius: var(--radius-sm);
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   transition: all 0.3s var(--ease-out-expo);
   cursor: pointer;
@@ -1588,7 +1588,7 @@ body::after {
 
 .popover-tool-name {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-primary);
   margin: 0 0 0.15rem;
@@ -1597,7 +1597,7 @@ body::after {
 
 .popover-tool-cat {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -1606,7 +1606,7 @@ body::after {
 }
 
 .popover-desc {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.65;
   color: var(--text-secondary);
   margin: 0 0 1rem;
@@ -1621,7 +1621,7 @@ body::after {
 
 .popover-exp-label {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1646,7 +1646,7 @@ body::after {
   display: flex;
   align-items: flex-start;
   gap: 0.55rem;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   line-height: 1.55;
   color: var(--text-secondary);
 }
@@ -1707,7 +1707,7 @@ body::after {
 }
 
 .popover-svc-text {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.65;
   color: var(--text-secondary);
   margin: 0 0 1.15rem;
@@ -1727,7 +1727,7 @@ body::after {
   padding: 0.7rem 0.85rem;
   border-radius: 11px;
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -2014,7 +2014,7 @@ body::after {
 /* Body */
 .svc-body h3 {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.65rem;
@@ -2022,7 +2022,7 @@ body::after {
 }
 
 .svc-body p {
-  font-size: 0.88rem;
+  font-size: 0.98rem;
   color: var(--text-secondary);
   line-height: 1.75;
   margin-bottom: 1.25rem;
@@ -2036,10 +2036,10 @@ body::after {
 }
 
 .svc-stack span {
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.65rem;
   border-radius: 100px;
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -2116,7 +2116,7 @@ body::after {
 
 .svc-featured-label {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
@@ -2149,7 +2149,7 @@ body::after {
 }
 
 .testimonial-quote {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 1.5rem;
@@ -2189,12 +2189,12 @@ body::after {
 }
 
 .testimonial-role {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
 }
 
 .testimonial-org {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--accent-purple);
   font-weight: 500;
 }
@@ -2230,7 +2230,7 @@ body::after {
 }
 
 .contact-text {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-secondary);
   max-width: 500px;
   margin: 0 auto 2.5rem;
@@ -2269,7 +2269,7 @@ body::after {
 }
 
 .footer-copy {
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
 }
 
