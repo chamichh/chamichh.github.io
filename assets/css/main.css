@@ -270,7 +270,11 @@ body::after {
   color: var(--text-primary);
   font-size: 1.5rem;
   cursor: pointer;
-  padding: 0.25rem;
+  padding: 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-menu {
@@ -1564,11 +1568,35 @@ body::after {
 
 @media (max-width: 600px) {
   .popover {
-    width: 300px;
-    padding: 1.25rem;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    max-height: 70vh;
+    overflow-y: auto;
+    border-radius: 20px 20px 0 0;
+    padding: 1.5rem;
+    transform: translateY(100%) !important;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
+
+  .popover.active {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
   .popover-svc {
-    width: 290px;
+    width: 100% !important;
+  }
+
+  .popover-backdrop.active {
+    background: rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -2884,6 +2912,14 @@ body::after {
 
   .stat-card {
     padding: 1.25rem;
+  }
+
+  .nav {
+    padding: 1rem 1.25rem;
+  }
+
+  .nav.scrolled {
+    padding: 0.6rem 1.25rem;
   }
 }
 

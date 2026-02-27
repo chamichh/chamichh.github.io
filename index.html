@@ -87,7 +87,7 @@
     <a href="#experience" class="mobile-link">Experience</a>
     <a href="#services" class="mobile-link">Services</a>
     <a href="#testimonials" class="mobile-link">Testimonials</a>
-    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#contact" class="mobile-link nav-cta" style="font-size: 1rem; padding: 0.75rem 2rem; margin-top: 1rem;">Get in Touch</a>
   </div>
 
   <main>
@@ -1135,6 +1135,12 @@
     let activePopover = null;
 
     function positionPopover(popover, anchor) {
+      // On mobile, use CSS bottom-sheet positioning
+      if (window.innerWidth <= 600) {
+        popover.classList.add('active');
+        return;
+      }
+
       // Reset position for measurement
       popover.style.left = '0';
       popover.style.top = '0';
